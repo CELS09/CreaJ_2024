@@ -3,3 +3,28 @@
 
 ### Pre-requisitos de instalación 📋
 
+
+
+
+## Herramientas 🛠️
+
+
+
+
+
+## Guía de Instalación 💻
+
+
+
+
+## Autores ✒️
+
+
+
+
+## Licencia 📄
+
+
+
+
+## Enlaces de interés 👀
