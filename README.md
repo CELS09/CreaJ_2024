@@ -26,7 +26,7 @@
 
 ## Licencia 📄
 
-
+### *Sistema para Gestión de Recursos Humanos | Crea-J 2024© 2024 por Equipo de Trabajo (InSect). tiene licencia de Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)*
 
 
 ## Enlaces de interés 👀
