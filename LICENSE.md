@@ -48,16 +48,61 @@ Obra y el significado y efecto jurídico pretendido de CC0 sobre dichos derechos
 
 **Sección 1 – Definiciones.**
 
+**a.** *Material adaptado* significa material sujeto a derechos de autor y derechos similares 
+que se deriva o se basa en el material con licencia y en el que el material con licencia se 
+traduce, altera, organiza, transforma o modifica de otra manera de una manera que requiere 
+permiso según los derechos de autor y derechos similares. por el Licenciante. Para los fines 
+de esta Licencia pública, cuando el Material bajo licencia es una obra musical, una interpretación 
+o una grabación de sonido, siempre se produce Material adaptado cuando el Material bajo licencia se 
+sincroniza en una relación temporal con una imagen en movimiento.
 
+**b.** *Licencia de Adaptador* significa la licencia que Usted aplica a Sus Derechos de Autor y Derechos 
+Similares en Sus contribuciones al Material Adaptado de acuerdo con los términos y condiciones de esta Licencia Pública.
 
+**c.** *Licencia compatible BY-NC-SA* significa una licencia enumerada en [creativecommons.org/compatiblelicenses](creativecommons.org/compatiblelicenses "Title"), 
+aprobada por Creative Commons como esencialmente el equivalente de esta Licencia pública.
 
+**d.** *Derechos de autor y derechos similares* significa derechos de autor y/o derechos similares 
+estrechamente relacionados con los derechos de autor, incluidos, entre otros, los derechos de interpretación, 
+transmisión, grabación de sonido y derechos de base de datos Sui Generis, sin importar cómo se etiqueten o 
+categoricen los derechos. Para los fines de esta Licencia pública, los derechos especificados en la Sección 
+2(b)(1)-(2) no son derechos de autor ni derechos similares.
 
+**e.** *Medidas Tecnológicas Eficaces* significa aquellas medidas que, en ausencia de la autoridad adecuada, 
+no pueden ser eludidas en virtud de leyes que cumplan las obligaciones previstas en el Artículo 11 del Tratado 
+de la OMPI sobre Derecho de Autor adoptado el 20 de diciembre de 1996 y/o acuerdos internacionales similares.
 
+**f.** *Excepciones y limitaciones* significa uso legítimo, trato justo y/o cualquier otra excepción o limitación 
+a los derechos de autor y derechos similares que se apliquen a su uso del Material con licencia.
 
+**g.** *Elementos de licencia* significa los atributos de licencia enumerados en el nombre de una Licencia pública 
+Creative Commons. Los Elementos de Licencia de esta Licencia Pública son Atribución, No Comercial y CompartirIgual.
 
+**h.** *Material Licenciado* significa la obra artística o literaria, base de datos u otro material al que el Licenciante 
+aplicó esta Licencia Pública.
 
+**i.** *Derechos con licencia* significa los derechos que se le otorgan sujetos a los términos y condiciones de esta 
+Licencia pública, que se limitan a todos los derechos de autor y derechos similares que se aplican a su uso del Material 
+con licencia y que el Licenciante tiene autoridad para otorgar licencias.
 
+**j.** *Licenciante* significa el(los) individuo(s) o entidad(es) que otorgan derechos bajo esta Licencia Pública.
 
+**k.** *No comercial* significa que no está destinado ni dirigido principalmente a una ventaja comercial o una compensación 
+monetaria. Para los fines de esta Licencia Pública, el intercambio del Material Licenciado por otro material sujeto a Derechos 
+de Autor y Derechos Similares mediante el intercambio de archivos digitales o medios similares es No Comercial siempre que no 
+haya pago de compensación monetaria en relación con el intercambio.
+
+**l.** *Compartir* significa proporcionar material al público por cualquier medio o proceso que requiera permiso según los 
+Derechos Licenciados, como reproducción, exhibición pública, presentación pública, distribución, difusión, comunicación o 
+importación, y poner material a disposición del público, incluso en formas en que el público pueda acceder al material desde 
+un lugar y en un momento elegido individualmente por ellos.
+
+**m.** *Derechos sui generis sobre bases de datos* significa derechos distintos de los derechos de autor resultantes de la 
+Directiva 96/9/CE del Parlamento Europeo y del Consejo, de 11 de marzo de 1996, sobre la protección jurídica de las bases de 
+datos, modificada y/o sucesiva, así como otros derechos esencialmente equivalentes. en cualquier lugar del mundo.
+
+**n.** *Usted* se refiere al individuo o entidad que ejerce los Derechos Licenciados bajo esta Licencia Pública. **Tu** tiene 
+un significado correspondiente.
 
 
 
@@ -89,63 +134,4 @@ iii. publicity and privacy rights pertaining to a person's image or
 vii. other similar, equivalent or corresponding rights throughout the
      world based on applicable law or treaty, and any national
      implementations thereof.
-
-2. Waiver. To the greatest extent permitted by, but not in contravention
-of, applicable law, Affirmer hereby overtly, fully, permanently,
-irrevocably and unconditionally waives, abandons, and surrenders all of
-Affirmer's Copyright and Related Rights and associated claims and causes
-of action, whether now known or unknown (including existing as well as
-future claims and causes of action), in the Work (i) in all territories
-worldwide, (ii) for the maximum duration provided by applicable law or
-treaty (including future time extensions), (iii) in any current or future
-medium and for any number of copies, and (iv) for any purpose whatsoever,
-including without limitation commercial, advertising or promotional
-purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
-member of the public at large and to the detriment of Affirmer's heirs and
-successors, fully intending that such Waiver shall not be subject to
-revocation, rescission, cancellation, termination, or any other legal or
-equitable action to disrupt the quiet enjoyment of the Work by the public
-as contemplated by Affirmer's express Statement of Purpose.
-
-3. Public License Fallback. Should any part of the Waiver for any reason
-be judged legally invalid or ineffective under applicable law, then the
-Waiver shall be preserved to the maximum extent permitted taking into
-account Affirmer's express Statement of Purpose. In addition, to the
-extent the Waiver is so judged Affirmer hereby grants to each affected
-person a royalty-free, non transferable, non sublicensable, non exclusive,
-irrevocable and unconditional license to exercise Affirmer's Copyright and
-Related Rights in the Work (i) in all territories worldwide, (ii) for the
-maximum duration provided by applicable law or treaty (including future
-time extensions), (iii) in any current or future medium and for any number
-of copies, and (iv) for any purpose whatsoever, including without
-limitation commercial, advertising or promotional purposes (the
-"License"). The License shall be deemed effective as of the date CC0 was
-applied by Affirmer to the Work. Should any part of the License for any
-reason be judged legally invalid or ineffective under applicable law, such
-partial invalidity or ineffectiveness shall not invalidate the remainder
-of the License, and in such case Affirmer hereby affirms that he or she
-will not (i) exercise any of his or her remaining Copyright and Related
-Rights in the Work or (ii) assert any associated claims and causes of
-action with respect to the Work, in either case contrary to Affirmer's
-express Statement of Purpose.
-
-4. Limitations and Disclaimers.
-
- a. No trademark or patent rights held by Affirmer are waived, abandoned,
-    surrendered, licensed or otherwise affected by this document.
- b. Affirmer offers the Work as-is and makes no representations or
-    warranties of any kind concerning the Work, express, implied,
-    statutory or otherwise, including without limitation warranties of
-    title, merchantability, fitness for a particular purpose, non
-    infringement, or the absence of latent or other defects, accuracy, or
-    the present or absence of errors, whether or not discoverable, all to
-    the greatest extent permissible under applicable law.
- c. Affirmer disclaims responsibility for clearing rights of other persons
-    that may apply to the Work or any use thereof, including without
-    limitation any person's Copyright and Related Rights in the Work.
-    Further, Affirmer disclaims responsibility for obtaining any necessary
-    consents, permissions or other rights required for any use of the
-    Work.
- d. Affirmer understands and acknowledges that Creative Commons is not a
-    party to this document and has no duty or obligation with respect to
-    this CC0 or use of the Work.
+     
