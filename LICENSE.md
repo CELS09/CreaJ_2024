@@ -12,37 +12,60 @@ Attribution-NonCommercial-ShareAlike 4.0 International
     HEREUNDER.
 
     By exercising the Licensed Rights (defined below), You accept and agree 
-    to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 
-    International Public License ("Public License"). To the extent this Public License may be interpreted as a 
-    contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, 
-    and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed 
-    Material available under these terms and conditions.
+    to be bound by the terms and conditions of this Creative Commons 
+    Attribution-NonCommercial-ShareAlike 4.0 International Public License 
+    ("Public License"). To the extent this Public License may be interpreted 
+    as a contract, You are granted the Licensed Rights in consideration of 
+    Your acceptance of these terms and conditions, and the Licensor grants 
+    You such rights in consideration of benefits the Licensor receives from 
+    making the Licensed Material available under these terms and conditions.
 
-Declaración de propósito
+**Declaración de propósito**
 
 Las leyes de la mayoría de las jurisdicciones en todo el mundo confieren automáticamente
 Copyright exclusivo y derechos relacionados (definidos a continuación) del creador
 y propietarios posteriores (todos y cada uno de ellos, un "propietario") de una obra original de
 autoría y/o una base de datos (cada uno, una "Obra").
 
-Certain owners wish to permanently relinquish those rights to a Work for
-the purpose of contributing to a commons of creative, cultural and
-scientific works ("Commons") that the public can reliably and without fear
-of later claims of infringement build upon, modify, incorporate in other
-works, reuse and redistribute as freely as possible in any form whatsoever
-and for any purposes, including without limitation commercial purposes.
-These owners may contribute to the Commons to promote the ideal of a free
-culture and the further production of creative, cultural and scientific
-works, or to gain reputation or greater distribution for their Work in
-part through the use and efforts of others.
+Ciertos propietarios desean renunciar permanentemente a esos derechos sobre una Obra para
+el propósito de contribuir a un bien común de bienes creativos, culturales y
+obras científicas ("Commons") que el público puede consultar de forma fiable y sin miedo.
+de reclamaciones posteriores por infracción se basan en, modifican, incorporan en otros
+obras, reutilizar y redistribuir lo más libremente posible en cualquier forma
+y para cualquier propósito, incluidos, entre otros, fines comerciales.
+Estos propietarios pueden contribuir a los Comunes para promover el ideal de una sociedad libre.
+cultura y la ulterior producción de conocimientos creativos, culturales y científicos.
+obras, o para ganar reputación o mayor distribución por su Trabajo en
+parte a través del uso y esfuerzo de otros.
 
-For these and/or other purposes and motivations, and without any
-expectation of additional consideration or compensation, the person
-associating CC0 with a Work (the "Affirmer"), to the extent that he or she
-is an owner of Copyright and Related Rights in the Work, voluntarily
-elects to apply CC0 to the Work and publicly distribute the Work under its
-terms, with knowledge of his or her Copyright and Related Rights in the
-Work and the meaning and intended legal effect of CC0 on those rights.
+Por estos y/u otros fines y motivaciones, y sin ningún tipo de
+expectativa de contraprestación o compensación adicional, la persona
+asociar CC0 con una Obra (el "Afirmante"), en la medida en que él o ella
+es titular de los Derechos de Autor y Derechos Conexos sobre la Obra, voluntariamente
+elige aplicar CC0 al Trabajo y distribuir públicamente el Trabajo bajo su
+términos, con conocimiento de sus derechos de autor y derechos conexos en el
+Obra y el significado y efecto jurídico pretendido de CC0 sobre dichos derechos.
+
+**Sección 1 – Definiciones.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 1. Copyright and Related Rights. A Work made available under CC0 may be
 protected by copyright and related or neighboring rights ("Copyright and
