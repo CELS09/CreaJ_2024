@@ -25,8 +25,30 @@
 * ***Ángel Josué Molina Rivas:*** Encargado del diseño UX/UI del proyecto, y sub encargado del Back-End.
 
 ## Licencia 📄
-
 ### *Sistema para Gestión de Recursos Humanos | Crea-J 2024© 2024 por Equipo de Trabajo (InSect). tiene licencia de Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)*
 
+### Esta licencia establece que el usuario es libre de:
+- **Compartir :** copiar y redistribuir el material en cualquier medio o formato.
+
+- **Adaptar :** remezclar, transformar y construir sobre el material.
+
+El licenciante no puede revocar estas libertades siempre que cumpla con los términos de la licencia.
+
+
+### Bajo los siguientes términos:
+- **Atribución :** debe dar el crédito apropiado , proporcionar un enlace a la licencia e indicar si se realizaron cambios . Puede hacerlo de cualquier manera razonable, pero no de ninguna manera que sugiera que el licenciante lo respalda a usted o su uso.
+
+- **No comercial :** no puede utilizar el material con fines comerciales.
+
+- **CompartirIgual :** si remezclas, transformas o construyes a partir del material, debes distribuir tus contribuciones bajo la misma licencia que el original.
+
+
+**Sin restricciones adicionales :** no puede aplicar términos legales ni medidas tecnológicas que restrinjan legalmente a otros hacer cualquier cosa que la licencia permita.
+
+### Avisos:
+
+No tiene que cumplir con la licencia para elementos del material que sean de dominio público o donde su uso esté permitido por una excepción o limitación aplicable.
+
+No se dan garantías. Es posible que la licencia no le otorgue todos los permisos necesarios para el uso previsto. Por ejemplo, otros derechos como publicidad, privacidad o derechos morales pueden limitar la forma en que utiliza el material.
 
 ## Enlaces de interés 👀
