@@ -1291,7 +1291,7 @@ nav .nav-wrapper ul li span.badge {
 }
 
 .side-nav {
-    padding: 0 !important;
+    padding:  0 !important;
     height: calc(100% - 60px) !important;
     margin-top: 80px;
     margin-bottom: 10px;

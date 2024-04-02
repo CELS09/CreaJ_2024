@@ -67,6 +67,18 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+
+
+        <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!--FIN DE FUENTE DE GOOGLE -->
+
+
         <style>
             .errorWrap {
                 padding: 10px;

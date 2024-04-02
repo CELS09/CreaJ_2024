@@ -130,7 +130,7 @@ if (isset($_POST['signin'])) {
                         </a>
                     </section>
                     <div class="header-title col s5">
-                        <span class="chapter-title">WorkFusion | Sistema de gestión de la licencia del empleado
+                        <span class="chapter-title">WorkFusion | Sistema del empleado
                         </span>
                     </div>
                 </div>

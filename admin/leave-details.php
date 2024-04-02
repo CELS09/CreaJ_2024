@@ -59,6 +59,13 @@ $msg="Leave updated Successfully";
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 
+        <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!--FIN DE FUENTE DE GOOGLE -->
+
+
                 <link href="../assets/plugins/google-code-prettify/prettify.css" rel="stylesheet" type="text/css"/>  
         <!-- Theme Styles -->
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
@@ -83,9 +90,10 @@ $msg="Leave updated Successfully";
         </style>
     </head>
     <body>
+
        <?php include('includes/header.php');?>
-            
        <?php include('includes/sidebar.php');?>
+
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">

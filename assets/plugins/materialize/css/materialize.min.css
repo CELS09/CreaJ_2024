@@ -3744,7 +3744,7 @@ input[type=range]+.thumb {
     }
 
     .row .col.l4 {
-        width: 33.3333333333%;
+        width: 50%;
         margin-left: auto;
         left: auto;
         right: auto
@@ -3843,7 +3843,7 @@ input[type=range]+.thumb {
     }
 
     .row .col.offset-l4 {
-        margin-left: 33.3333333333%
+        margin-left: 25%
     }
 
     .row .col.pull-l4 {
@@ -4449,7 +4449,7 @@ footer.page-footer .footer-copyright {
     margin: 0.5rem 0 1rem 0;
     background-color: #fff;
     transition: box-shadow .25s;
-    border-radius: 2px
+    border-radius: 10px
 }
 
 .card .card-title {
