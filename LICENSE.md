@@ -118,8 +118,18 @@ a. **Concesión de licencia.**
       B. producir, reproducir y compartir material adaptado 
          únicamente con fines no comerciales.
 
- 2. **Excepciones y Limitaciones.**
+ 2. **Excepciones y Limitaciones.** Para evitar dudas, cuando se aplican Excepciones y Limitaciones a Su uso, esta Licencia
+    Pública no se aplica y Usted no necesita cumplir con sus términos y condiciones.
 
+ 3. **Término.** El plazo de esta Licencia Pública se especifica en la Sección [6(a)](#the-text-of-the-level2-section-separated-by-hyphens) .
+
+ 4. **Medios y formatos; Se permiten modificaciones técnicas.** El Licenciante le autoriza a ejercer los Derechos Licenciados en todos los medios y formatos, ya sean 
+      conocidos ahora o creados en el futuro, y a realizar las modificaciones técnicas necesarias para hacerlo. El Licenciante renuncia y/o acepta no hacer valer ningún 
+      derecho o autoridad para prohibirle realizar las modificaciones técnicas necesarias para ejercer los Derechos Licenciados, incluidas las modificaciones técnicas 
+      necesarias para eludir las Medidas Tecnológicas Efectivas. Para los fines de esta Licencia Pública, la simple realización de modificaciones autorizadas por esta Sección 
+      [2(a)(4)](#the-text-of-the-level2-section-separated-by-hyphens) nunca produce Material Adaptado.
+    
+ 6. Destinatarios posteriores.
 
 
 
