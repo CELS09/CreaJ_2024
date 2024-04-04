@@ -129,7 +129,10 @@ a. **Concesión de licencia.**
       necesarias para eludir las Medidas Tecnológicas Efectivas. Para los fines de esta Licencia Pública, la simple realización de modificaciones autorizadas por esta Sección 
       [2(a)(4)](#the-text-of-the-level2-section-separated-by-hyphens) nunca produce Material Adaptado.
     
- 6. Destinatarios posteriores.
+ 6. **Destinatarios posteriores.**
+    
+       A. **Oferta del Licenciante – Material Licenciado.** Cada destinatario del Material con licencia recibe automáticamente una oferta del Licenciante para ejercer los 
+          Derechos con licencia según los términos y condiciones de esta Licencia pública.
 
 
 
