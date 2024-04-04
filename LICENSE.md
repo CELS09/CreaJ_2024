@@ -104,34 +104,23 @@ datos, modificada y/o sucesiva, así como otros derechos esencialmente equivalen
 **n.** *Usted* se refiere al individuo o entidad que ejerce los Derechos Licenciados bajo esta Licencia Pública. **Tu** tiene 
 un significado correspondiente.
 
+**Sección 2 – Alcance.**
+
+a. **Concesión de licencia.**
+
+ 1. Sujeto a los términos y condiciones de esta Licencia Pública, el Licenciante le otorga por la presente una licencia 
+    mundial, libre de regalías, no sublicenciable, no exclusiva e irrevocable para ejercer los Derechos Licenciados sobre 
+    el Material Licenciado para:
+
+      A. reproducir y compartir el Material con licencia, total o parcialmente, 
+         únicamente con fines no comerciales; y
+
+      B. producir, reproducir y compartir material adaptado 
+         únicamente con fines no comerciales.
+
+ 2. **Excepciones y Limitaciones.**
 
 
 
 
-
-
-
-
-1. Copyright and Related Rights. A Work made available under CC0 may be
-protected by copyright and related or neighboring rights ("Copyright and
-Related Rights"). Copyright and Related Rights include, but are not
-limited to, the following:
-
-  i. the right to reproduce, adapt, distribute, perform, display,
-     communicate, and translate a Work;
- ii. moral rights retained by the original author(s) and/or performer(s);
-iii. publicity and privacy rights pertaining to a person's image or
-     likeness depicted in a Work;
- iv. rights protecting against unfair competition in regards to a Work,
-     subject to the limitations in paragraph 4(a), below;
-  v. rights protecting the extraction, dissemination, use and reuse of data
-     in a Work;
- vi. database rights (such as those arising under Directive 96/9/EC of the
-     European Parliament and of the Council of 11 March 1996 on the legal
-     protection of databases, and under any national implementation
-     thereof, including any amended or successor version of such
-     directive); and
-vii. other similar, equivalent or corresponding rights throughout the
-     world based on applicable law or treaty, and any national
-     implementations thereof.
      
