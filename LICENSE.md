@@ -179,10 +179,13 @@ Su ejercicio de los Derechos Licenciados está expresamente sujeto a las siguien
 
       B. indicar si modificó el Material con licencia y conservar una indicación de cualquier modificación anterior; y
 
-      C. indicar que el Material Autorizado está bajo esta Licencia Pública e incluir el texto de esta Licencia Pública,
-         o el URI o hipervínculo a ella.
+      C. indicar que el Material Autorizado está bajo esta Licencia Pública e incluir el texto de esta Licencia Pública, o el URI o hipervínculo a ella.
 
-   2. Puede cumplir las condiciones de la Sección [3(a)(1)](#the-text-of-the-level2-section-separated-by-hyphens "Title")
+   2. Puede cumplir las condiciones de la Sección [3(a)(1)](#the-text-of-the-level2-section-separated-by-hyphens "Title") de cualquier manera razonable
+      según el medio, los medios y el contexto en el que comparte el Material con licencia. Por ejemplo, puede ser razonable satisfacer las condiciones
+      proporcionando un URI o un hipervínculo a un recurso que incluya la información requerida.
 
+   3. Si lo solicita el Licenciante, debe eliminar cualquier información requerida por la Sección [3(a)(1)(A)](#the-text-of-the-level2-section-separated-by-hyphens "Title") en la 
+      medida razonablemente posible.
    
 
