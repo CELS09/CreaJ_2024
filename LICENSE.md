@@ -155,4 +155,34 @@ b. **Otros derechos.**
       través de una sociedad de recaudación bajo cualquier esquema de licencia obligatorio, estatutario o voluntario o renunciable. En todos los demás casos, el Licenciante
       se reserva expresamente cualquier derecho a cobrar dichas regalías, incluso cuando el Material Licenciado se utiliza para fines distintos a los no comerciales.
 
-     
+**Sección 3 – Condiciones de la Licencia.**
+
+Su ejercicio de los Derechos Licenciados está expresamente sujeto a las siguientes condiciones.
+
+  a. **Atribución.**
+
+   1. Si comparte el material con licencia (incluso en forma modificada), debe:
+
+      A. conservará lo siguiente si el Licenciante lo suministra junto con el Material Licenciado:
+
+            I. identificación de los creadores del Material con licencia y cualquier otra persona designada
+               para recibir atribución, de cualquier manera razonable solicitada por el Licenciante (incluso
+               mediante seudónimo si así lo designa);
+      
+           II. un aviso de derechos de autor;
+
+          III. un aviso que haga referencia a esta Licencia Pública;
+
+           IV. un aviso que haga referencia a la renuncia de garantías;
+
+            V. un URI o hipervínculo al Material con licencia en la medida de lo razonablemente posible;
+
+      B. indicar si modificó el Material con licencia y conservar una indicación de cualquier modificación anterior; y
+
+      C. indicar que el Material Autorizado está bajo esta Licencia Pública e incluir el texto de esta Licencia Pública,
+         o el URI o hipervínculo a ella.
+
+   2. Puede cumplir las condiciones de la Sección [3(a)(1)](#the-text-of-the-level2-section-separated-by-hyphens "Title")
+
+   
+
