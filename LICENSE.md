@@ -59,8 +59,7 @@ sincroniza en una relación temporal con una imagen en movimiento.
 **b.** *Licencia de Adaptador* significa la licencia que Usted aplica a Sus Derechos de Autor y Derechos 
 Similares en Sus contribuciones al Material Adaptado de acuerdo con los términos y condiciones de esta Licencia Pública.
 
-**c.** *Licencia compatible BY-NC-SA* significa una licencia enumerada en [creativecommons.org/compatiblelicenses](creativecommons.org/compatiblelicenses "Title"), 
-aprobada por Creative Commons como esencialmente el equivalente de esta Licencia pública.
+**c.** *Licencia compatible BY-NC-SA* significa una licencia enumerada en [creativecommons.org/compatiblelicenses](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/ "Title"), aprobada por Creative Commons como esencialmente el equivalente de esta Licencia pública.
 
 **d.** *Derechos de autor y derechos similares* significa derechos de autor y/o derechos similares 
 estrechamente relacionados con los derechos de autor, incluidos, entre otros, los derechos de interpretación, 
