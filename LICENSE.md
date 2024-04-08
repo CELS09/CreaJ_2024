@@ -121,19 +121,39 @@ a. **Concesión de licencia.**
  2. **Excepciones y Limitaciones.** Para evitar dudas, cuando se aplican Excepciones y Limitaciones a Su uso, esta Licencia
     Pública no se aplica y Usted no necesita cumplir con sus términos y condiciones.
 
- 3. **Término.** El plazo de esta Licencia Pública se especifica en la Sección [6(a)](#the-text-of-the-level2-section-separated-by-hyphens) .
+ 3. **Término**. El plazo de esta Licencia Pública se especifica en la Sección [6(a)](#the-text-of-the-level2-section-separated-by-hyphens "Title") .
 
- 4. **Medios y formatos; Se permiten modificaciones técnicas.** El Licenciante le autoriza a ejercer los Derechos Licenciados en todos los medios y formatos, ya sean 
+ 4. **Medios y formatos; Se permiten modificaciones técnicas**. El Licenciante le autoriza a ejercer los Derechos Licenciados en todos los medios y formatos, ya sean 
       conocidos ahora o creados en el futuro, y a realizar las modificaciones técnicas necesarias para hacerlo. El Licenciante renuncia y/o acepta no hacer valer ningún 
       derecho o autoridad para prohibirle realizar las modificaciones técnicas necesarias para ejercer los Derechos Licenciados, incluidas las modificaciones técnicas 
       necesarias para eludir las Medidas Tecnológicas Efectivas. Para los fines de esta Licencia Pública, la simple realización de modificaciones autorizadas por esta Sección 
-      [2(a)(4)](#the-text-of-the-level2-section-separated-by-hyphens) nunca produce Material Adaptado.
+      [2(a)(4)](#the-text-of-the-level2-section-separated-by-hyphens "Title") nunca produce Material Adaptado.
     
- 6. **Destinatarios posteriores.**
+ 5. **Destinatarios posteriores**.
     
-       A. **Oferta del Licenciante – Material Licenciado.** Cada destinatario del Material con licencia recibe automáticamente una oferta del Licenciante para ejercer los 
+       A. **Oferta del Licenciante – Material Licenciado**. Cada destinatario del Material con licencia recibe automáticamente una oferta del Licenciante para ejercer los 
           Derechos con licencia según los términos y condiciones de esta Licencia pública.
+    
+       B. **Oferta adicional del Licenciante – Material adaptado**. Cada destinatario de su Material Adaptado recibe automáticamente una oferta del Licenciante para ejercer
+            los Derechos Licenciados sobre el Material Adaptado bajo las condiciones de la Licencia del Adaptador que usted aplica.
 
+       C. **Sin restricciones aguas abajo**. No puede ofrecer ni imponer términos o condiciones adicionales o diferentes, ni aplicar medidas tecnológicas efectivas al Material
+            con licencia si al hacerlo restringe el ejercicio de los Derechos con licencia por parte de cualquier destinatario del Material con licencia.
 
+  6. **Sin respaldo**. Nada en esta Licencia Pública constituye o puede interpretarse como un permiso para afirmar o implicar que Usted está, o que Su uso del Material
+       Autorizado está conectado, patrocinado, respaldado o concedido estatus oficial por, el Licenciante u otras personas designadas para recibir atribución según lo dispuesto
+       en la Sección [3(a)(1)(A)(i)](#the-text-of-the-level2-section-separated-by-hyphens "Title") .
+
+b. **Otros derechos.** 
+
+   1. Los derechos morales, como el derecho a la integridad, no están autorizados bajo esta Licencia Pública, ni tampoco los derechos de publicidad, privacidad y/u otros
+      derechos de personalidad similares; sin embargo, en la medida de lo posible, el Licenciante renuncia y/o acepta no hacer valer ninguno de los derechos que posee en
+      la medida limitada necesaria para permitirle ejercer los Derechos Licenciados, pero no de otra manera.
+      
+   2. Los derechos de patentes y marcas registradas no se conceden bajo esta Licencia Pública.
+
+   3. En la medida de lo posible, el Licenciante renuncia a cualquier derecho a cobrarle regalías por el ejercicio de los Derechos Licenciados, ya sea directamente o a
+      través de una sociedad de recaudación bajo cualquier esquema de licencia obligatorio, estatutario o voluntario o renunciable. En todos los demás casos, el Licenciante
+      se reserva expresamente cualquier derecho a cobrar dichas regalías, incluso cuando el Material Licenciado se utiliza para fines distintos a los no comerciales.
 
      
