@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 error_reporting(0);
@@ -114,7 +113,7 @@ $msg="Your Password succesfully changed";
                             </a>
                         </section>
                         <div class="header-title col s10">      
-                            <span class="chapter-title">WorkFusion | Sistema de gestión de la licencia del empleado</span>
+                            <span class="chapter-title">WorkFusion | Sistema de gestión de la licencia para empleado</span>
                         </div>
                       
                            
@@ -165,13 +164,13 @@ $msg="Your Password succesfully changed";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title"><h4><b>Recuperación de contraseña del empleado</b></h4></div>
+                        <div class="page-title"><h4><b>Recuperación de contraseña de empleado</b></h4></div>
 
                           <div class="col s12 m6 l8 offset-l2 offset-m3">
                               <div class="card white darken-1">
 
                                   <div class="card-content ">
-                                      <span class="card-title" style="font-size:20px;">Detalles sobre empleados</span>
+                                      <span class="card-title" style="font-size:20px;">Digite sus credenciales</span>
                                          <?php if($msg){?><div class="succWrap"><strong>Éxito </strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
