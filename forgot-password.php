@@ -35,30 +35,31 @@ $msg="Your Password succesfully changed";
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../CreaJ_2024/assets/images/WorkFusion(letras).png" type="image/x-icon">
 
-        	
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
-  <style>
+    
+    <style>
         .errorWrap {
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #dd3d36;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-.succWrap{
-    padding: 10px;
-    margin: 0 0 20px 0;
-    background: #fff;
-    border-left: 4px solid #5cb85c;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-}
-        </style>
+            padding: 10px;
+            margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid #dd3d36;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        }
+
+        .succWrap{
+            padding: 10px;
+            margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid #5cb85c;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        }
+    </style>
         
     </head>
     <body>
@@ -124,7 +125,6 @@ $msg="Your Password succesfully changed";
                 </nav>
             </header>
            
-           
             <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
@@ -180,11 +180,11 @@ $msg="Your Password succesfully changed";
                                                </div>
                                                <div class="input-field col s12">
                                                    <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
-                                                   <label for="password">id Email</label>
+                                                   <label for="password">Email</label>
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
                                                 
-                                                   <input type="submit" name="submit" value="Sign in" class="waves-effect waves-light btn teal">
+                                                   <input type="submit" name="submit" value="Iniciar sesión" class="waves-effect waves-light btn teal">
                                                </div>
                                            </form>
                                       </div>
