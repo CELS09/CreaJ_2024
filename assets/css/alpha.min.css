@@ -21,7 +21,7 @@ nav {
 
 html {
     font-weight: 500;
-    color: rgba(0, 0, 0, .6)
+    color: rgba(0, 0, 0, .6);
 }
 
 body {
@@ -35,12 +35,12 @@ a {
 }
 
 text {
-    font-family: Roboto, sans-serif
+    font-family: Roboto, sans-serif;
 }
 
 mark {
     background: #fff9c4;
-    color: rgba(0, 0, 0, .8)
+    color: rgba(0, 0, 0, .8);
 }
 
 a:active,
@@ -369,13 +369,13 @@ nav .nav-wrapper ul li span.badge {
 .material-design-hamburger__icon--to-arrow:before {
     animation-name: material-design-hamburger__icon--slide-before;
     animation-fill-mode: forwards;
-    bottom: 200%
+    bottom: 200%;
 }
 
 .material-design-hamburger__icon--to-arrow:after {
     animation-name: material-design-hamburger__icon--slide-after;
     animation-fill-mode: forwards;
-    top: 200%
+    top: 200%;
 }
 
 .material-design-hamburger__icon--from-arrow {
@@ -2502,7 +2502,7 @@ input.expand-search[type=url]:focus:not([readonly]) {
 }
 
 .media-iframe-example {
-    frameborder: 0
+    mask-border: 0
 }
 
 .material-icons.icon-demo {
@@ -2802,7 +2802,7 @@ input[type=range]::-ms-thumb {
 }
 
 .datatable-example {
-    cellspacing: 0;
+    letter-spacing: 0;
     width: 100%
 }
 
