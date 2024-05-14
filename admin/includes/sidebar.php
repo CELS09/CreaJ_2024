@@ -34,7 +34,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="adddepartment.php">Agregar departamento</a></li>
-                        <li><a href="managedepartments.php">Administrar departamento</a></li>
+                        <li><a href="managedepartments.php">Admr departamento</a></li>
                     </ul>
                 </div>
             </li>

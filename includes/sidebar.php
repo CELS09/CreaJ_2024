@@ -60,8 +60,8 @@
                 </a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="apply-leave.php">Aplicar solicitud</a></li>
-                        <li><a href="leavehistory.php">Dejar el historial</a></li>
+                        <li><a href="apply-leave.php">Solicitar permiso</a></li>
+                        <li><a href="leavehistory.php">Ver el historial</a></li>
                     </ul>
                 </div>
             </li>

@@ -13,7 +13,7 @@ $chngpwd1 = $dbh->prepare($con);
 $chngpwd1-> bindParam(':empid', $empid, PDO::PARAM_STR);
 $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
 $chngpwd1->execute();
-$msg="Your Password succesfully changed";
+$msg="Su contraseña ha sido cambiada con éxito";
 }
 
 ?><!DOCTYPE html>

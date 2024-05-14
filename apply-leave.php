@@ -14,7 +14,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
         $status = 0;
         $isread = 0;
         if ($fromdate > $todate) {
-            $error = " ToDate should be greater than FromDate ";
+            $error = " ToDate debe ser mayor que FromDate ";
         }
         $sql = "INSERT INTO tblleaves(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid) VALUES(:leavetype,:fromdate,:todate,:description,:status,:isread,:empid)";
         $query = $dbh->prepare($sql);
@@ -28,9 +28,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Leave applied successfully";
+            $msg = "Permiso solicitado con éxito";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Algo salio mal. Vuelva a intentarlo";
         }
 
     }
@@ -117,7 +117,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                                 <?php echo htmlentities($error); ?>
                                                             </div>
                                                         <?php } else if ($msg) { ?>
-                                                                <div class="succWrap"><strong>SUCCESS</strong>:
+                                                                <div class="succWrap"><strong>ÉXITO</strong>:
                                                                 <?php echo htmlentities($msg); ?>
                                                                 </div>
                                                         <?php } ?>
@@ -125,7 +125,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
 
                                                         <div class="input-field col  s12">
                                                             <select name="leavetype" autocomplete="off">
-                                                                <option value="">Select leave type...</option>
+                                                                <option value="">Seleccione el tipo de permiso...</option>
                                                                 <?php $sql = "SELECT  LeaveType from tblleavetype";
                                                                 $query = $dbh->prepare($sql);
                                                                 $query->execute();

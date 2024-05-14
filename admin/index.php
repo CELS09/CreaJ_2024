@@ -87,7 +87,7 @@ if (isset($_POST['signin'])) {
                                             <label for="password">Password</label>
                                         </div>
                                         <div class="col s12 right-align m-t-sm">
-                                            <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn teal">
+                                            <input type="submit" name="signin" value="INGRESAR" class="waves-effect waves-light btn teal">
                                         </div>
                                     </form>
                                 </div>

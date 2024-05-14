@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $('#example').DataTable({
         language: {
-            searchPlaceholder: 'Search records',
+            searchPlaceholder: 'Buscar registros',
             sSearch: '',
-            sLengthMenu: 'Show _MENU_',
+            sLengthMenu: 'Motrar _MENU_',
             sLength: 'dataTables_length',
             oPaginate: {
                 sFirst: '<i class="material-icons">chevron_left</i>',

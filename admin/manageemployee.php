@@ -107,7 +107,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                             <table id="example" class="display responsive-table ">
                                 <thead>
                                     <tr>
-                                        <th>no Sr </th>
+                                        <th>No.ㅤ</th>
                                         <th>Id Emp </th>
                                         <th>Nombre completo</th>
                                         <th>Departamento</th>
