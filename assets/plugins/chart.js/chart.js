@@ -1086,7 +1086,7 @@
 				return new ChartType(data,config,this);
 			};
 		} else{
-			warn("Name not provided for this chart, so it hasn't been registered");
+			warn("Nombre no proporcionado para este gráfico, por lo que no se ha registrado");
 		}
 		return parent;
 	};
@@ -3469,9 +3469,4 @@
 		}
 
 	});
-
-
-
-
-
 }).call(this);
