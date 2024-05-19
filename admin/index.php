@@ -29,7 +29,7 @@ if (isset($_POST['signin'])) {
 <head>
 
     <!-- Title -->
-    <title>Sistema de gestión de abandono del empleado | Administración</title>
+    <title>Inicio de Sesión | Administración</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
@@ -57,13 +57,11 @@ if (isset($_POST['signin'])) {
 
             <a class="center-align" href="../index.php" style="color: white;">
                 <h5>
-                    <b>Sistema de gestión de los permisos de empleados</b>
+                    <!--<b>Sistema de gestión de los permisos de empleados</b>-->
                 </h5>
-                <h4>
-                    <b>Login de administrador</b>
-                </h4>
             </a>
 
+            <h4 class="center-align" style="color: white; cursor: default;"><b>Login de administrador</b></h4>
 
             <div class="valign">
                 <div class="row">
@@ -72,7 +70,7 @@ if (isset($_POST['signin'])) {
 
                             <div class="card-content">
 
-                                <span class="card-title center-align font-extrabold">Registrarse</span>
+                                <span class="card-title center-align font-extrabold">Iniciar sesión</span>
 
                                 <div class="row">
                                     <form class="col s12" name="signin" method="post">
@@ -108,5 +106,4 @@ if (isset($_POST['signin'])) {
     <script src="../assets/js/alpha.min.js"></script>
 
 </body>
-
 </html>

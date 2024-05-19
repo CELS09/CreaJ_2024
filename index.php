@@ -175,7 +175,7 @@ if (isset($_POST['signin'])) {
 
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a>©</p>
+                    <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a> ©</p>
                 </div>
             </div>
         </aside>
@@ -204,7 +204,7 @@ if (isset($_POST['signin'])) {
                                         <div class="input-field col s12">
                                             <input id="username" type="text" name="username" class="validate"
                                                 autocomplete="off" required>
-                                            <label for="email">Id Email </label>
+                                            <label for="email">Email</label>
                                         </div>
                                         <div class="input-field col s12">
                                             <input id="password" type="password" class="validate" name="password"
@@ -213,8 +213,7 @@ if (isset($_POST['signin'])) {
                                         </div>
                                         <div class="col s12 right-align m-t-sm">
 
-                                            <input type="submit" name="signin" value="Sign in"
-                                                class="waves-effect waves-light btn teal">
+                                            <input type="submit" name="signin" value="INGRESAR" class="waves-effect waves-light btn teal">
                                         </div>
                                     </form>
                                 </div>
@@ -236,5 +235,4 @@ if (isset($_POST['signin'])) {
     <script src="assets/js/alpha.min.js"></script>
 
 </body>
-
 </html>

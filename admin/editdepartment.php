@@ -96,7 +96,7 @@ foreach($results as $result)
                                         <div class="row">
                                             <div class="input-field col s12">
 <input id="departmentname" type="text"  class="validate" autocomplete="off" name="departmentname" value="<?php echo htmlentities($result->DepartmentName);?>"  required>
-                                                <label for="deptname">DNombre de Departamento</label>
+                                                <label for="deptname">Nombre de Departamento</label>
                                             </div>
 
 
@@ -106,7 +106,7 @@ foreach($results as $result)
                                             </div>
   <div class="input-field col s12">
  <input id="deptcode" type="text" name="deptcode" class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentCode);?>" required>
-                                                <label for="password">código del departamento</label>
+                                                <label for="password">Código del departamento</label>
                                             </div>
 
 <?php }} ?>

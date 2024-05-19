@@ -1,6 +1,8 @@
 $(document).ready(function() {
     
-    setTimeout(function(){ Materialize.toast('Bienvenido al Sistema de Gestión de Licencias para Empleados', 4000) }, 2000);
+    setTimeout(function () {
+        Materialize.toast('Bienvenido al Sistema de Gestión de Licencias para Empleados', 4000)
+    }, 2000);
     
     // CounterUp Plugin
     $('.counter').each(function () {
