@@ -5,41 +5,35 @@ include ('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
 
     <head>
-
-        <!-- Title -->
+        <!-- Título -->
         <title>Admin | Dashboard</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
 
-        <!-- Styles -->
-
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-        <!--FIN DE FUENTE DE GOOGLE -->
 
+        <!--FIN DE FUENTE DE GOOGLE -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
         <link href="../assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
 
-
-        <!-- Theme Styles -->
-        <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
-
+        <!-- Enlaces para estilos CSS -->
+        <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -167,7 +161,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                             <span style="color: green">Aprobado</span>
                                                         <?php }
                                                         if ($stats == 2) { ?>
-                                                            <span style="color: red">No aprovado</span>
+                                                            <span style="color: red">No aprobado</span>
                                                         <?php }
                                                         if ($stats == 0) { ?>
                                                             <span style="color: blue">A la espera de la aprobación</span>
@@ -217,6 +211,5 @@ if (strlen($_SESSION['alogin']) == 0) {
         <script src="../assets/js/pages/dashboard.js"></script>
 
     </body>
-
     </html>
 <?php } ?>

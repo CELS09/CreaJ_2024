@@ -104,7 +104,7 @@
 
         </ul>
         <div class="footer">
-            <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a>©</p>
+            <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a> ©</p>
         </div>
     </div>
 </aside>

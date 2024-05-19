@@ -73,7 +73,7 @@
                                     <span class="badge"><?php echo htmlentities($unreadcount);?></span>
                                 </a>
                             </li>
-                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">Buscar</i></a></li>
                         </ul>
 
                         
@@ -81,7 +81,7 @@
                         <ul id="dropdown1" class="dropdown-content notifications-dropdown">
                             <li class="notificatoins-dropdown-container">
                                 <ul>
-                                    <li class="notification-drop-title">Notifications</li>
+                                    <li class="notification-drop-title">Notificaciones</li>
                                     <?php 
                                     $isread=0;
                                     $sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.EmpId,tblleaves.PostingDate from tblleaves join tblemployees on tblleaves.empid=tblemployees.id where tblleaves.IsRead=:isread";
@@ -109,3 +109,4 @@
                     </div>
                 </nav>
             </header>
+            

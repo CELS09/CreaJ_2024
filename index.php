@@ -29,16 +29,13 @@ if (isset($_POST['signin'])) {
     }
 
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <!-- Title -->
-    <title>index</title>
-
+    <title>Inicio de Sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Admin Dashboard Template" />
@@ -56,7 +53,7 @@ if (isset($_POST['signin'])) {
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     <!--FAVICON-->
-    <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/Favicon.png" type="image/x-icon">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
