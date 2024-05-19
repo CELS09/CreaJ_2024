@@ -29,7 +29,9 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
         <link href="../assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
 
         <!-- Enlaces para estilos CSS -->
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css">
@@ -48,7 +50,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="card stats-card">
                             <div class="card-content">
 
-                                <span class="card-title">empleado</span>
+                                <span class="card-title">Empleados</span>
                                 <span class="stats-counter">
                                     <?php
                                     $sql = "SELECT id from tblemployees";
@@ -88,7 +90,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col s12 m12 l4">
                         <div class="card stats-card">
                             <div class="card-content">
-                                <span class="card-title">Tipo de licencia enumerado</span>
+                                <span class="card-title">Tipos de permisos enumerados</span>
                                 <?php
                                 $sql = "SELECT id from  tblleavetype";
                                 $query = $dbh->prepare($sql);
@@ -125,7 +127,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                             <th width="180">Fecha de publicación</th>
                                             <th>Estado</th>
-                                            <th align="center">Acción</th>
+                                            <!--<th align="center">Acción</th>-->
                                         </tr>
                                     </thead>
 

@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     setTimeout(function () {
-        Materialize.toast('Bienvenido al Sistema de Gestión de Licencias para Empleados', 4000)
+        Materialize.toast('¡Bienvenido al Sistema de Administrador!', 4000)
     }, 2000);
     
     // CounterUp Plugin

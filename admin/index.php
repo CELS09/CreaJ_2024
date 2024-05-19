@@ -45,7 +45,7 @@ if (isset($_POST['signin'])) {
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
     
     <!--FAVICON-->
-    <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
 
 </head>
 

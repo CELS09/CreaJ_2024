@@ -36,14 +36,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!-- Title -->
         <title>Admin | Cambia la contraseña</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
 
-        <!-- Styles -->
+        <!-- Enlaces de Estilos -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
@@ -57,7 +56,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <!--FIN DE FUENTE DE GOOGLE -->
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
     </head>
 
 
