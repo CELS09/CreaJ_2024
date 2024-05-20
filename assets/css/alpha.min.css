@@ -3380,6 +3380,8 @@ table.bordered>thead>tr {
     background-size: cover
 }
 
+
+/*IMAGEN DE EL LOGIN DE ADMIN*/
 .error-page.page-coming-soon {
     background: url(../images/mountains2.jpg) no-repeat;
     background-size: cover
@@ -3617,7 +3619,9 @@ body.search-app .search-input input:-ms-input-placeholder {
     margin-right: 5px
 }
 
-.signin-page {
+
+/*IMAGEN DE FONDO DE EL LOGIN DE ADMIN*/
+.signin-page {  
     height: 100%;
     width: 100%;
     background: url(../images/mountains2.jpg) no-repeat;

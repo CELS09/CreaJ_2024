@@ -43,56 +43,39 @@ if (isset($_POST['signin'])) {
     <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
     <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
     <!--FAVICON-->
     <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
 
 </head>
 
-<body class="signin-page">
+<body class="signin-page bg-gray-900 flex items-center justify-center h-screen">
 
-    <div class="mn-content valign-wrapper">
-
-        <main class="mn-inner container">
-
-            <a class="center-align" href="../index.php" style="color: white;">
-                <h5>
-                    <!--<b>Sistema de gestión de los permisos de empleados</b>-->
-                </h5>
+<div class="container mx-auto p-4">
+        <main class="flex flex-col items-center">
+            <a href="../index.php" class="text-cyan-400 text-center">
+                <h5 class="bg-green-600 w-32 font-bold rounded-xl text-xl font-bold">Regresar</h5>
             </a>
-
-            <h4 class="center-align" style="color: white; cursor: default;"><b>Login de administrador</b></h4>
-
-            <div class="valign">
-                <div class="row">
-                    <div class="col s12 m6 l4 offset-l4 offset-m3">
-                        <div class="card white darken-1">
-
-                            <div class="card-content">
-
-                                <span class="card-title center-align font-extrabold">Iniciar sesión</span>
-
-                                <div class="row">
-                                    <form class="col s12" name="signin" method="post">
-                                        <div class="input-field col s12">
-                                            <input id="username" type="text" name="username" class="validate"
-                                                autocomplete="off" required>
-                                            <label for="email">Nombre de usuario</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="password" type="password" class="validate" name="password"
-                                                autocomplete="off" required>
-                                            <label for="password">Password</label>
-                                        </div>
-                                        <div class="col s12 right-align m-t-sm">
-                                            <input type="submit" name="signin" value="INGRESAR" class="waves-effect waves-light btn teal">
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
+            <h4 class="text-white text-2xl font-bold mt-2 mb-6">Login de administrador</h4>
+            <div class="w-full max-w-sm">
+                <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+                    <div class="mb-4">
+                        <span class="block text-gray-700 text-center text-xl font-bold mb-2">Iniciar sesión</span>
                     </div>
+                    <form name="signin" method="post">
+                        <div class="mb-4">
+                            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Nombre de usuario</label>
+                            <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                            <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" required>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <input type="submit" name="signin" value="INGRESAR" class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>
