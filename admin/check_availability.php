@@ -10,10 +10,10 @@ $query-> bindParam(':empid',$empid, PDO::PARAM_STR);
 $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
-{
-echo "<span style='color:red'> Employee id already exists .</span>";
- echo "<script>$('#add').prop('disabled',true);</script>";
-} else{
+	{
+	echo "<span style='color:red'> Employee id already exists .</span>";
+ 	echo "<script>$('#add').prop('disabled',true);</script>";
+	} else{
 	
 echo "<span style='color:green'> Employee id available for Registration .</span>";
 echo "<script>$('#add').prop('disabled',false);</script>";
@@ -38,8 +38,4 @@ echo "<span style='color:green'> Email id available for Registration .</span>";
 echo "<script>$('#add').prop('disabled',false);</script>";
 }
 }
-
-
-
-
 ?>

@@ -27,7 +27,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             $error = "Tu contraseña actual es incorrecta";
         }
     }
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
