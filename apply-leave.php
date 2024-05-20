@@ -30,20 +30,18 @@ if (strlen($_SESSION['emplogin']) == 0) {
         if ($lastInsertId) {
             $msg = "Permiso solicitado con éxito";
         } else {
-            $error = "Algo salio mal. Vuelva a intentarlo";
+            $error = "Algo salió mal. Vuelva a intentarlo...";
         }
-
     }
-
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
 
     <head>
 
-        <!-- Title -->
-        <title>Empleado | Aplicar licencia</title>
+        <!-- Título -->
+        <title>Empleado | Aplicar permiso</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
@@ -87,9 +85,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
                 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
             }
         </style>
-
-
-
     </head>
 
     <body>
@@ -113,7 +108,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                 <div class="col m12">
                                                     <div class="row">
                                                         <?php if ($error) { ?>
-                                                            <div class="errorWrap"><strong>ERROR </strong>:
+                                                            <div class="errorWrap"><strong>ERROR</strong>:
                                                                 <?php echo htmlentities($error); ?>
                                                             </div>
                                                         <?php } else if ($msg) { ?>

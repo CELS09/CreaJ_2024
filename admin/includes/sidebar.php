@@ -34,7 +34,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="adddepartment.php">Agregar departamento</a></li>
-                        <li><a href="managedepartments.php">Admr departamento</a></li>
+                        <li><a href="managedepartments.php">Adm. departamento</a></li>
                     </ul>
                 </div>
             </li>
@@ -51,8 +51,8 @@
 
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="addleavetype.php">Agregar tipo de licencia</a></li>
-                        <li><a href="manageleavetype.php">Administrar tipo de licencia</a></li>
+                        <li><a href="addleavetype.php">Agregar tipo de permiso</a></li>
+                        <li><a href="manageleavetype.php">Adm. tipo de licencia</a></li>
                     </ul>
                 </div>
             </li>
@@ -69,7 +69,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="addemployee.php">Agregar empleado</a></li>
-                        <li><a href="manageemployee.php">Administrar Empleado</a></li>
+                        <li><a href="manageemployee.php">Administrar empleados</a></li>
 
                     </ul>
                 </div>
