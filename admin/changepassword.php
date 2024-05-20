@@ -80,7 +80,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php elseif ($msg): ?>
-                                        <div class="succWrap"><strong>SUCCESS</strong>:
+                                        <div class="succWrap"><strong>ÉXITO</strong>:
                                             <?php echo htmlentities($msg); ?>
                                         </div>
                                     <?php endif; ?>
