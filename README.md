@@ -5,12 +5,13 @@
 
 
 
-
 ## Herramientas 🛠️
 
 * XAMPP (Sistema de Gestión de Bases de Datos MySQL): https://www.apachefriends.org/download.html 
 * Visual Studio Code (Editor de Código Fuente): https://code.visualstudio.com/download
 * phpMyAdmin (Aplicación Web para Administrar Bases de Datos MySQL): https://www.phpmyadmin.net/downloads/
+* PHP (Lenguaje de Programación interpretado​ del lado del Servidor): https://www.php.net/downloads.php
+* GitHub Desktop (Aplicación de Escritorio para el Desarrollo Colaborativo): https://desktop.github.com/
 
 ## Guía de Instalación 💻
 
