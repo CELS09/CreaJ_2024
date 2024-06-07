@@ -8,9 +8,9 @@
 
 ## Herramientas 🛠️
 
-vtfvvtb
-
-
+* XAMPP (Sistema de Gestión de Bases de Datos MySQL): https://www.apachefriends.org/download.html 
+* Visual Studio Code (Editor de Código Fuente): https://code.visualstudio.com/download
+* phpMyAdmin (Aplicación Web para Administrar Bases de Datos MySQL): https://www.phpmyadmin.net/downloads/
 
 ## Guía de Instalación 💻
 
