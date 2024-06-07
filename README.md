@@ -12,10 +12,14 @@
 * phpMyAdmin (Aplicación Web para Administrar Bases de Datos MySQL): https://www.phpmyadmin.net/downloads/
 * PHP (Lenguaje de Programación interpretado​ del lado del Servidor): https://www.php.net/downloads.php
 * GitHub Desktop (Aplicación de Escritorio para el Desarrollo Colaborativo): https://desktop.github.com/
+* Less (Dinámico Lenguaje de Hojas de Estilo): https://lesscss.org/
 
 ## Guía de Instalación 💻
 
-
+Antes de comenzar, asegúrese de tener instalado:
+* XAMPP (Última Versión).
+* GitHub Desktop.
+* Visual Studio Code (O algún otro Editor de Código).
 
 
 ## Autores ✒️
