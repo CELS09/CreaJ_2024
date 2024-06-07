@@ -3382,6 +3382,7 @@ table.bordered>thead>tr {
 
 
 /*IMAGEN DE EL LOGIN DE ADMIN*/
+/*A LA IMAGEN SE LE QUITO EL .jpg ya que no se utilizara de fondo*/
 .error-page.page-coming-soon {
     background: url(../images/mountains2.jpg) no-repeat;
     background-size: cover
@@ -3621,6 +3622,7 @@ body.search-app .search-input input:-ms-input-placeholder {
 
 
 /*IMAGEN DE FONDO DE EL LOGIN DE ADMIN*/
+/*A LA IMAGEN SE LE QUITO EL .jpg ya que no se utilizara de fondo*/
 .signin-page {  
     height: 100%;
     width: 100%;

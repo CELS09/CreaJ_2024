@@ -14,23 +14,17 @@ if (isset($_POST['signin'])) {
         $_SESSION['alogin'] = $_POST['username'];
         echo "<script type='text/javascript'> document.location = 'changepassword.php'; </script>";
     } else {
-
         echo "<script>alert('Invalid Details');</script>";
-
     }
-
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <!-- Title -->
     <title>Inicio de Sesión | Administración</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Admin Dashboard Template" />
@@ -44,49 +38,93 @@ if (isset($_POST['signin'])) {
     <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
-    <!--FAVICON-->
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
 
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Estilo para mantener el formulario centrado */
+        .signin-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #27233B; /* Color de fondo opcional */
+            padding: 20px
+        }
+    </style>
 </head>
 
-<body class="signin-page bg-gray-900 flex items-center justify-center h-screen">
+<body class="signin-page">
 
 <div class="container mx-auto p-4">
-        <main class="flex flex-col items-center">
-            <a href="../index.php" class="text-cyan-400 text-center">
-                <h5 class="bg-green-600 w-32 font-bold rounded-xl text-xl font-bold">Regresar</h5>
-            </a>
-            <h4 class="text-white text-2xl font-bold mt-2 mb-6">Login de administrador</h4>
-            <div class="w-full max-w-sm">
-                <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
-                    <div class="mb-4">
-                        <span class="block text-gray-700 text-center text-xl font-bold mb-2">Iniciar sesión</span>
-                    </div>
-                    <form name="signin" method="post">
-                        <div class="mb-4">
-                            <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Nombre de usuario</label>
-                            <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                            <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" required>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <input type="submit" name="signin" value="INGRESAR" class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                        </div>
-                    </form>
+    <main class="flex flex-col items-center">
+        <a href="../index.php" class="text-cyan-400 text-center">
+            <h5 class="bg-green-600 w-32 rounded-xl text-xl font-bold p-2">Regresar</h5>
+        </a>
+        <h4 class="text-white text-2xl font-bold mt-8 mb-6">Login de administrador</h4>
+        <div class="w-full max-w-xs sm:max-w-sm">
+            <div class="bg-white w-full shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <span class="block text-gray-700 text-center text-3xl font-bold pb-4">Iniciar sesión</span>
                 </div>
+                <form id="myForm" name="signin" method="post">
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-700 text-base font-bold mb-2">Nombre de usuario</label>
+                        <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Ingrese su usuario">
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block text-gray-700 text-base font-bold mb-2">Contraseña</label>
+                        <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button type="submit" name="signin" class="w-full bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
+                    </div>
+                </form>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
 
-    <!-- Javascripts -->
-    <script src="../assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-    <script src="../assets/plugins/materialize/js/materialize.min.js"></script>
-    <script src="../assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-    <script src="../assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-    <script src="../assets/js/alpha.min.js"></script>
+
+<!-- Javascripts -->
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        const form = event.target;
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        if (username === '' || password === '') {
+            event.preventDefault(); // Evita el envío del formulario
+            Swal.fire({
+                icon: 'error',
+                title: 'Debe ingresar los datos',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK',
+                focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
+                allowOutsideClick: false, // Evita que el usuario pueda hacer clic fuera de la alerta para cerrarla
+                customClass: {
+                    popup: 'my-popup', // Clase personalizada para el contenedor de la alerta
+                }
+            }).then((result) => {
+                // Restablece el foco al primer campo de entrada (username) si el usuario cierra la alerta
+                if (result.isConfirmed || result.dismiss === Swal.DismissReason.backdrop) {
+                    document.getElementById('username').focus();
+                }
+            });
+        }
+    });
+</script>
+<script src="../assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+<script src="../assets/plugins/materialize/js/materialize.min.js"></script>
+<script src="../assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+<script src="../assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+<script src="../assets/js/alpha.min.js"></script>
 
 </body>
 </html>
