@@ -3772,7 +3772,7 @@ input[type=range]+.thumb {
     }
 
     .row .col.l8 {
-        width: 66.6666666667%;
+        width: 65%;
         margin-left: auto;
         left: auto;
         right: auto
@@ -4447,13 +4447,16 @@ footer.page-footer .footer-copyright {
 .card {
     position: relative;
     margin: 0.5rem 0 1rem 0;
-    background-color: #fff;
+    
     transition: box-shadow .25s;
-    border-radius: 10px
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .card .card-title {
-    font-size: 24px;
     font-weight: 300
 }
 

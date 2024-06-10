@@ -58,7 +58,7 @@
                     </a>
                 </section>
 
-                <img class="left" src="../assets/images/WorkFusion.png" style="margin-top: 9px; margin-left: 4%;" alt="" height="40px">
+                <img class="left" src="../assets/images/WorkFusion.png" style="margin-top: 9px;" alt="" height="40px">
 
                 <div class="header-title col s3">
                     <span class="chapter-title">WorkFusion | Empleado</span>

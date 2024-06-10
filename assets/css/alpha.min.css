@@ -1727,7 +1727,7 @@ li.active .nav-drop-icon {
 .card>.card-content>.card-title,
 .card>.card-reveal>.card-title {
     line-height: 24px;
-    font-size: 13px;
+    
     font-weight: 700;
     display: block;
     margin-bottom: 20px;

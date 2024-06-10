@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (isset($_POST['signin'])) {
     $uname = $_POST['username'];
     $password = md5($_POST['password']);
@@ -17,22 +17,21 @@ if (isset($_POST['signin'])) {
             $_SESSION['eid'] = $result->id;
         }
         if ($status == 0) {
-            $msg = "Your account is Inactive. Please contact admin";
+            $msg = "Su cuenta está inactiva. Póngase en contacto con el administrador";
         } else {
             $_SESSION['emplogin'] = $_POST['username'];
             echo "<script type='text/javascript'> document.location = 'emp-changepassword.php'; </script>";
         }
     } else {
 
-        echo "<script>alert('Invalid Details');</script>";
-
+        echo "<script>alert('DATOS INVÀLIDOS');</script>";
     }
-
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- Title -->
     <title>Inicio de Sesión</title>
@@ -47,13 +46,24 @@ if (isset($_POST['signin'])) {
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
 
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
 
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!--FAVICON-->
     <link rel="shortcut icon" href="../CreaJ_2024/assets/images/Favicon.png" type="image/x-icon">
+
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -65,6 +75,8 @@ if (isset($_POST['signin'])) {
 </head>
 
 <body>
+
+
     <div class="loader-bg"></div>
     <div class="loader">
         <div class="preloader-wrapper big active">
@@ -121,14 +133,12 @@ if (isset($_POST['signin'])) {
             <nav class="cyan darken-1">
                 <div class="nav-wrapper row">
                     <section class="material-design-hamburger navigation-toggle">
-                        <a href="#" data-activates="slide-out"
-                            class="button-collapse show-on-large material-design-hamburger__icon">
+                        <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
                             <span class="material-design-hamburger__layer"></span>
                         </a>
                     </section>
                     <div class="header-title col s5">
-                        <span class="chapter-title">WorkFusion | Sistema del empleado
-                        </span>
+                        <span class="chapter-title">WorkFusion | Sistema del empleado</span>
                     </div>
                 </div>
             </nav>
@@ -152,7 +162,7 @@ if (isset($_POST['signin'])) {
                         </a>
                     </li>
 
-                    <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
+                    <hr class="border-gray-300 my-0.5 mx-5">
 
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="admin/">
@@ -162,13 +172,12 @@ if (isset($_POST['signin'])) {
                         </a>
                     </li>
 
-                    <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
+                    <hr class="border-gray-300 my-0.5 mx-5">
 
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="forgot-password.php">
                             <i class="material-icons">
-                                <img
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
                             </i>Contraseña de recuperación
                         </a>
                     </li>
@@ -185,37 +194,37 @@ if (isset($_POST['signin'])) {
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
-                    <div class="page-title">
-                        <h4><b>Bienvenido al sistema de gestión de permisos de empleados WorkFusion</b></h4>
+                    <div class="font-bold text-3xl mb-7 mt-24">
+                        <p class="text-center text-5xl" style="font-family: averia libre;">BIENVENIDO AL SISTEMA DE GESTIÓN DE</p>
+                        <p class="text-center text-4xl" style="font-family: averia libre;">PERMISOS DE EMPLEADOS WORKFUSION</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
                         <div class="card white darken-1">
 
-                            <div class="card-content ">
-                                <span class="card-title" style="font-size:20px;">Login del empleado</span>
+                            <div class="card-content h-auto">
+                                <span class="card-title text-xl text-center">Login del empleado</span>
                                 <?php if ($msg) { ?>
                                     <div class="errorWrap"><strong>Error</strong> :
                                         <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
-                                <div class="row">
-                                    <form class="col s12" name="signin" method="post">
-                                        <div class="input-field col s12">
-                                            <input id="username" type="text" name="username" class="validate"
-                                                autocomplete="off" required>
-                                            <label for="email">Email</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="password" type="password" class="validate" name="password"
-                                                autocomplete="off" required>
-                                            <label for="password">Password</label>
-                                        </div>
-                                        <div class="col s12 right-align m-t-sm">
 
-                                            <input type="submit" name="signin" value="INGRESAR" class="waves-effect waves-light btn teal">
+                                <div class="row">
+                                    <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-8 mb-4" name="signin" method="post">
+                                        <div class="mb-4">
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Email</label>
+                                            <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Email">
+                                        </div>
+                                        <div class="mb-6">
+                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                                            <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Password">
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <button type="submit" name="signin" class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
@@ -228,6 +237,35 @@ if (isset($_POST['signin'])) {
     <div class="left-sidebar-hover"></div>
 
     <!-- Javascripts -->
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            const form = event.target;
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (username === '' || password === '') {
+                event.preventDefault(); // Evita el envío del formulario
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Debe ingresar los datos',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK',
+                    focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
+                    allowOutsideClick: false, // Evita que el usuario pueda hacer clic fuera de la alerta para cerrarla
+                    customClass: {
+                        popup: 'my-popup', // Clase personalizada para el contenedor de la alerta
+                    }
+                }).then((result) => {
+                    // Restablece el foco al primer campo de entrada (username) si el usuario cierra la alerta
+                    if (result.isConfirmed || result.dismiss === Swal.DismissReason.backdrop) {
+                        document.getElementById('username').focus();
+                    }
+                });
+            }
+        });
+    </script>
+
     <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
     <script src="assets/plugins/materialize/js/materialize.min.js"></script>
     <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
@@ -235,4 +273,5 @@ if (isset($_POST['signin'])) {
     <script src="assets/js/alpha.min.js"></script>
 
 </body>
+
 </html>

@@ -34,7 +34,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <!--FIN DE FUENTE DE GOOGLE -->
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../CreaJ_2024/assets/images/Favicon.png" type="image/x-icon">
 
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
