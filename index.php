@@ -203,7 +203,7 @@ if (isset($_POST['signin'])) {
                         <div class="card white darken-1">
 
                             <div class="card-content h-auto">
-                                <span class="card-title text-xl text-center">Login del empleado</span>
+                                <span class="mt-4 card-title text-xl text-center">Login del empleado</span>
                                 <?php if ($msg) { ?>
                                     <div class="errorWrap"><strong>Error</strong> :
                                         <?php echo htmlentities($msg); ?>
@@ -221,7 +221,7 @@ if (isset($_POST['signin'])) {
                                             <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Password">
                                         </div>
                                         <div class="flex items-center justify-center">
-                                            <button type="submit" name="signin" class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
+                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
                                         </div>
                                     </form>
 
