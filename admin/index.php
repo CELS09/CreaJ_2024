@@ -12,9 +12,9 @@ if (isset($_POST['signin'])) {
     $results = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
         $_SESSION['alogin'] = $_POST['username'];
-        echo "<script type='text/javascript'> document.location = 'changepassword.php'; </script>";
+        echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
     } else {
-        echo "<script>alert('Invalid Details');</script>";
+        echo "<script>alert('Detalles no válidos');</script>";
     }
 }
 ?>
@@ -43,9 +43,9 @@ if (isset($_POST['signin'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -76,7 +76,7 @@ if (isset($_POST['signin'])) {
             </a>
 
             <h4 class="text-white text-3xl font-bold mt-8 mb-6" style="font-family: averia libre;">Login de administrador</h4>
-            
+
             <div class="w-full max-w-xs sm:max-w-sm">
                 <div class="bg-white w-full shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
                     <div class="mb-4">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['emplogin']) == 0) {
     header('location:index.php');
 } else {
@@ -22,12 +22,12 @@ if (strlen($_SESSION['emplogin']) == 0) {
             $chngpwd1->bindParam(':username', $username, PDO::PARAM_STR);
             $chngpwd1->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
             $chngpwd1->execute();
-            $msg = "Your Password succesfully changed";
+            $msg = "Su contraseña ha sido cambiada exitosamente";
         } else {
-            $error = "Your current password is wrong";
+            $error = "Su contraseña actual es incorrecta";
         }
     }
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -58,7 +58,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link rel="stylesheet" href="../includes\style-traductor.css">
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <style>
             .errorWrap {
@@ -83,17 +83,17 @@ if (strlen($_SESSION['emplogin']) == 0) {
 
     <body>
 
-        <?php include ('includes/header.php'); ?>
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/header.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
 
         <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
         <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script>
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({
-                    pageLanguage: "es",
-                    includedLanguages: "fr,en,es,pt,zh-CN,ru",
-                },
+                        pageLanguage: "es",
+                        includedLanguages: "fr,en,es,pt,zh-CN,ru",
+                    },
                     "google_translate_element"
                 );
             }
@@ -118,15 +118,15 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>SUCCESS</strong>:
+                                        <div class="succWrap"><strong>SUCCESS</strong>:
                                             <?php echo htmlentities($msg); ?>
-                                            </div>
+                                        </div>
                                     <?php } ?>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input id="password" type="password" class="validate" autocomplete="off"
                                                 name="password" required>
-                                            <label for="password">contraseña actual</label>
+                                            <label for="password">Contraseña actual</label>
                                         </div>
 
                                         <div class="input-field col s12">

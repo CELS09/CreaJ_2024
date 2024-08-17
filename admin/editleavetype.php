@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
@@ -16,12 +16,10 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->bindParam(':lid', $lid, PDO::PARAM_STR);
         $query->execute();
 
-        $msg = "Leave type updated Successfully";
-
-
+        $msg = "El tipo de permiso se actualizó correctamente";
     }
 
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -45,7 +43,8 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+
         <style>
             .errorWrap {
                 padding: 10px;
@@ -68,9 +67,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
 
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -87,9 +86,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>SUCCESS</strong> :
+                                        <div class="succWrap"><strong>SUCCESS</strong> :
                                             <?php echo htmlentities($msg); ?>
-                                            </div>
+                                        </div>
                                     <?php } ?>
                                     <?php
                                     $lid = intval($_GET['lid']);
@@ -118,7 +117,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <label for="deptshortname">Descripción</label>
                                                 </div>
 
-                                            <?php }
+                                        <?php }
                                     } ?>
 
 
@@ -133,7 +132,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 
 
-                                    </div>
+                                            </div>
 
                                 </form>
                             </div>

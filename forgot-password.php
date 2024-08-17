@@ -3,150 +3,160 @@ session_start();
 error_reporting(0);
 include('includes/config.php');
 // Code for change password 
-if(isset($_POST['change']))
-    {
-$newpassword=md5($_POST['newpassword']);
-$empid=$_SESSION['empid'];
+if (isset($_POST['change'])) {
+    $newpassword = md5($_POST['newpassword']);
+    $empid = $_SESSION['empid'];
 
-$con="update tblemployees set Password=:newpassword where id=:empid";
-$chngpwd1 = $dbh->prepare($con);
-$chngpwd1-> bindParam(':empid', $empid, PDO::PARAM_STR);
-$chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
-$chngpwd1->execute();
-$msg="Su contraseña ha sido cambiada con éxito";
+    $con = "update tblemployees set Password=:newpassword where id=:empid";
+    $chngpwd1 = $dbh->prepare($con);
+    $chngpwd1->bindParam(':empid', $empid, PDO::PARAM_STR);
+    $chngpwd1->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
+    $chngpwd1->execute();
+    $msg = "Su contraseña ha sido cambiada con éxito";
 }
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        
-        <!-- Title -->
-        <title>WorkFusion | Recuperación de contraseña</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <meta charset="UTF-8">
-        <meta name="description" content="Responsive Admin Dashboard Template" />
-        <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
-        
-        <!-- Styles -->
-        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../CreaJ_2024/assets/images/WorkFusion(letras).png" type="image/x-icon">
+<head>
 
-        <!-- Theme Styles -->
-        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Title -->
+    <title>WorkFusion | Recuperación de contraseña</title>
 
-        <!--Fuente de Google-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
+
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
+
+    <!-- Theme Styles -->
+    <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
         .errorWrap {
             padding: 10px;
             margin: 0 0 20px 0;
             background: #fff;
             border-left: 4px solid #dd3d36;
-            -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
         }
 
-        .succWrap{
+        .succWrap {
             padding: 10px;
             margin: 0 0 20px 0;
             background: #fff;
             border-left: 4px solid #5cb85c;
-            -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-            box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
         }
     </style>
-        
-    </head>
-    <body>
-        <div class="loader-bg"></div>
-        <div class="loader">
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-blue">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div><div class="gap-patch">
+
+</head>
+
+<body>
+    <div class="loader-bg"></div>
+    <div class="loader">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
                     <div class="circle"></div>
-                    </div><div class="circle-clipper right">
-                    <div class="circle"></div>
-                    </div>
                 </div>
-                <div class="spinner-layer spinner-spinner-teal lighten-1">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div><div class="gap-patch">
+                <div class="gap-patch">
                     <div class="circle"></div>
-                    </div><div class="circle-clipper right">
-                    <div class="circle"></div>
-                    </div>
                 </div>
-                <div class="spinner-layer spinner-yellow">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div><div class="gap-patch">
+                <div class="circle-clipper right">
                     <div class="circle"></div>
-                    </div><div class="circle-clipper right">
-                    <div class="circle"></div>
-                    </div>
                 </div>
-                <div class="spinner-layer spinner-green">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div><div class="gap-patch">
+            </div>
+            <div class="spinner-layer spinner-spinner-teal lighten-1">
+                <div class="circle-clipper left">
                     <div class="circle"></div>
-                    </div><div class="circle-clipper right">
+                </div>
+                <div class="gap-patch">
                     <div class="circle"></div>
-                    </div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
                 </div>
             </div>
         </div>
-        <div class="mn-content fixed-sidebar">
-            <header class="mn-header navbar-fixed">
-                <nav class="cyan darken-1">
-                    <div class="nav-wrapper row">
-                        <section class="material-design-hamburger navigation-toggle">
-                            <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
-                                <span class="material-design-hamburger__layer"></span>
-                            </a>
-                        </section>
-                        <div class="header-title col s10">      
-                            <span class="chapter-title">WorkFusion | Sistema de gestión de empleados</span>
-                        </div>
-                      
-                           
-                        </form>
-                     
-                        
+    </div>
+    <div class="mn-content fixed-sidebar">
+        <header class="mn-header navbar-fixed">
+            <nav class="cyan darken-1">
+                <div class="nav-wrapper row">
+                    <section class="material-design-hamburger navigation-toggle">
+                        <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
+                            <span class="material-design-hamburger__layer"></span>
+                        </a>
+                    </section>
+                    <div class="header-title col s10">
+                        <span class="chapter-title">WorkFusion | Sistema de gestión de empleados</span>
                     </div>
-                </nav>
-            </header>
-           
-            <aside id="slide-out" class="side-nav white fixed">
+
+
+                    </form>
+
+
+                </div>
+            </nav>
+        </header>
+
+        <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
                     <li>&nbsp;</li>
 
-                        <li class="no-padding">
-                            <a class="waves-effect waves-grey" href="index.php">
-                                
-                                <!-- USAMOS EL (class="material-icons) DENTRO DE LOS "<i>" PARA QUE QUEDE AJUSTADO AL TEXTO-->
-                                <i class="material-icons">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVR4nM3TsUrDUBSH8d8u6KCTLvoAujiLgs666dBVBKm4utsXaHfRybyEq07WSZ9BpYOTY0W5cAqXQFOTgPiHj4RzLt8NhxP+KEsoMMy4xWIdyRo2cYNHnGQMcR391VmiLr7wgU884yLjJeqpP8ZplewJ5/E+hz7uMvpRF+fSl05Nurnzy3F04nwt2VHM77CtbAffGdttZGclWbeNbAWvIUrP5TaylAVsYb5U79SRpSUdxU5NGOG4iawozWtC0UR2EFuei8bYbyJL2UAPV7jEetabKXvAIH7kWQxwXyXbw/uUWZV5w26V7P/kB29nXp92NMJ+AAAAAElFTkSuQmCC">
-                                </i>Login empleado
-                            </a>
-                        </li>
+                    <li class="no-padding">
+                        <a class="waves-effect waves-grey" href="index.php">
 
-                        <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
+                            <!-- USAMOS EL (class="material-icons) DENTRO DE LOS "<i>" PARA QUE QUEDE AJUSTADO AL TEXTO-->
+                            <i class="material-icons">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVR4nM3TsUrDUBSH8d8u6KCTLvoAujiLgs666dBVBKm4utsXaHfRybyEq07WSZ9BpYOTY0W5cAqXQFOTgPiHj4RzLt8NhxP+KEsoMMy4xWIdyRo2cYNHnGQMcR391VmiLr7wgU884yLjJeqpP8ZplewJ5/E+hz7uMvpRF+fSl05Nurnzy3F04nwt2VHM77CtbAffGdttZGclWbeNbAWvIUrP5TaylAVsYb5U79SRpSUdxU5NGOG4iawozWtC0UR2EFuei8bYbyJL2UAPV7jEetabKXvAIH7kWQxwXyXbw/uUWZV5w26V7P/kB29nXp92NMJ+AAAAAElFTkSuQmCC">
+                            </i>Login empleado
+                        </a>
+                    </li>
+
+                    <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
 
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="forgot-password.php">
@@ -167,93 +177,93 @@ $msg="Su contraseña ha sido cambiada con éxito";
             </div>
         </aside>
 
-            <main class="mn-inner">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="page-title">
-                            <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña de empleado</p>
-                        </div>
+        <main class="mn-inner">
+            <div class="row">
+                <div class="col s12">
+                    <div class="page-title">
+                        <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña de empleado</p>
+                    </div>
 
-                          <div class="col s12 m6 l8 offset-l2 offset-m3">
-                              <div class="card white darken-1">
+                    <div class="col s12 m6 l8 offset-l2 offset-m3">
+                        <div class="card white darken-1">
 
-                                  <div class="card-content ">
-                                      <span class="card-title" style="font-size:20px;">Digite sus credenciales</span>
-                                         <?php if($msg){?><div class="succWrap"><strong>Éxito </strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
-                                       <div class="row">
-                                           <form class="col s12" name="signin" method="post">
-                                               <div class="input-field col s12">
-                                                   <input id="empid" type="text" name="empid" class="validate" autocomplete="off" required >
-                                                   <label for="email">Id Empleado</label>
-                                               </div>
-                                               <div class="input-field col s12">
-                                                   <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
-                                                   <label for="password">Email</label>
-                                               </div>
-                                               <div class="col s12 right-align m-t-sm">
-                                                
-                                                   <input type="submit" name="submit" value="Iniciar sesión" class="waves-effect waves-light btn teal">
-                                               </div>
-                                           </form>
-                                      </div>
-                                  </div>
-<?php if(isset($_POST['submit']))
-{
-$empid=$_POST['empid'];
-$email=$_POST['emailid'];
-$sql ="SELECT id FROM tblemployees WHERE EmailId=:email and EmpId=:empid";
-$query= $dbh -> prepare($sql);
-$query-> bindParam(':email', $email, PDO::PARAM_STR);
-$query-> bindParam(':empid', $empid, PDO::PARAM_STR);
-$query-> execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-if($query->rowCount() > 0)
-{
-foreach ($results as $result) {
-    $_SESSION['empid']=$result->id;
-  } 
-    ?>
+                            <div class="card-content ">
+                                <span class="card-title" style="font-size:20px;">Digite sus credenciales</span>
+                                <?php if ($msg) { ?><div class="succWrap"><strong>Éxito </strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
+                                <div class="row">
+                                    <form class="col s12" name="signin" method="post">
+                                        <div class="input-field col s12">
+                                            <input id="empid" type="text" name="empid" class="validate" autocomplete="off" required>
+                                            <label for="email">Id Empleado</label>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
+                                            <label for="password">Email</label>
+                                        </div>
+                                        <div class="col s12 right-align m-t-sm">
 
- <div class="row">
-          <span class="card-title" style="font-size:20px;">cambia tu contraseña </span>                                     
-    <form class="col s12" name="udatepwd" method="post">
-  <div class="input-field col s12">
- <input id="password" type="password" name="newpassword" class="validate" autocomplete="off" required>
+                                            <input type="submit" name="submit" value="Iniciar sesión" class="waves-effect waves-light btn teal">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <?php if (isset($_POST['submit'])) {
+                                $empid = $_POST['empid'];
+                                $email = $_POST['emailid'];
+                                $sql = "SELECT id FROM tblemployees WHERE EmailId=:email and EmpId=:empid";
+                                $query = $dbh->prepare($sql);
+                                $query->bindParam(':email', $email, PDO::PARAM_STR);
+                                $query->bindParam(':empid', $empid, PDO::PARAM_STR);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                        $_SESSION['empid'] = $result->id;
+                                    }
+                            ?>
+
+                                    <div class="row">
+                                        <span class="card-title" style="font-size:20px;">cambia tu contraseña </span>
+                                        <form class="col s12" name="udatepwd" method="post">
+                                            <div class="input-field col s12">
+                                                <input id="password" type="password" name="newpassword" class="validate" autocomplete="off" required>
                                                 <label for="password">Nueva contraseña</label>
                                             </div>
 
-<div class="input-field col s12">
-<input id="password" type="password" name="confirmpassword" class="validate" autocomplete="off" required>
- <label for="password">Confirmar contraseña</label>
-</div>
+                                            <div class="input-field col s12">
+                                                <input id="password" type="password" name="confirmpassword" class="validate" autocomplete="off" required>
+                                                <label for="password">Confirmar contraseña</label>
+                                            </div>
 
 
-<div class="input-field col s12">
-<button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Cambio</button>
+                                            <div class="input-field col s12">
+                                                <button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Cambio</button>
 
-</div>
-</div>
-</form>
-<?php } else{ ?>
-<div class="errorWrap" style="margin-left: 2%; font-size:22px;">
- <strong>ERROR</strong> : <?php echo htmlentities("Invalid details");
-}?></div>
-<?php } ?>
-                              </div>
-                          </div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                <?php } else { ?>
+                                    <div class="errorWrap" style="margin-left: 2%; font-size:22px;">
+                                        <strong>ERROR</strong> : <?php echo htmlentities("Invalid details");
+                                                                } ?>
+                                    </div>
+                                <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </main>
-            
-        </div>
-        <div class="left-sidebar-hover"></div>
-        
-        <!-- Javascripts -->
-        <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-        <script src="assets/plugins/materialize/js/materialize.min.js"></script>
-        <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-        <script src="assets/js/alpha.min.js"></script>
-        
-    </body>
+            </div>
+        </main>
+
+    </div>
+    <div class="left-sidebar-hover"></div>
+
+    <!-- Javascripts -->
+    <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+    <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+    <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+    <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+    <script src="assets/js/alpha.min.js"></script>
+
+</body>
+
 </html>

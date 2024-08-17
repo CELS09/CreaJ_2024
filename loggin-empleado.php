@@ -37,7 +37,7 @@ if (isset($_POST['signin'])) {
     <title>Loggin Empleado</title>
 
     <!--FAVICON-->
-    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
     <!--TAILWIND-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -45,33 +45,33 @@ if (isset($_POST['signin'])) {
 </head>
 
 <body class="bg-gray-300">
-    
 
-<div class="flex justify-center items-center h-screen">
-    <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
-        <div class="bg-teal-700 shadow-md rounded-md p-8">
-            <h2 class="text-2xl text-center font-semibold mb-6">Login del empleado</h2>
-            <?php if ($msg) { ?>
-                <div class="bg-red-100 text-red-600 p-3 rounded-md mb-4">
-                    <strong>Error:</strong> <?php echo htmlentities($msg); ?>
-                </div>
-            <?php } ?>
-            <form class="space-y-4" name="signin" method="post">
-                <div>
-                    <label for="username" class="block text-gray-700">Email</label>
-                    <input id="username" type="text" name="username" class="block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-teal-500" autocomplete="off" required>
-                </div>
-                <div>
-                    <label for="password" class="block text-gray-700">Password</label>
-                    <input id="password" type="password" name="password" class="block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-teal-500" autocomplete="off" required>
-                </div>
-                <div class="flex flex-col">
-                    <button type="submit" name="signin" class="inline-block bg-teal-500 hover:bg-teal-600 text-black font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out">INGRESAR</button>
-                </div>
-            </form>
+
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-full sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
+            <div class="bg-teal-700 shadow-md rounded-md p-8">
+                <h2 class="text-2xl text-center font-semibold mb-6">Login del empleado</h2>
+                <?php if ($msg) { ?>
+                    <div class="bg-red-100 text-red-600 p-3 rounded-md mb-4">
+                        <strong>Error:</strong> <?php echo htmlentities($msg); ?>
+                    </div>
+                <?php } ?>
+                <form class="space-y-4" name="signin" method="post">
+                    <div>
+                        <label for="username" class="block text-gray-700">Email</label>
+                        <input id="username" type="text" name="username" class="block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-teal-500" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-gray-700">Password</label>
+                        <input id="password" type="password" name="password" class="block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-teal-500" autocomplete="off" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <button type="submit" name="signin" class="inline-block bg-teal-500 hover:bg-teal-600 text-black font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out">INGRESAR</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 

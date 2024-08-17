@@ -57,8 +57,8 @@ if (isset($_POST['signin'])) {
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!--FAVICON-->
-    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/Favicon.png" type="image/x-icon">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -74,7 +74,7 @@ if (isset($_POST['signin'])) {
         <![endif]-->
 </head>
 
-<body >
+<body>
 
 
     <div class="loader-bg"></div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
@@ -15,9 +15,9 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Leave type added Successfully";
+            $msg = "El tipo de permiso se agregó correctamente";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Algo salió mal. Inténtalo de nuevo.";
         }
 
     }
@@ -48,13 +48,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <style>
             .errorWrap {
@@ -78,9 +78,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
 
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">

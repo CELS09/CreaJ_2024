@@ -6,8 +6,6 @@ if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
 
-
-
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -30,7 +28,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,9 +62,10 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
+        
         <?php include('includes/header.php'); ?>
-
         <?php include('includes/sidebar.php'); ?>
+
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">

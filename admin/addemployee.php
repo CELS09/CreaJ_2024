@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
@@ -38,9 +38,9 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Employee record added Successfully";
+            $msg = "Registro de empleado añadido exitosamente";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Algo salió mal. Inténtalo de nuevo.";
         }
 
     }
@@ -68,14 +68,14 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
 
@@ -147,8 +147,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 
     <body>
 
-        <?php include ('includes/header.php'); ?>
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/header.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
 
         <main class="mn-inner">
             <div class="row">
@@ -254,8 +254,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         </div>
 
                                                         <div class="input-field col m6 s12">
-                                                            <label style="cursor: pointer;" for="birthdate">Fecha de nacimiento</label>
-                                                            <input style="cursor: pointer;" id="birthdate" name="dob" type="date" class="datepicker" autocomplete="off">
+                                                            <label style="cursor: pointer;" for="birthdate">Fecha de
+                                                                nacimiento</label>
+                                                            <input style="cursor: pointer;" id="birthdate" name="dob"
+                                                                type="date" class="datepicker" autocomplete="off">
                                                         </div>
 
                                                         <div class="input-field col m6 s12">
@@ -285,9 +287,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="input-field col s12 center-align">
-                                                    <button type="submit" name="add" onclick="return valid();" id="add" class="waves-effect waves-light btn indigo m-b-xs">AGREGAR EMPLEADO</button>
+                                                    <button type="submit" name="add" onclick="return valid();" id="add"
+                                                        class="waves-effect waves-light btn indigo m-b-xs">AGREGAR
+                                                        EMPLEADO</button>
                                                 </div>
 
                                             </div>

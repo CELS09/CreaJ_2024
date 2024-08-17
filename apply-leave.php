@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['emplogin']) == 0) {
     header('location:src/index.php');
 } else {
@@ -54,17 +54,17 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\WorkFusion(letras).png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <style>
             .errorWrap {
@@ -88,9 +88,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
     </head>
 
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
 
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -112,9 +112,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                                 <?php echo htmlentities($error); ?>
                                                             </div>
                                                         <?php } else if ($msg) { ?>
-                                                                <div class="succWrap"><strong>ÉXITO</strong>:
+                                                            <div class="succWrap"><strong>ÉXITO</strong>:
                                                                 <?php echo htmlentities($msg); ?>
-                                                                </div>
+                                                            </div>
                                                         <?php } ?>
 
 
@@ -132,7 +132,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                                             value="<?php echo htmlentities($result->LeaveType); ?>">
                                                                             <?php echo htmlentities($result->LeaveType); ?>
                                                                         </option>
-                                                                    <?php }
+                                                                <?php }
                                                                 } ?>
                                                             </select>
                                                         </div>

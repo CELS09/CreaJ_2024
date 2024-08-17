@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
@@ -11,11 +11,10 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query = $dbh->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Department record deleted";
-
+        $msg = "Registro del departamento eliminado";
     }
 
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="es">
 
@@ -30,6 +29,9 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
 
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+
         <!-- Styles -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,8 +42,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
 
@@ -70,9 +72,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
 
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -129,7 +131,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         onclick="return confirm('Do you want to delete');"> <i
                                                             class="material-icons">delete_forever</i></a></td>
                                             </tr>
-                                            <?php $cnt++;
+                                    <?php $cnt++;
                                         }
                                     } ?>
                                 </tbody>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['emplogin']) == 0) {
     header('location:index.php');
 } else {
@@ -33,7 +33,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
         $msg = "Employee record updated Successfully";
     }
 
-    ?>
+?>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -56,10 +56,13 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+
         <!--FUENTE DE GOOGLE PARA EL NOMBRE DEL PERFIL -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
 
@@ -91,8 +94,8 @@ if (strlen($_SESSION['emplogin']) == 0) {
 
     <body>
 
-        <?php include ('includes/header.php'); ?>
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/header.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
 
         <main class="mn-inner">
             <div class="row">
@@ -110,9 +113,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>SUCCESS</strong> :
+                                        <div class="succWrap"><strong>SUCCESS</strong> :
                                             <?php echo htmlentities($msg); ?>
-                                            </div>
+                                        </div>
                                     <?php } ?>
                                     <section>
                                         <div class="wizard-content">
@@ -167,77 +170,77 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                                         maxlength="10" autocomplete="off" required>
                                                                 </div>
 
-                                                            </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="m6">
+                                                    <div class="row">
+
+                                                        <div class="input-field col m6 s12">
+                                                            <select name="gender" autocomplete="off">
+                                                                <option value="">Género...</option>
+                                                                <option value="Male">Masculino</option>
+                                                                <option value="Female">Hembra</option>
+                                                                <option value="Other">Otro</option>
+                                                            </select>
                                                         </div>
 
-                                                        <div class="m6">
-                                                            <div class="row">
 
-                                                                <div class="input-field col m6 s12">
-                                                                    <select name="gender" autocomplete="off">
-                                                                        <option value="">Género...</option>
-                                                                        <option value="Male">Masculino</option>
-                                                                        <option value="Female">Hembra</option>
-                                                                        <option value="Other">Otro</option>
-                                                                    </select>
-                                                                </div>
+                                                        <label for="birthdate">Fecha de nacimiento</label>
+                                                        <div class="input-field col m6 s12">
 
-
-                                                                <label for="birthdate">Fecha de nacimiento</label>
-                                                                <div class="input-field col m6 s12">
-
-                                                                    <input id="birthdate" name="dob" class="datepicker"
-                                                                        value="<?php echo htmlentities($result->Dob); ?>">
-                                                                </div>
+                                                            <input id="birthdate" name="dob" class="datepicker"
+                                                                value="<?php echo htmlentities($result->Dob); ?>">
+                                                        </div>
 
 
 
-                                                                <div class="input-field col m6 s12">
-                                                                    <select name="department" autocomplete="off">
+                                                        <div class="input-field col m6 s12">
+                                                            <select name="department" autocomplete="off">
+                                                                <option
+                                                                    value="<?php echo htmlentities($result->Department); ?>">
+                                                                    <?php echo htmlentities($result->Department); ?>
+                                                                </option>
+                                                                <?php $sql = "SELECT DepartmentName from tbldepartments";
+                                                                $query = $dbh->prepare($sql);
+                                                                $query->execute();
+                                                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                                $cnt = 1;
+                                                                if ($query->rowCount() > 0) {
+                                                                    foreach ($results as $resultt) { ?>
                                                                         <option
-                                                                            value="<?php echo htmlentities($result->Department); ?>">
-                                                                            <?php echo htmlentities($result->Department); ?>
+                                                                            value="<?php echo htmlentities($resultt->DepartmentName); ?>">
+                                                                            <?php echo htmlentities($resultt->DepartmentName); ?>
                                                                         </option>
-                                                                        <?php $sql = "SELECT DepartmentName from tbldepartments";
-                                                                        $query = $dbh->prepare($sql);
-                                                                        $query->execute();
-                                                                        $results = $query->fetchAll(PDO::FETCH_OBJ);
-                                                                        $cnt = 1;
-                                                                        if ($query->rowCount() > 0) {
-                                                                            foreach ($results as $resultt) { ?>
-                                                                                <option
-                                                                                    value="<?php echo htmlentities($resultt->DepartmentName); ?>">
-                                                                                    <?php echo htmlentities($resultt->DepartmentName); ?>
-                                                                                </option>
-                                                                            <?php }
-                                                                        } ?>
-                                                                    </select>
-                                                                </div>
+                                                                <?php }
+                                                                } ?>
+                                                            </select>
+                                                        </div>
 
-                                                                <div class="input-field col m6 s12">
-                                                                    <label for="address">Dirección</label>
-                                                                    <input id="address" name="address" type="text"
-                                                                        value="<?php echo htmlentities($result->Address); ?>"
-                                                                        autocomplete="off" required>
-                                                                </div>
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="address">Dirección</label>
+                                                            <input id="address" name="address" type="text"
+                                                                value="<?php echo htmlentities($result->Address); ?>"
+                                                                autocomplete="off" required>
+                                                        </div>
 
-                                                                <div class="input-field col m6 s12">
-                                                                    <label for="city">Ciudad / Pueblo </label>
-                                                                    <input id="city" name="city" type="text"
-                                                                        value="<?php echo htmlentities($result->City); ?>"
-                                                                        autocomplete="off" required>
-                                                                </div>
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="city">Ciudad / Pueblo </label>
+                                                            <input id="city" name="city" type="text"
+                                                                value="<?php echo htmlentities($result->City); ?>"
+                                                                autocomplete="off" required>
+                                                        </div>
 
-                                                                <div class="input-field col m6 s12">
-                                                                    <label for="country">País</label>
-                                                                    <input id="country" name="country" type="text"
-                                                                        value="<?php echo htmlentities($result->Country); ?>"
-                                                                        autocomplete="off" required>
-                                                                </div>
+                                                        <div class="input-field col m6 s12">
+                                                            <label for="country">País</label>
+                                                            <input id="country" name="country" type="text"
+                                                                value="<?php echo htmlentities($result->Country); ?>"
+                                                                autocomplete="off" required>
+                                                        </div>
 
 
 
-                                                            <?php }
+                                                <?php }
                                                         } ?>
 
                                                     </div>

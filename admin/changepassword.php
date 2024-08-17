@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
@@ -27,7 +27,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             $error = "Tu contraseña actual es incorrecta";
         }
     }
-?>
+    ?>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -51,18 +51,18 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
     </head>
 
 
     <body>
-        <?php include ('includes/header.php'); ?>
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/header.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
 
         <main class="mn-inner">
             <div class="row">

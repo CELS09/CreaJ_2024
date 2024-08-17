@@ -11,7 +11,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $query = $dbh->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Leave type record deleted";
+        $msg = "Tipo de permiso eliminado";
     }
 ?>
     <!DOCTYPE html>
@@ -40,6 +40,8 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <!-- Theme Styles -->
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />

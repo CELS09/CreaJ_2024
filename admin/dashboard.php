@@ -1,11 +1,11 @@
 <?php
 session_start();
 error_reporting(0);
-include ('includes/config.php');
+include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
 } else {
-?>
+    ?>
 
     <!DOCTYPE html>
     <html lang="es">
@@ -20,9 +20,9 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="author" content="Steelcoders" />
 
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
         <!--FIN DE FUENTE DE GOOGLE -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
@@ -31,7 +31,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
 
         <!-- FAVICON -->
-        <link rel="shortcut icon" href="../assets/images/Favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
         <!-- Enlaces para estilos CSS -->
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css">
@@ -39,9 +39,9 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include ('includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
 
-        <?php include ('includes/sidebar.php'); ?>
+        <?php include('includes/sidebar.php'); ?>
 
         <main class="mn-inner">
             <div class="middle-content">
@@ -213,5 +213,6 @@ if (strlen($_SESSION['alogin']) == 0) {
         <script src="../assets/js/pages/dashboard.js"></script>
 
     </body>
+
     </html>
 <?php } ?>
