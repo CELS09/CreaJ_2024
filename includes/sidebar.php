@@ -21,7 +21,7 @@
                 if ($query->rowCount() > 0) {
                     foreach ($results as $result) { ?>
 
-                        <p style="font-family: Lilita One; font-size: 17px;">
+                        <p style="font-family: Lilita One; font-size: 18px;">
                             <?php echo htmlentities($result->FirstName . " " . $result->LastName); ?>
                         </p>
                         <span>
@@ -49,7 +49,7 @@
                     <i class="material-icons">account_box</i>Mi cuenta
                 </a>
             </li>
- 
+
             <li class="no-padding">
                 <a class="collapsible-header waves-effect waves-grey">
                     <i class="material-icons">
@@ -74,7 +74,7 @@
 
         </ul>
         <div class="footer">
-            <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a> ©</p>
+            <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==">WorkFusion</a> ©</p>
 
         </div>
     </div>

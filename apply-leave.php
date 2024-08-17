@@ -62,7 +62,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
-
         <!--FAVICON-->
         <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 

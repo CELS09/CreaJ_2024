@@ -15,7 +15,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <head>
 
         <!-- Title -->
-        <title>Admin | Licencia total </title>
+        <title>Admin | Todas las hojas</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
@@ -71,13 +71,13 @@ if (strlen($_SESSION['alogin']) == 0) {
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
-                    <div class="page-title">Dejar el historial</div>
+                    <div class="page-title">REGISTRO DE PERMISOS</div>
                 </div>
 
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title">Dejar el historial</span>
+                            <span class="card-title">PERMISOS</span>
                             <?php if ($msg) { ?><div class="succWrap"><strong>ÉXITO</strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
                             <table id="example" class="display responsive-table ">
                                 <thead>

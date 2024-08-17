@@ -9,146 +9,150 @@ if (strlen($_SESSION['alogin']) == 0) {
         $deptname = $_POST['departmentname'];
         $deptshortname = $_POST['departmentshortname'];
         $deptcode = $_POST['deptcode'];
-        $sql = "INSERT INTO tbldepartments(DepartmentName,DepartmentCode,DepartmentShortName) VALUES(:deptname,:deptcode,:deptshortname)";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(':deptname', $deptname, PDO::PARAM_STR);
-        $query->bindParam(':deptcode', $deptcode, PDO::PARAM_STR);
-        $query->bindParam(':deptshortname', $deptshortname, PDO::PARAM_STR);
-        $query->execute();
-        $lastInsertId = $dbh->lastInsertId();
-        if ($lastInsertId) {
-            $msg = "Departamento creado con éxito";
+        
+        if (empty($deptname) || empty($deptshortname) || empty($deptcode)) {
+            $error = "Todos los campos son obligatorios.";
         } else {
-            $error = "Algo salió mal. Inténtalo de nuevo.";
+            $sql = "INSERT INTO tbldepartments(DepartmentName, DepartmentCode, DepartmentShortName) VALUES(:deptname, :deptcode, :deptshortname)";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':deptname', $deptname, PDO::PARAM_STR);
+            $query->bindParam(':deptcode', $deptcode, PDO::PARAM_STR);
+            $query->bindParam(':deptshortname', $deptshortname, PDO::PARAM_STR);
+            $query->execute();
+            $lastInsertId = $dbh->lastInsertId();
+            if ($lastInsertId) {
+                $msg = "Departamento creado con éxito";
+            } else {
+                $error = "Algo salió mal. Inténtalo de nuevo.";
+            }
+        }
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- Title -->
+    <title>Admin | Agregar departamento</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+    <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+    function validateForm() {
+        const departmentName = document.getElementById('departmentname').value.trim();
+        const departmentShortName = document.getElementById('departmentshortname').value.trim();
+        const deptCode = document.getElementById('deptcode').value.trim();
+
+        if (departmentName === '' || departmentShortName === '' || deptCode === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Campos vacíos',
+                text: 'Todos los campos son obligatorios.',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK',
+                focusConfirm: false,
+                allowOutsideClick: false,
+                customClass: {
+                    popup: 'my-popup',
+                }
+            });
+            return false; // Evita el envío del formulario
         }
 
+        return true; // Permite el envío del formulario
     }
+    </script>
+</head>
 
-    ?>
+<body>
+    <?php include('includes/header.php'); ?>
+    <?php include('includes/sidebar.php'); ?>
 
-    <!DOCTYPE html>
-    <html lang="es">
-
-    <head>
-
-        <!-- Title -->
-        <title>Admin | Agregar departamento</title>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta charset="UTF-8">
-        <meta name="description" content="Responsive Admin Dashboard Template" />
-        <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
-
-        <!-- Styles -->
-
-        <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-        <!--FIN DE FUENTE DE GOOGLE -->
-
-        <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
-        <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
-
-        <!-- FAVICON -->
-        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
-
-        <style>
-            .errorWrap {
-                padding: 10px;
-                margin: 0 0 20px 0;
-                background: #fff;
-                border-left: 4px solid #dd3d36;
-                -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-            }
-
-            .succWrap {
-                padding: 10px;
-                margin: 0 0 20px 0;
-                background: #fff;
-                border-left: 4px solid #5cb85c;
-                -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-            }
-        </style>
-    </head>
-
-    <body>
-        <?php include('includes/header.php'); ?>
-        <?php include('includes/sidebar.php'); ?>
-
-        <main class="mn-inner">
-            <div class="row">
-                <div class="col s12">
-                    <div class="page-title">Agregar departamento</div>
-                </div>
-                <div class="col s12 m12 l6">
-                    <div class="card">
-                        <div class="card-content">
-
-                            <div class="row">
-                                <form class="col s12" name="chngpwd" method="post">
-                                    <?php if ($error) { ?>
-                                        <div class="errorWrap"><strong>ERROR</strong>:
-                                            <?php echo htmlentities($error); ?>
-                                        </div>
-                                    <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>ÉXITO</strong>:
-                                            <?php echo htmlentities($msg); ?>
-                                            </div>
-                                    <?php } ?>
-
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="departmentname" type="text" class="validate" autocomplete="off"
-                                                name="departmentname" required>
-                                            <label for="deptname">Nombre de Departamento</label>
-                                        </div>
-
-
-                                        <div class="input-field col s12">
-                                            <input id="departmentshortname" type="text" class="validate" autocomplete="off"
-                                                name="departmentshortname" required>
-                                            <label for="deptshortname">Nombre corto del departamento</label>
-                                        </div>
-
-                                        <div class="input-field col s12">
-                                            <input id="deptcode" type="text" name="deptcode" class="validate"
-                                                autocomplete="off" required>
-                                            <label for="password">código del departamento</label>
-                                        </div>
-
-                                        <div class="input-field col s12">
-                                            <button type="submit" name="add"
-                                                class="waves-effect waves-light btn indigo m-b-xs">AÑADIR</button>
-
-                                        </div>
+    <main class="mn-inner">
+        <div class="row">
+            <div class="col s12">
+                <div class="page-title">Agregar departamento</div>
+            </div>
+            <div class="col s12 m12 l6">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <form class="col s12" name="addDept" method="post" onsubmit="return validateForm();">
+                                <?php if ($error) { ?>
+                                    <div class="errorWrap"><strong>ERROR</strong>:
+                                        <?php echo htmlentities($error); ?>
                                     </div>
-                                </form>
-                            </div>
+                                <?php } else if ($msg) { ?>
+                                    <div class="succWrap"><strong>ÉXITO</strong>:
+                                        <?php echo htmlentities($msg); ?>
+                                    </div>
+                                <?php } ?>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="departmentname" type="text" class="validate" autocomplete="off"
+                                            name="departmentname" >
+                                        <label for="departmentname">Nombre de Departamento</label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <input id="departmentshortname" type="text" class="validate" autocomplete="off"
+                                            name="departmentshortname" >
+                                        <label for="departmentshortname">Nombre corto del departamento</label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <input id="deptcode" type="text" name="deptcode" class="validate"
+                                            autocomplete="off" >
+                                        <label for="deptcode">Código del departamento</label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <button type="submit" name="add"
+                                            class="waves-effect waves-light btn indigo m-b-xs">AÑADIR</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-
         </div>
-        <div class="left-sidebar-hover"></div>
+    </main>
 
-        <!-- Javascripts -->
-        <script src="../assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-        <script src="../assets/plugins/materialize/js/materialize.min.js"></script>
-        <script src="../assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-        <script src="../assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-        <script src="../assets/js/alpha.min.js"></script>
-        <script src="../assets/js/pages/form_elements.js"></script>
+    <div class="left-sidebar-hover"></div>
 
-    </body>
+    <!-- Javascripts -->
+    <script src="../assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../assets/plugins/materialize/js/materialize.min.js"></script>
+    <script src="../assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+    <script src="../assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+    <script src="../assets/js/alpha.min.js"></script>
+    <script src="../assets/js/pages/form_elements.js"></script>
 
-    </html>
+</body>
+
+</html>
 <?php } ?>

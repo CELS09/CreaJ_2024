@@ -8,20 +8,23 @@ if (strlen($_SESSION['alogin']) == 0) {
     if (isset($_POST['add'])) {
         $leavetype = $_POST['leavetype'];
         $description = $_POST['description'];
-        $sql = "INSERT INTO tblleavetype(LeaveType,Description) VALUES(:leavetype,:description)";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(':leavetype', $leavetype, PDO::PARAM_STR);
-        $query->bindParam(':description', $description, PDO::PARAM_STR);
-        $query->execute();
-        $lastInsertId = $dbh->lastInsertId();
-        if ($lastInsertId) {
-            $msg = "El tipo de permiso se agregó correctamente";
+
+        if (empty($leavetype) || empty($description)) {
+            $error = "Todos los campos son obligatorios.";
         } else {
-            $error = "Algo salió mal. Inténtalo de nuevo.";
+            $sql = "INSERT INTO tblleavetype(LeaveType, Description) VALUES(:leavetype, :description)";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':leavetype', $leavetype, PDO::PARAM_STR);
+            $query->bindParam(':description', $description, PDO::PARAM_STR);
+            $query->execute();
+            $lastInsertId = $dbh->lastInsertId();
+            if ($lastInsertId) {
+                $msg = "El tipo de permiso se agregó correctamente";
+            } else {
+                $error = "Algo salió mal. Inténtalo de nuevo.";
+            }
         }
-
     }
-
     ?>
 
     <!DOCTYPE html>
@@ -30,7 +33,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <head>
 
         <!-- Title -->
-        <title>Admin | Add Leave Type</title>
+        <title>Admin | Agregar Tipo de Licencia</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
@@ -45,16 +48,41 @@ if (strlen($_SESSION['alogin']) == 0) {
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
-
-        <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
+        <!-- Fuente de Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-        <!--FIN DE FUENTE DE GOOGLE -->
 
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+        <!-- SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+            function validateForm() {
+                const leaveType = document.getElementById('leavetype').value.trim();
+                const description = document.getElementById('textarea1').value.trim();
+
+                if (leaveType === '' || description === '') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Campos vacíos',
+                        text: 'Todos los campos son obligatorios.',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK',
+                        focusConfirm: false,
+                        allowOutsideClick: false,
+                        customClass: {
+                            popup: 'my-popup',
+                        }
+                    });
+                    return false; // Evita el envío del formulario
+                }
+
+                return true; // Permite el envío del formulario
+            }
+        </script>
 
         <style>
             .errorWrap {
@@ -78,71 +106,55 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include('includes/header.php'); ?>
 
+        <?php include('includes/header.php'); ?>
         <?php include('includes/sidebar.php'); ?>
+
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
-                    <div class="page-title">Agregar tipo de licencia</div>
+                    <div class="page-title">Agregar tipo de permiso</div>
                 </div>
                 <div class="col s12 m12 l6">
                     <div class="card">
                         <div class="card-content">
-
                             <div class="row">
-                                <form class="col s12" name="chngpwd" method="post">
+                                <form class="col s12" name="addLeaveType" method="post" onsubmit="return validateForm();">
                                     <?php if ($error) { ?>
-                                        <div class="errorWrap"><strong>ERROR</strong> :
+                                        <div class="errorWrap"><strong>ERROR</strong>:
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>SUCCESS</strong> :
+                                            <div class="succWrap"><strong>ÉXITO</strong>:
                                             <?php echo htmlentities($msg); ?>
                                             </div>
                                     <?php } ?>
+
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <input id="leavetype" type="text" class="validate" autocomplete="off"
-                                                name="leavetype" required>
-                                            <label for="leavetype">Tipo de licencia</label>
+                                                name="leavetype">
+                                            <label for="leavetype">Tipo de permiso</label>
                                         </div>
-
 
                                         <div class="input-field col s12">
                                             <textarea id="textarea1" name="description" class="materialize-textarea"
-                                                name="description" length="500"></textarea>
-                                            <label for="deptshortname">Descripcion</label>
+                                                length="500"></textarea>
+                                            <label for="textarea1">Descripción</label>
                                         </div>
-
-
-
-
 
                                         <div class="input-field col s12">
                                             <button type="submit" name="add"
                                                 class="waves-effect waves-light btn indigo m-b-xs">AÑADIR</button>
-
                                         </div>
-
-
-
-
                                     </div>
-
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
-
             </div>
         </main>
-
-        </div>
         <div class="left-sidebar-hover"></div>
 
         <!-- Javascripts -->

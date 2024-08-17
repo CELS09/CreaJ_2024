@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2018 a las 19:59:57
--- Versión del servidor: 10.1.31-MariaDB
--- Versión de PHP: 5.6.35
+-- Tiempo de generación: 18-08-2024 a las 00:45:21
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,15 +31,15 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `UserName` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
-  `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `updationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `admin`
 --
 
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
-(1, 'admin', '6c5dc4ff5d0be4ac99337cea5576e7ff', '2018-06-26 17:01:25');
+(1, 'admin', '87629ebcc397228abf397f421b57d071', '2024-08-17 18:43:59');
 
 -- --------------------------------------------------------
 
@@ -53,19 +52,19 @@ CREATE TABLE `tbldepartments` (
   `DepartmentName` varchar(150) DEFAULT NULL,
   `DepartmentShortName` varchar(100) NOT NULL,
   `DepartmentCode` varchar(50) DEFAULT NULL,
-  `CreationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `CreationDate` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `tbldepartments`
 --
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'Human Resource', 'HR', 'HR001', '2017-11-01 07:16:25'),
-(2, 'Information Technology', 'IT', 'IT001', '2017-11-01 07:19:37'),
-(3, 'Operations', 'OP', 'OP1', '2017-12-02 21:28:56'),
-(4, 'dep informatica', 'info', '003223', '2018-06-26 17:02:30'),
-(5, 'Redes', 'red', '032034', '2018-06-26 17:15:19');
+(1, 'Recursos humanos', 'HR', 'HR001', '2017-11-01 07:16:25'),
+(6, 'Area informatica', 'AINF', 'AINF001', '2024-03-28 06:04:16'),
+(7, 'Reclutamiento y Selección', 'R&S', 'R&S001', '2024-03-28 06:05:36'),
+(8, 'Administración de Personal', 'AP', 'AP001', '2024-03-28 06:06:06'),
+(9, 'Gestión del Rendimiento', 'GR', 'GR001', '2024-03-28 06:06:47');
 
 -- --------------------------------------------------------
 
@@ -88,8 +87,8 @@ CREATE TABLE `tblemployees` (
   `Country` varchar(150) NOT NULL,
   `Phonenumber` char(11) NOT NULL,
   `Status` int(1) NOT NULL,
-  `RegDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `RegDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `tblemployees`
@@ -113,13 +112,13 @@ CREATE TABLE `tblleaves` (
   `ToDate` varchar(120) NOT NULL,
   `FromDate` varchar(120) NOT NULL,
   `Description` mediumtext NOT NULL,
-  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `AdminRemark` mediumtext,
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `AdminRemark` mediumtext DEFAULT NULL,
   `AdminRemarkDate` varchar(120) DEFAULT NULL,
   `Status` int(1) NOT NULL,
   `IsRead` int(1) NOT NULL,
   `empid` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `tblleaves`
@@ -141,9 +140,9 @@ INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`,
 CREATE TABLE `tblleavetype` (
   `id` int(11) NOT NULL,
   `LeaveType` varchar(200) DEFAULT NULL,
-  `Description` mediumtext,
-  `CreationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Description` mediumtext DEFAULT NULL,
+  `CreationDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `tblleavetype`
@@ -205,7 +204,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tblemployees`

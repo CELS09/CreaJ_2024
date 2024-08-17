@@ -5,6 +5,26 @@ require('../includes/fpdf.php'); // Ajusta la ruta según sea necesario
 $pdf = new FPDF('L', 'mm', 'A4'); // 'L' para orientación horizontal (Landscape)
 $pdf->AddPage();
 
+// Agregar el botón de regresar al inicio del PDF con más estilo
+$pdf->SetFont('Arial', 'U', 16); // Cambiar a subrayado
+$pdf->SetTextColor(0, 0, 255); // Color azul para el enlace
+
+// Obtener el ancho del enlace
+$link_text = 'Regresar a Dashboard';
+$width = $pdf->GetStringWidth($link_text);
+
+// Posición del enlace
+$x = ($pdf->GetPageWidth() - $width) / 2;
+$y = $pdf->GetY();
+
+// Imprimir el texto del enlace
+$pdf->SetXY($x, $y);
+$pdf->Cell($width, 10, $link_text, 0, 1, 'C', false, 'http://localhost/CreaJ_2024/admin/dashboard.php');
+
+// Volver al color negro para el texto restante
+$pdf->SetTextColor(0, 0, 0); 
+$pdf->Ln(10);
+
 // Configurar título del documento
 $pdf->SetFont('Arial', 'B', 16);
 $pdf->Cell(0, 10, 'Reporte Detallado', 0, 1, 'C');
@@ -24,7 +44,8 @@ if ($conn->connect_error) {
 }
 
 // Función para agregar una tabla al PDF
-function addTable($pdf, $header, $data, $widths) {
+function addTable($pdf, $header, $data, $widths)
+{
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->SetFillColor(200, 220, 255);
 
@@ -33,9 +54,9 @@ function addTable($pdf, $header, $data, $widths) {
         $pdf->Cell($widths[$key], 10, $col, 1, 0, 'C', true);
     }
     $pdf->Ln();
-    
+
     $pdf->SetFont('Arial', '', 12);
-    
+
     // Crear contenido de tabla
     foreach ($data as $row) {
         foreach ($row as $key => $col) {
@@ -52,6 +73,7 @@ $row = $result->fetch_assoc();
 $total_employees = $row['total_employees'];
 
 $pdf->SetFont('Arial', 'B', 14);
+$pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
 $pdf->Cell(0, 10, "Cantidad de Empleados: $total_employees", 0, 1);
 $pdf->Ln(4);
 
@@ -83,6 +105,7 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $pdf->SetFont('Arial', 'B', 14);
+$pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
 $pdf->Cell(0, 10, "Ultimos Tipos de Permisos Agregados", 0, 1);
 $pdf->Ln(5);
 
@@ -97,17 +120,18 @@ $result = $conn->query($sql);
 $employee_data = [];
 while ($row = $result->fetch_assoc()) {
     $employee_data[] = [
-        $row['EmpId'], 
-        $row['FirstName'], 
-        $row['LastName'], 
-        $row['EmailId'], 
-        $row['Department'], 
+        $row['EmpId'],
+        $row['FirstName'],
+        $row['LastName'],
+        $row['EmailId'],
+        $row['Department'],
         $row['RegDate']
     ];
 }
 $pdf->Ln(40);
 
 $pdf->SetFont('Arial', 'B', 14);
+$pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
 $pdf->Cell(0, 10, "Detalles de Empleados", 0, 1);
 $pdf->Ln(5);
 
@@ -122,15 +146,16 @@ $result = $conn->query($sql);
 $department_data = [];
 while ($row = $result->fetch_assoc()) {
     $department_data[] = [
-        $row['DepartmentName'], 
-        $row['DepartmentShortName'], 
-        $row['DepartmentCode'], 
+        $row['DepartmentName'],
+        $row['DepartmentShortName'],
+        $row['DepartmentCode'],
         $row['CreationDate']
     ];
 }
 $pdf->Ln(10);
 
 $pdf->SetFont('Arial', 'B', 14);
+$pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
 $pdf->Cell(0, 5, "Detalles de Departamentos", 0, 1);
 $pdf->Ln(5);
 
@@ -145,26 +170,21 @@ $result = $conn->query($sql);
 $leave_type_data = [];
 while ($row = $result->fetch_assoc()) {
     $leave_type_data[] = [
-        $row['LeaveType'], 
-        $row['Description'], 
+        $row['LeaveType'],
+        $row['Description'],
         $row['CreationDate']
     ];
 }
 $pdf->Ln(30);
 
 $pdf->SetFont('Arial', 'B', 14);
+$pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
 $pdf->Cell(0, 5, "Detalles de Tipos de Licencia", 0, 1);
 $pdf->Ln(5);
 
 $header = ['Tipo de Licencia', 'Descripcion', 'Fecha de Creacion'];
 $widths = [60, 90, 60]; // Anchos personalizados para cada columna
 addTable($pdf, $header, $leave_type_data, $widths);
-
-// Agregar el botón de regresar al final del PDF
-$pdf->SetFont('Arial', 'B', 16); // Cambiar a negrita
-$pdf->Ln(20);
-$pdf->SetTextColor(0, 0, 255); // Color azul para el enlace
-$pdf->Cell(0, 10, 'Regresar a Dashboard', 0, 1, 'C', false, 'http://localhost/CreaJ_2024/admin/dashboard.php');
 
 // Cerrar la conexión
 $conn->close();

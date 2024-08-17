@@ -6,9 +6,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
     header('location:index.php');
 } else {
 
-?>
+    ?>
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es">
 
     <head>
 
@@ -55,9 +55,10 @@ if (strlen($_SESSION['emplogin']) == 0) {
     </head>
 
     <body>
-        <?php include('includes/header.php'); ?>
 
+        <?php include('includes/header.php'); ?>
         <?php include('includes/sidebar.php'); ?>
+
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -68,9 +69,12 @@ if (strlen($_SESSION['emplogin']) == 0) {
                     <div class="card">
                         <div class="card-content">
 
-                            <?php if ($msg) { ?><div class="succWrap"><strong>ÉXITO</strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
+                            <?php if ($msg) { ?>
+                                <div class="succWrap"><strong>ÉXITO</strong> : <?php echo htmlentities($msg); ?> </div>
+                            <?php } ?>
                             <aside>
-                                <p class="sidebar-chat-name">tusolutionweb<a href="#" data-activates="chat-messages" class="chat-message-link"><i class="material-icons">keyboard_arrow_right</i></a></p>
+                                <p class="sidebar-chat-name">tusolutionweb<a href="#" data-activates="chat-messages"
+                                        class="chat-message-link"><i class="material-icons">keyboard_arrow_right</i></a></p>
                                 <div class="messages-container">
 
                                     <?php
@@ -82,29 +86,30 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                     $results = $query->fetchAll(PDO::FETCH_OBJ);
                                     $cnt = 1;
                                     if ($query->rowCount() > 0) {
-                                        foreach ($results as $result) {               ?>
+                                        foreach ($results as $result) { ?>
                                             <div class="message-wrapper them">
                                                 <div>Me fgfdgdfgfd</div>
                                                 <div class="text-wrapper"><?php echo htmlentities($result->chat); ?></div>
                                             </div>
                                             <div class="message-wrapper me">
-                                                <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg" class="circle" alt=""></div>
+                                                <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg"
+                                                        class="circle" alt=""></div>
                                                 <div class="text-wrapper"><?php $st = $result->admin;
-                                                                            // if($st==1){
-
-                                                                            //  echo htmlentities($result->chat);
-
-                                                                            // };
-                                                                            ?></div>
+                                                // if($st==1){
+                                    
+                                                //  echo htmlentities($result->chat);
+                                    
+                                                // };
+                                                ?></div>
                                             </div>
 
-                                </div>
-                                <div class="message-compose-box">
-                                    <div class="input-field">
-                                        <input placeholder="Write message" id="message_compose" type="text">
-                                    </div>
-                                </div>
-                        <?php }
+                                        </div>
+                                        <div class="message-compose-box">
+                                            <div class="input-field">
+                                                <input placeholder="Write message" id="message_compose" type="text">
+                                            </div>
+                                        </div>
+                                    <?php }
                                     } ?>
                             </aside>
                         </div>
