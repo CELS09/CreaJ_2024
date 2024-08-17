@@ -74,7 +74,9 @@ if (isset($_POST['signin'])) {
             <a href="../index.php" class="text-cyan-400 text-center">
                 <h5 class="bg-green-600 w-32 rounded-xl text-lg font-bold p-2">Regresar</h5>
             </a>
+
             <h4 class="text-white text-3xl font-bold mt-8 mb-6" style="font-family: averia libre;">Login de administrador</h4>
+            
             <div class="w-full max-w-xs sm:max-w-sm">
                 <div class="bg-white w-full shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
                     <div class="mb-4">

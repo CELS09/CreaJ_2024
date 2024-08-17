@@ -97,6 +97,13 @@
                 </a>
             </li>
 
+            <li>
+                <a href="includes/generar_reporte.php">
+                <i class="material-icons">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0zMCAxMVY5aC04djE0aDJ2LTZoNXYtMmgtNXYtNHpNOCA5SDJ2MTRoMnYtNWg0YTIgMiAwIDAgMCAyLTJ2LTVhMiAyIDAgMCAwLTItMm0wIDdINHYtNWg0em04IDdoLTRWOWg0YTQgNCAwIDAgMSA0IDR2NmE0IDQgMCAwIDEtNCA0bS0yLTJoMmEyIDIgMCAwIDAgMi0ydi02YTIgMiAwIDAgMC0yLTJoLTJ6Ii8+PC9zdmc+">
+                </i>Generar Reporte</a>
+            </li>
+
             <li class="no-padding">
                 <a class="waves-effect waves-grey" href="logout.php"><i
                     class="material-icons">exit_to_app</i>Cerrar Sesión</a>

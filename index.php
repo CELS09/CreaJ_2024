@@ -74,7 +74,7 @@ if (isset($_POST['signin'])) {
         <![endif]-->
 </head>
 
-<body>
+<body >
 
 
     <div class="loader-bg"></div>
@@ -184,7 +184,7 @@ if (isset($_POST['signin'])) {
 
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://linktab.co/WorkFusion">WorkFusion</a> ©</p>
+                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
                 </div>
             </div>
         </aside>
@@ -196,7 +196,7 @@ if (isset($_POST['signin'])) {
                 <div class="col s12">
                     <div class="font-bold text-3xl mb-7 mt-24">
                         <p class="text-center text-5xl" style="font-family: averia libre;">BIENVENIDO AL SISTEMA DE GESTIÓN DE</p>
-                        <p class="text-center text-4xl" style="font-family: averia libre;">PERMISOS DE EMPLEADOS WORKFUSION</p>
+                        <p class="text-center text-4xl" style="font-family: averia libre;">EMPLEADOS WORKFUSION</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">

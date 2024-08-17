@@ -40,6 +40,12 @@ $msg="Su contraseña ha sido cambiada con éxito";
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+        <!--Fuente de Google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         .errorWrap {
@@ -114,7 +120,7 @@ $msg="Su contraseña ha sido cambiada con éxito";
                             </a>
                         </section>
                         <div class="header-title col s10">      
-                            <span class="chapter-title">WorkFusion | Sistema de gestión de la licencia para empleado</span>
+                            <span class="chapter-title">WorkFusion | Sistema de gestión de empleados</span>
                         </div>
                       
                            
@@ -156,7 +162,7 @@ $msg="Su contraseña ha sido cambiada con éxito";
                                 class="material-icons">account_box</i>Admin login</a></li>
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="http://www.code-projects.org/">Código-Proyectos </a>©</p>
+                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a>©</p>
                 </div>
             </div>
         </aside>
@@ -164,7 +170,9 @@ $msg="Su contraseña ha sido cambiada con éxito";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title"><h4><b>Recuperación de contraseña de empleado</b></h4></div>
+                        <div class="page-title">
+                            <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña de empleado</p>
+                        </div>
 
                           <div class="col s12 m6 l8 offset-l2 offset-m3">
                               <div class="card white darken-1">
