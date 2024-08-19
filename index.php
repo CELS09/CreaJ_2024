@@ -40,7 +40,6 @@ if (isset($_POST['signin'])) {
     <meta name="description" content="Responsive Admin Dashboard Template" />
     <meta name="keywords" content="admin,dashboard" />
     <meta name="author" content="Steelcoders" />
-
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -58,7 +57,7 @@ if (isset($_POST['signin'])) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
 
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -137,8 +136,8 @@ if (isset($_POST['signin'])) {
                             <span class="material-design-hamburger__layer"></span>
                         </a>
                     </section>
-                    <div class="header-title col s5">
-                        <span class="chapter-title">WorkFusion | Sistema del empleado</span>
+                    <div class="header-title col s10">
+                        <span class="chapter-title">WorkFusion | Sistema de gestión de empleados</span>
                     </div>
                 </div>
             </nav>
@@ -155,7 +154,7 @@ if (isset($_POST['signin'])) {
                     <li>&nbsp;</li>
 
                     <li class="no-padding">
-                        <a class="waves-effect waves-grey" href="index.php">
+                        <a class="waves-effect waves-grey" href="#">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
                             </i>Login empleado
@@ -195,8 +194,7 @@ if (isset($_POST['signin'])) {
             <div class="row">
                 <div class="col s12">
                     <div class="font-bold text-3xl mb-7 mt-24">
-                        <p class="text-center text-5xl" style="font-family: averia libre;">BIENVENIDO AL SISTEMA DE GESTIÓN DE</p>
-                        <p class="text-center text-4xl" style="font-family: averia libre;">EMPLEADOS WORKFUSION</p>
+                        <p class="text-center text-5xl" style="font-family: averia libre;">¡BIENVENIDO A WORKFUSION!</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
@@ -212,16 +210,16 @@ if (isset($_POST['signin'])) {
 
                                 <div class="row">
                                     <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-8 mb-4" name="signin" method="post">
-                                        <div class="mb-4">
-                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Email</label>
-                                            <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Email">
+                                        <div class="input-field col s12"> 
+                                            <input id="username" type="text" name="username" class="validate" autocomplete="off" required>
+                                            <label for="email">Email</label>
                                         </div>
                                         <div class="mb-6">
                                             <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
                                             <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Password">
                                         </div>
                                         <div class="flex items-center justify-center">
-                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
+                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
                                         </div>
                                     </form>
 

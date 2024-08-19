@@ -23,26 +23,21 @@ if (isset($_POST['change'])) {
 
     <!-- Title -->
     <title>WorkFusion | Recuperación de contraseña</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Admin Dashboard Template" />
     <meta name="keywords" content="admin,dashboard" />
     <meta name="author" content="Steelcoders" />
-
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
-
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
-
+    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -172,7 +167,7 @@ if (isset($_POST['change'])) {
                                 class="material-icons">account_box</i>Admin login</a></li>
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a>©</p>
+                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
                 </div>
             </div>
         </aside>
@@ -181,7 +176,7 @@ if (isset($_POST['change'])) {
             <div class="row">
                 <div class="col s12">
                     <div class="page-title">
-                        <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña de empleado</p>
+                        <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña para empleado</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
@@ -194,7 +189,7 @@ if (isset($_POST['change'])) {
                                     <form class="col s12" name="signin" method="post">
                                         <div class="input-field col s12">
                                             <input id="empid" type="text" name="empid" class="validate" autocomplete="off" required>
-                                            <label for="email">Id Empleado</label>
+                                            <label for="email">ID Empleado</label>
                                         </div>
                                         <div class="input-field col s12">
                                             <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
