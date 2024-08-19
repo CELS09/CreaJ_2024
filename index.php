@@ -211,14 +211,15 @@ if (isset($_POST['signin'])) {
                                 <div class="row">
                                     <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-8 mb-4" name="signin" method="post">
                                         <div class="input-field col s12"> 
-                                            <input id="username" type="text" name="username" class="validate" autocomplete="off" required>
+                                            <input id="username" type="text" name="username" class="validate" autocomplete="off" >
                                             <label for="email">Email</label>
                                         </div>
-                                        <div class="mb-6">
-                                            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-                                            <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Password">
-                                        </div>
-                                        <div class="flex items-center justify-center">
+                                        <div class="input-field col s12"> 
+    <input id="password" type="password" name="password" class="validate" autocomplete="off">
+    <label for="password">Contraseña</label>
+</div>
+
+                                        <div class=" items-center justify-center">
                                             <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
                                         </div>
                                     </form>
@@ -246,7 +247,7 @@ if (isset($_POST['signin'])) {
                 event.preventDefault(); // Evita el envío del formulario
                 Swal.fire({
                     icon: 'error',
-                    title: 'Debe ingresar los datos',
+                    title: 'Debe ingresar todos los datos',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK',
                     focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación

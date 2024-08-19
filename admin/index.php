@@ -83,13 +83,13 @@ if (isset($_POST['signin'])) {
                         <span class="block text-gray-700 text-center text-3xl font-bold pb-4">Iniciar sesión</span>
                     </div>
                     <form id="myForm" name="signin" method="post">
-                        <div class="mb-4">
-                            <label for="username" class="block text-gray-700 text-base font-bold mb-2">Nombre de usuario</label>
-                            <input id="username" type="text" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Ingrese su usuario">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" name="username" class="validate" autocomplete="off">
+                            <label for="username">Nombre de usuario</label>
                         </div>
-                        <div class="mb-6">
-                            <label for="password" class="block text-gray-700 text-base font-bold mb-2">Contraseña</label>
-                            <input id="password" type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" autocomplete="off" placeholder="Ingrese su contraseña">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" name="password" class="validate" autocomplete="off">
+                            <label for="password">Contraseña</label>
                         </div>
                         <div class="flex items-center justify-center">
                             <button type="submit" name="signin" class="w-full bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
