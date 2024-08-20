@@ -30,7 +30,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
         $query->bindParam(':mobileno', $mobileno, PDO::PARAM_STR);
         $query->bindParam(':eid', $eid, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Employee record updated Successfully";
+        $msg = "Registro de empleado actualizado exitosamente";
     }
 
 ?>
@@ -113,7 +113,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                             <?php echo htmlentities($error); ?>
                                         </div>
                                     <?php } else if ($msg) { ?>
-                                        <div class="succWrap"><strong>SUCCESS</strong> :
+                                        <div class="succWrap"><strong>ÉXITO</strong> :
                                             <?php echo htmlentities($msg); ?>
                                         </div>
                                     <?php } ?>

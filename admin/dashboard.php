@@ -39,8 +39,8 @@ if (strlen($_SESSION['alogin']) == 0) {
     </head>
 
     <body>
-        <?php include('includes/header.php'); ?>
 
+        <?php include('includes/header.php'); ?>
         <?php include('includes/sidebar.php'); ?>
 
         <main class="mn-inner">
@@ -117,16 +117,17 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="card invoices-card">
                             <div class="card-content">
 
-                                <span class="card-title">Últimas aplicaciones de licencia</span>
+                                <span class="card-title">Últimas aplicaciones de permisos</span>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
                                             <th>#</th>
                                             <th width="200">Nombre</th>
-                                            <th width="120">Tipo de licencia</th>
-
-                                            <th width="180">Fecha de publicación</th>
+                                            <th width="220">Tipo de licencia</th>
+                                            <th width="200">Fecha de publicación</th>
                                             <th>Estado</th>
+                                            <th></th>
+                                            <th>Acción</th>
                                             <!--<th align="center">Acción</th>-->
                                         </tr>
                                     </thead>

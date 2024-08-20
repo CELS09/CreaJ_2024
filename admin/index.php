@@ -4,17 +4,18 @@ include('includes/config.php');
 if (isset($_POST['signin'])) {
     $uname = $_POST['username'];
     $password = md5($_POST['password']);
-    $sql = "SELECT UserName,Password FROM admin WHERE UserName=:uname and Password=:password";
+    $sql = "SELECT UserName, Password FROM admin WHERE UserName = :uname AND Password = :password";
     $query = $dbh->prepare($sql);
     $query->bindParam(':uname', $uname, PDO::PARAM_STR);
     $query->bindParam(':password', $password, PDO::PARAM_STR);
     $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
+
     if ($query->rowCount() > 0) {
         $_SESSION['alogin'] = $_POST['username'];
         echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
     } else {
-        echo "<script>alert('Detalles no válidos');</script>";
+        // Agregar un valor en la variable de sesión para indicar error
+        $_SESSION['login_error'] = 'Detalles no válidos';
     }
 }
 ?>
@@ -24,7 +25,7 @@ if (isset($_POST['signin'])) {
 
 <head>
     <!-- Title -->
-    <title>Inicio de Sesión | Administración</title>
+    <title>Login | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Admin Dashboard Template" />
@@ -39,7 +40,7 @@ if (isset($_POST['signin'])) {
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!--Fuente de Google-->
+    <!-- Fuente de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
@@ -64,7 +65,21 @@ if (isset($_POST['signin'])) {
             /* Color de fondo opcional */
             padding: 20px
         }
+        .select-wrapper {
+        display: none !important;
+        }
     </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Elimina cualquier swal2-checkbox si existe
+        let checkbox = document.querySelector('.swal2-checkbox');
+        if (checkbox) {
+            checkbox.remove();
+        }
+    });
+</script>
+
 </head>
 
 <body class="signin-page">
@@ -75,7 +90,7 @@ if (isset($_POST['signin'])) {
                 <h5 class="bg-green-600 w-32 rounded-xl text-lg font-bold p-2">Regresar</h5>
             </a>
 
-            <h4 class="text-white text-3xl font-bold mt-8 mb-6" style="font-family: averia libre;">Login de administrador</h4>
+            <h4 class="text-white text-3xl font-bold mt-8 mb-6" style="font-family: averia libre;">Administrador</h4>
 
             <div class="w-full max-w-xs sm:max-w-sm">
                 <div class="bg-white w-full shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
@@ -84,7 +99,7 @@ if (isset($_POST['signin'])) {
                     </div>
                     <form id="myForm" name="signin" method="post">
                         <div class="input-field col s12">
-                            <input id="username" type="text" name="username" class="validate" autocomplete="off">
+                            <input id="username1" type="text" name="username" class="validate" autocomplete="off">
                             <label for="username">Nombre de usuario</label>
                         </div>
                         <div class="input-field col s12">
@@ -100,33 +115,42 @@ if (isset($_POST['signin'])) {
         </main>
     </div>
 
-
     <!-- Javascripts -->
     <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            const form = event.target;
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
-
-            if (username === '' || password === '') {
-                event.preventDefault(); // Evita el envío del formulario
+        document.addEventListener('DOMContentLoaded', (event) => {
+            <?php if (isset($_SESSION['login_error'])) { ?>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Debe ingresar los datos',
+                    title: 'Detalles no válidos',
+                    text: 'El nombre de usuario o la contraseña son incorrectos.',
                     confirmButtonColor: '#3085d6',
-                    confirmButtonText: 'OK',
-                    focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
-                    allowOutsideClick: false, // Evita que el usuario pueda hacer clic fuera de la alerta para cerrarla
-                    customClass: {
-                        popup: 'my-popup', // Clase personalizada para el contenedor de la alerta
-                    }
-                }).then((result) => {
-                    // Restablece el foco al primer campo de entrada (username) si el usuario cierra la alerta
-                    if (result.isConfirmed || result.dismiss === Swal.DismissReason.backdrop) {
-                        document.getElementById('username').focus();
-                    }
+                    confirmButtonText: 'OK'
                 });
-            }
+                <?php unset($_SESSION['login_error']); // Elimina el mensaje de error después de mostrarlo ?>
+            <?php } ?>
+
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                const username = document.getElementById('username1').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                if (username === '' || password === '') {
+                    event.preventDefault(); // Evita el envío del formulario
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Complete todos los campos',
+                        text: 'Hay uno o más campos sin completar.',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK',
+                        focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
+                        allowOutsideClick: false // Evita que el usuario pueda hacer clic fuera de la alerta para cerrarla
+                    }).then((result) => {
+                        // Restablece el foco al primer campo de entrada (username) si el usuario cierra la alerta
+                        if (result.isConfirmed || result.dismiss === Swal.DismissReason.backdrop) {
+                            document.getElementById('username1').focus();
+                        }
+                    });
+                }
+            });
         });
     </script>
     <script src="../assets/plugins/jquery/jquery-2.2.0.min.js"></script>

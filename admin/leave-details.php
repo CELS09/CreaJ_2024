@@ -36,14 +36,14 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 
 
-?>
+    ?>
     <!DOCTYPE html>
     <html lang="es">
 
     <head>
 
         <!-- Title -->
-        <title>Admin | Dejar detalles </title>
+        <title>Admin | Detalles Empleado </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
@@ -52,7 +52,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="author" content="Steelcoders" />
 
         <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">        
+        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
 
         <!-- Styles -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
@@ -100,15 +100,17 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         <main class="mn-inner">
             <div class="row">
-                <div class="col s12">
-                    <div class="page-title" style="font-size:24px;">Dejar detalles</div>
+                <div class="col s12 ">
+                    <div class="page-title" style="font-size:24px;">Detalles</div>
                 </div>
 
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title">Dejar detalles</span>
-                            <?php if ($msg) { ?><div class="succWrap"><strong>ÉXITO</strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
+                            <span class="card-title">Información Detallada</span>
+                            <?php if ($msg) { ?>
+                                <div class="succWrap"><strong>ÉXITO</strong> : <?php echo htmlentities($msg); ?> </div>
+                            <?php } ?>
                             <table id="example" class="display responsive-table ">
 
 
@@ -123,16 +125,16 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     $cnt = 1;
                                     if ($query->rowCount() > 0) {
                                         foreach ($results as $result) {
-                                    ?>
+                                            ?>
 
                                             <tr>
                                                 <td style="font-size:16px;"> <b>Nombre del empleado:</b></td>
-                                                <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id); ?>" target="_blank">
-                                                        <?php echo htmlentities($result->FirstName . " " . $result->LastName); ?></a></td>
-                                                <td style="font-size:16px;"><b> Id Emp:</b></td>
+                                                <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id); ?>"
+                                                        target="_blank">
+                                                        <?php echo htmlentities($result->FirstName . " " . $result->LastName); ?></a>
+                                                </td>
+                                                <td style="font-size:16px;"><b> ID Emp :</b></td>
                                                 <td><?php echo htmlentities($result->EmpId); ?></td>
-                                                <td style="font-size:16px;"><b>Género :</b></td>
-                                                <td><?php echo htmlentities($result->Gender); ?></td>
                                             </tr>
 
                                             <tr>
@@ -145,64 +147,68 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             </tr>
 
                                             <tr>
-                                                <td style="font-size:16px;"><b>Tipo de licencia :</b></td>
+                                                <td style="font-size:16px;"><b>Tipo de permiso :</b></td>
                                                 <td><?php echo htmlentities($result->LeaveType); ?></td>
-                                                <td style="font-size:16px;"><b>Fecha de partida . :</b></td>
-                                                <td>From <?php echo htmlentities($result->FromDate); ?> to <?php echo htmlentities($result->ToDate); ?></td>
+                                                <td style="font-size:16px;"><b>Fecha de partida :</b></td>
+                                                <td>From <?php echo htmlentities($result->FromDate); ?> to
+                                                    <?php echo htmlentities($result->ToDate); ?>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:16px;"><b>Descripción del permiso del empleado : </b></td>
+                                                <td colspan="1"><?php echo htmlentities($result->Description); ?></td>
+                                                <td style="font-size:16px;"><b>Género :</b></td>
+                                                <td><?php echo htmlentities($result->Gender); ?></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:16px;"><b>Estado :</b></td>
+                                                <td colspan="1"><?php $stats = $result->Status;
+                                                if ($stats == 1) {
+                                                    ?>
+                                                        <span style="color: green">Aprobado</span>
+                                                    <?php }
+                                                if ($stats == 2) { ?>
+                                                        <span style="color: red">no Aprobado</span>
+                                                    <?php }
+                                                if ($stats == 0) { ?>
+                                                        <span style="color: blue">A la espera de la aprobación</span>
+                                                    <?php } ?>
+                                                </td>
                                                 <td style="font-size:16px;"><b>Fecha de publicación</b></td>
                                                 <td><?php echo htmlentities($result->PostingDate); ?></td>
                                             </tr>
 
                                             <tr>
-                                                <td style="font-size:16px;"><b>Descripción de la licencia del empleado : </b></td>
-                                                <td colspan="5"><?php echo htmlentities($result->Description); ?></td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td style="font-size:16px;"><b>dejar estado :</b></td>
-                                                <td colspan="5"><?php $stats = $result->Status;
-                                                                if ($stats == 1) {
-                                                                ?>
-                                                        <span style="color: green">Aprobado</span>
-                                                    <?php }
-                                                                if ($stats == 2) { ?>
-                                                        <span style="color: red">no Aprobado</span>
-                                                    <?php }
-                                                                if ($stats == 0) { ?>
-                                                        <span style="color: blue">A la espera de la aprobación</span>
-                                                    <?php } ?>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
                                                 <td style="font-size:16px;"><b>Observación del administrador: </b></td>
                                                 <td colspan="5"><?php
-                                                                if ($result->AdminRemark == "") {
-                                                                    echo "waiting for Approval";
-                                                                } else {
-                                                                    echo htmlentities($result->AdminRemark);
-                                                                }
-                                                                ?></td>
+                                                if ($result->AdminRemark == "") {
+                                                    echo "waiting for Approval";
+                                                } else {
+                                                    echo htmlentities($result->AdminRemark);
+                                                }
+                                                ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td style="font-size:16px;"><b>Fecha de toma de acción de administrador : </b></td>
                                                 <td colspan="5"><?php
-                                                                if ($result->AdminRemarkDate == "") {
-                                                                    echo "NA";
-                                                                } else {
-                                                                    echo htmlentities($result->AdminRemarkDate);
-                                                                }
-                                                                ?></td>
+                                                if ($result->AdminRemarkDate == "") {
+                                                    echo "NA";
+                                                } else {
+                                                    echo htmlentities($result->AdminRemarkDate);
+                                                }
+                                                ?></td>
                                             </tr>
                                             <?php
                                             if ($stats == 0) {
 
-                                            ?>
+                                                ?>
                                                 <tr>
                                                     <td colspan="5">
-                                                        <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Tomar&nbsp;Accion</a>
+                                                        <a class="modal-trigger waves-effect waves-light btn"
+                                                            href="#modal1">Tomar&nbsp;Accion</a>
                                                         <form name="adminaction" method="post">
                                                             <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
                                                                 <div class="modal-content" style="width:90%">
@@ -212,10 +218,15 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                                         <option value="1">Aprobado</option>
                                                                         <option value="2">No Aprobado</option>
                                                                     </select></p>
-                                                                    <p><textarea id="textarea1" name="description" class="materialize-textarea" name="description" placeholder="Description" length="500" maxlength="500" required></textarea></p>
+                                                                    <p><textarea id="textarea1" name="description"
+                                                                            class="materialize-textarea" name="description"
+                                                                            placeholder="Description" length="500" maxlength="500"
+                                                                            required></textarea></p>
                                                                 </div>
                                                                 <div class="modal-footer" style="width:90%">
-                                                                    <input type="submit" class="waves-effect waves-light btn blue m-b-xs" name="update" value="Submit">
+                                                                    <input type="submit"
+                                                                        class="waves-effect waves-light btn blue m-b-xs" name="update"
+                                                                        value="Submit">
                                                                 </div>
 
                                                             </div>
@@ -225,7 +236,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <?php } ?>
                                             </form>
                                             </tr>
-                                    <?php $cnt++;
+                                            <?php $cnt++;
                                         }
                                     } ?>
                                 </tbody>

@@ -10,23 +10,25 @@ if (strlen($_SESSION['alogin']) == 0) {
         $deptname = $_POST['departmentname'];
         $deptshortname = $_POST['departmentshortname'];
         $deptcode = $_POST['deptcode'];
-        $sql = "update tbldepartments set DepartmentName=:deptname,DepartmentCode=:deptcode,DepartmentShortName=:deptshortname where id=:did";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(':deptname', $deptname, PDO::PARAM_STR);
-        $query->bindParam(':deptcode', $deptcode, PDO::PARAM_STR);
-        $query->bindParam(':deptshortname', $deptshortname, PDO::PARAM_STR);
-        $query->bindParam(':did', $did, PDO::PARAM_STR);
-        $query->execute();
-        $msg = "Departamento actualizado exitosamente";
+
+        // Verificar que todos los campos están llenos
+        if (empty($deptname) || empty($deptshortname) || empty($deptcode)) {
+            $error = "Por favor, complete todos los campos.";
+        } else {
+            $sql = "update tbldepartments set DepartmentName=:deptname,DepartmentCode=:deptcode,DepartmentShortName=:deptshortname where id=:did";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':deptname', $deptname, PDO::PARAM_STR);
+            $query->bindParam(':deptcode', $deptcode, PDO::PARAM_STR);
+            $query->bindParam(':deptshortname', $deptshortname, PDO::PARAM_STR);
+            $query->bindParam(':did', $did, PDO::PARAM_STR);
+            $query->execute();
+            $msg = "Departamento actualizado exitosamente";
+        }
     }
-
-    ?>
-
+?>
     <!DOCTYPE html>
     <html lang="es">
-
     <head>
-
         <!-- Title -->
         <title>Admin | Departamento de actualización</title>
 
@@ -36,8 +38,8 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
         <!-- Styles -->
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css" />
@@ -64,10 +66,11 @@ if (strlen($_SESSION['alogin']) == 0) {
                 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
             }
         </style>
+        <!-- SweetAlert CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     </head>
 
     <body>
-
         <?php include('includes/header.php'); ?>
         <?php include('includes/sidebar.php'); ?>
 
@@ -79,14 +82,13 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <div class="col s12 m12 l6">
                     <div class="card">
                         <div class="card-content">
-
                             <div class="row">
-                                <form class="col s12" name="chngpwd" method="post">
+                                <form class="col s12" name="chngpwd" method="post" onsubmit="return validateForm()">
                                     <?php if ($error) { ?>
-                                        <div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div>
+                                        <div class="errorWrap"><strong>ERROR</strong>: <?php echo htmlentities($error); ?> </div>
                                     <?php } else if ($msg) { ?>
-                                            <div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?>
-                                            </div><?php } ?>
+                                        <div class="succWrap"><strong>ÉXITO</strong>: <?php echo htmlentities($msg); ?></div>
+                                    <?php } ?>
                                     <?php
                                     $did = intval($_GET['deptid']);
                                     $sql = "SELECT * from tbldepartments WHERE id=:did";
@@ -94,60 +96,34 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     $query->bindParam(':did', $did, PDO::PARAM_STR);
                                     $query->execute();
                                     $results = $query->fetchAll(PDO::FETCH_OBJ);
-                                    $cnt = 1;
                                     if ($query->rowCount() > 0) {
                                         foreach ($results as $result) { ?>
-
                                             <div class="row">
                                                 <div class="input-field col s12">
-                                                    <input id="departmentname" type="text" class="validate" autocomplete="off"
-                                                        name="departmentname"
-                                                        value="<?php echo htmlentities($result->DepartmentName); ?>" required>
-                                                    <label for="deptname">Nombre de Departamento</label>
-                                                </div>
-
-
-                                                <div class="input-field col s12">
-                                                    <input id="departmentshortname" type="text" class="validate" autocomplete="off"
-                                                        value="<?php echo htmlentities($result->DepartmentShortName); ?>"
-                                                        name="departmentshortname" required>
-                                                    <label for="deptshortname">Nombre corto del departamento</label>
+                                                    <input id="departmentname" type="text" class="validate" autocomplete="off" name="departmentname" value="<?php echo htmlentities($result->DepartmentName); ?>" >
+                                                    <label for="departmentname">Nombre de Departamento</label>
                                                 </div>
                                                 <div class="input-field col s12">
-                                                    <input id="deptcode" type="text" name="deptcode" class="validate"
-                                                        autocomplete="off"
-                                                        value="<?php echo htmlentities($result->DepartmentCode); ?>" required>
-                                                    <label for="password">Código del departamento</label>
+                                                    <input id="departmentshortname" type="text" class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentShortName); ?>" name="departmentshortname" >
+                                                    <label for="departmentshortname">Nombre corto del departamento</label>
                                                 </div>
-
+                                                <div class="input-field col s12">
+                                                    <input id="deptcode" type="text" name="deptcode" class="validate" autocomplete="off" value="<?php echo htmlentities($result->DepartmentCode); ?>" >
+                                                    <label for="deptcode">Código del departamento</label>
+                                                </div>
                                             <?php }
                                     } ?>
-
-
                                         <div class="input-field col s12">
-                                            <button type="submit" name="update"
-                                                class="waves-effect waves-light btn indigo m-b-xs">ACTUALIZAR</button>
-
+                                            <button type="submit" name="update" class="waves-effect waves-light btn indigo m-b-xs">ACTUALIZAR</button>
                                         </div>
-
-
-
-
                                     </div>
-
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
-
             </div>
         </main>
-
-        </div>
         <div class="left-sidebar-hover"></div>
 
         <!-- Javascripts -->
@@ -158,7 +134,26 @@ if (strlen($_SESSION['alogin']) == 0) {
         <script src="../assets/js/alpha.min.js"></script>
         <script src="../assets/js/pages/form_elements.js"></script>
 
-    </body>
+        <!-- SweetAlert JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        <script>
+            function validateForm() {
+                const deptname = document.querySelector('#departmentname').value;
+                const deptshortname = document.querySelector('#departmentshortname').value;
+                const deptcode = document.querySelector('#deptcode').value;
 
+                if (!deptname || !deptshortname || !deptcode) {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Por favor, complete todos los campos.',
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar'
+                    });
+                    return false; // Previene el envío del formulario
+                }
+                return true; // Permite el envío del formulario
+            }
+        </script>
+    </body>
     </html>
 <?php } ?>

@@ -109,7 +109,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             for (var i = 0; i < fields.length; i++) {
                 if (document.forms["addemp"][fields[i]].value === "") {
                     Swal.fire({
-                        icon: 'error',
+                        icon: 'info',
                         title: 'Campos vacíos',
                         text: 'Por favor, completa todos los campos antes de agregar el empleado.',
                         confirmButtonColor: '#3085d6'
@@ -199,7 +199,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <?php } ?>
 
                                                     <div class="input-field col  s12">
-                                                        <label for="empcode">Employee Code(Must be unique)</label>
+                                                        <label for="empcode">Código de empleado (Debe ser único)</label>
                                                         <input name="empcode" id="empcode"
                                                             onBlur="checkAvailabilityEmpid()" type="text"
                                                             autocomplete="off" >
@@ -289,7 +289,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                             >
                                                     </div>
 
-                                                    <div class="input-field col m6 s12">
+                                                    <div class="input-field col s12">
                                                         <label for="country">País</label>
                                                         <input id="country" name="country" type="text"
                                                             autocomplete="off" >

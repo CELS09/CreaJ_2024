@@ -9,7 +9,8 @@
 
             <hr color="gray" size="0.5px">
 
-            <div class="sidebar-profile-info center-align">
+            <div class="sidebar-profile-info center-align style-none">
+                
                 <?php
                 $eid = $_SESSION['eid'];
                 $sql = "SELECT FirstName,LastName,EmpId from  tblemployees where id=:eid";
