@@ -56,8 +56,8 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../assets\images\FaviconWF.png" type="image/x-icon">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
         <!--FUENTE DE GOOGLE PARA EL NOMBRE DEL PERFIL -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

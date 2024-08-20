@@ -33,8 +33,8 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
 
-        <!--FAVICON-->
-        <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />

@@ -111,7 +111,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                     Swal.fire({
                         icon: 'info',
                         title: 'Campos vacíos',
-                        text: 'Por favor, completa todos los campos antes de agregar el empleado.',
+                        text: 'Por favor, completa todos los campos antes de agregar al empleado.',
                         confirmButtonColor: '#3085d6'
                     });
                     return false;
@@ -193,7 +193,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                             <?php echo htmlentities($error); ?>
                                                         </div>
                                                     <?php } else if ($msg) { ?>
-                                                        <div class="succWrap"><strong>SUCCESS</strong>:
+                                                        <div class="succWrap"><strong>ÉXITO</strong>:
                                                             <?php echo htmlentities($msg); ?>
                                                         </div>
                                                     <?php } ?>

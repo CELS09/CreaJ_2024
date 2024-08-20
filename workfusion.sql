@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-08-2024 a las 00:45:21
+-- Tiempo de generación: 20-08-2024 a las 09:42:51
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -95,10 +95,11 @@ CREATE TABLE `tblemployees` (
 --
 
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
-(1, 'EMP10806121', 'tusolutionweb', 'tutos', 'johnny@gmail.com', '6c5dc4ff5d0be4ac99337cea5576e7ff', 'Male', '3 February, 1990', 'Human Resource', 'N NEPO', 'sochi', 'IRE', '9857555555', 1, '2017-11-10 11:29:59'),
+(1, 'EMP10806121', 'tusolutionweb', 'tutos', 'johnny@gmail.com', '6c5dc4ff5d0be4ac99337cea5576e7ff', '', '3 February, 1990', 'Human Resource', 'N NEPO', 'sochi', 'IRE', '9857555555', 1, '2017-11-10 11:29:59'),
 (2, 'DEMP2132', 'James', 'doe', 'james@gmail.com', 'f925916e2754e5e03f75dd58a5733251', 'Male', '3 February, 1990', 'Information Technology', 'N NEPO', 'NEPO', 'IRE', '8587944255', 1, '2017-11-10 13:40:02'),
 (3, '09907887', 'rayan ', 'Pacheco', 'rayan@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '23 June, 2018', 'informatica', 'av sata ana', 'cusco', 'peru', '912233454', 1, '2018-06-26 17:06:01'),
-(4, 'tusolutionweb', 'tusolutionweb', 'tutos', 'tusolutionweb@gmail.com', '6c5dc4ff5d0be4ac99337cea5576e7ff', '', '30 June, 2018', 'Redes', 'santa maria', 'lima', 'peru', '932435423', 1, '2018-06-26 17:16:30');
+(4, 'tusolutionweb', 'tusolutionweb', 'tutos', 'tusolutionweb@gmail.com', '6c5dc4ff5d0be4ac99337cea5576e7ff', '', '30 June, 2018', 'Redes', 'santa maria', 'lima', 'peru', '932435423', 1, '2018-06-26 17:16:30'),
+(5, 'WF2024', 'Work', 'Fusion', 'wf@g.c', '87629ebcc397228abf397f421b57d071', '', '9 August, 2005', 'Area informatica', 'Ciudadela Don Bosco', 'Soyapango', 'El Salvador', '0000 0000', 1, '2024-08-20 07:28:40');
 
 -- --------------------------------------------------------
 
@@ -210,7 +211,7 @@ ALTER TABLE `tbldepartments`
 -- AUTO_INCREMENT de la tabla `tblemployees`
 --
 ALTER TABLE `tblemployees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tblleaves`

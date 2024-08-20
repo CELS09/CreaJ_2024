@@ -56,7 +56,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../includes/style-traductor.css">
 
-    <!--FAVICON-->
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
 
     <!-- SweetAlert2 -->
@@ -120,7 +120,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                         <?php echo htmlentities($error); ?>
                                     </div>
                                 <?php } else if ($msg) { ?>
-                                    <div class="succWrap"><strong>SUCCESS</strong>:
+                                    <div class="succWrap"><strong>ÉXITO</strong>:
                                         <?php echo htmlentities($msg); ?>
                                     </div>
                                 <?php } ?>
