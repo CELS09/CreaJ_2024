@@ -222,7 +222,6 @@ if (isset($_POST['signin'])) {
                                             <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
                                         </div>
                                     </form>
-
                                 </div>
                             </div>
                         </div>
@@ -269,7 +268,5 @@ if (isset($_POST['signin'])) {
     <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
     <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
     <script src="assets/js/alpha.min.js"></script>
-
 </body>
-
 </html>

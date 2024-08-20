@@ -226,13 +226,13 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     </div>
 
                                                     <div class="input-field col s12">
-                                                        <label for="password">Password</label>
+                                                        <label for="password">Contraseña</label>
                                                         <input id="password" name="password" type="password"
                                                             autocomplete="off" >
                                                     </div>
 
                                                     <div class="input-field col s12">
-                                                        <label for="confirm">Confirm password</label>
+                                                        <label for="confirm">Confirmar contraseña</label>
                                                         <input id="confirm" name="confirmpassword" type="password"
                                                             autocomplete="off" >
                                                     </div>
