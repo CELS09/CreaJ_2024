@@ -111,7 +111,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                     Swal.fire({
                         icon: 'info',
                         title: 'Campos vacíos',
-                        text: 'Por favor, completa todos los campos antes de agregar al empleado.',
+                        text: 'Por favor, completa todos los campos antes de agregar a un empleado.',
                         confirmButtonColor: '#3085d6'
                     });
                     return false;
@@ -228,13 +228,13 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <div class="input-field col s12">
                                                         <label for="password">Contraseña</label>
                                                         <input id="password" name="password" type="password"
-                                                            autocomplete="off" >
+                                                            autocomplete="off" minlength="5" maxlength="10">
                                                     </div>
 
                                                     <div class="input-field col s12">
                                                         <label for="confirm">Confirmar contraseña</label>
                                                         <input id="confirm" name="confirmpassword" type="password"
-                                                            autocomplete="off" >
+                                                            autocomplete="off" minlength="5" maxlength="10">
                                                     </div>
                                                 </div>
                                             </div>
@@ -244,7 +244,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                                     <div class="input-field m6 s12" style="margin-left: 14px;">
                                                         <select name="department" autocomplete="off">
-                                                            <option value="">Departamento...</option>
+                                                            <option value="">Departamento</option>
                                                             <?php $sql = "SELECT DepartmentName from tbldepartments";
                                                             $query = $dbh->prepare($sql);
                                                             $query->execute();
@@ -263,10 +263,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                                     <div class="input-field col m6 s12">
                                                         <select name="gender" autocomplete="off">
-                                                            <option value="">Género...</option>
+                                                            <option value="">Género</option>
                                                             <option value="Male">Masculino</option>
-                                                            <option value="Female">Hembra</option>
-                                                            <option value="Other">Otro</option>
+                                                            <option value="Female">Femenino</option>
+                                                            <option value="Other">Prefiero no decirlo</option>
                                                         </select>
                                                     </div>
 
