@@ -39,31 +39,27 @@ if (strlen($_SESSION['emplogin']) == 0) {
     <html lang="es">
 
     <head>
-
         <!-- Título -->
-        <title>Empleado | Aplicar permiso</title>
+        <title>Empleado | Solicitar permiso</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
-        <meta name="description" content="Responsive Admin Dashboard Template" />
-        <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
-
+        <meta name="description" content="Responsive Admin Dashboard Template"/>
+        <meta name="keywords" content="admin,dashboard"/>
+        <meta name="author" content="Steelcoders"/>
         <!-- Styles -->
         <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-
         <!--FUENTE DE GOOGLE PARA EL TEXTO "Admin" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <!--FIN DE FUENTE DE GOOGLE -->
-
         <!-- FAVICON -->
-        <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
 
         <style>
             .errorWrap {
@@ -92,15 +88,12 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
-                <div class="col s12">
-                    <div class="page-title">Solicitar licencia</div>
-                </div>
                 <div class="col s12 m12 l8">
                     <div class="card">
                         <div class="card-content">
                             <form id="example-form" method="post" name="addemp">
                                 <div>
-                                    <h3>Solicitar licencia</h3>
+                                    <h3>Solicitar permiso</h3>
                                     <section>
                                         <div class="wizard-content">
                                             <div class="row">
@@ -117,9 +110,9 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                         <?php } ?>
 
 
-                                                        <div class="input-field col  s12">
+                                                        <div class="input-field col s12">
                                                             <select name="leavetype" autocomplete="off">
-                                                                <option value="">Seleccione el tipo de permiso...</option>
+                                                                <option value="">Seleccione el tipo de permiso</option>
                                                                 <?php $sql = "SELECT  LeaveType from tblleavetype";
                                                                 $query = $dbh->prepare($sql);
                                                                 $query->execute();
@@ -136,19 +129,18 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                             </select>
                                                         </div>
 
-
                                                         <div class="input-field col m6 s12">
                                                             <label for="fromdate">Partir de la fecha</label>
                                                             <input placeholder="" id="mask1" name="fromdate" class="masked"
                                                                 type="text" data-inputmask="'alias': 'date'" required>
                                                         </div>
                                                         <div class="input-field col m6 s12">
-                                                            <label for="todate">Hasta la fecha </label>
+                                                            <label for="todate">Hasta la fecha</label>
                                                             <input placeholder="" id="mask1" name="todate" class="masked"
                                                                 type="text" data-inputmask="'alias': 'date'" required>
                                                         </div>
                                                         <div class="input-field col m12 s12">
-                                                            <label for="birthdate">Descripcion</label>
+                                                            <label for="birthdate">Descripción</label>
 
                                                             <textarea id="textarea1" name="description"
                                                                 class="materialize-textarea" length="500"

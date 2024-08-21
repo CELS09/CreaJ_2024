@@ -7,6 +7,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
 } else {
 
 ?>
+
     <!DOCTYPE html>
     <html lang="es">
 
@@ -66,10 +67,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
         <?php include('includes/sidebar.php'); ?>
         <main class="mn-inner">
             <div class="row">
-                <div class="col s12">
-                    <div class="page-title">Ver el historial</div>
-                </div>
-
                 <div class="col s12 m12 l12">
                     <div class="card">
                         <div class="card-content">
@@ -101,7 +98,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                     if ($query->rowCount() > 0) {
                                         foreach ($results as $result) {               ?>
                                             <tr>
-                                                <td> <?php echo htmlentities($cnt); ?></td>
+                                                <td><?php echo htmlentities($cnt); ?></td>
                                                 <td><?php echo htmlentities($result->LeaveType); ?></td>
                                                 <td><?php echo htmlentities($result->ToDate); ?></td>
                                                 <td><?php echo htmlentities($result->FromDate); ?></td>
@@ -110,7 +107,6 @@ if (strlen($_SESSION['emplogin']) == 0) {
                                                 <td><?php if ($result->AdminRemark == "") {
                                                         echo htmlentities('waiting for approval');
                                                     } else {
-
                                                         echo htmlentities(($result->AdminRemark) . " " . "at" . " " . $result->AdminRemarkDate);
                                                     }
 
