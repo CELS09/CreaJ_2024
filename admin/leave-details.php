@@ -41,9 +41,8 @@ if (strlen($_SESSION['alogin']) == 0) {
     <html lang="es">
 
     <head>
-
         <!-- Title -->
-        <title>Admin | Detalles Empleado </title>
+        <title>Administrador | Detalles de empleado</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="UTF-8">
@@ -133,7 +132,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         target="_blank">
                                                         <?php echo htmlentities($result->FirstName . " " . $result->LastName); ?></a>
                                                 </td>
-                                                <td style="font-size:16px;"><b> ID Emp :</b></td>
+                                                <td style="font-size:16px;"><b> ID Emp:</b></td>
                                                 <td><?php echo htmlentities($result->EmpId); ?></td>
                                             </tr>
 
@@ -149,31 +148,31 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <tr>
                                                 <td style="font-size:16px;"><b>Tipo de permiso :</b></td>
                                                 <td><?php echo htmlentities($result->LeaveType); ?></td>
-                                                <td style="font-size:16px;"><b>Fecha de partida :</b></td>
+                                                <td style="font-size:16px;"><b>Fecha de partida:</b></td>
                                                 <td>From <?php echo htmlentities($result->FromDate); ?> to
                                                     <?php echo htmlentities($result->ToDate); ?>
                                                 </td>
                                             </tr>
 
                                             <tr>
-                                                <td style="font-size:16px;"><b>Descripción del permiso del empleado : </b></td>
+                                                <td style="font-size:16px;"><b>Descripción del permiso de empleado:</b></td>
                                                 <td colspan="1"><?php echo htmlentities($result->Description); ?></td>
                                                 <td style="font-size:16px;"><b>Género :</b></td>
                                                 <td><?php echo htmlentities($result->Gender); ?></td>
                                             </tr>
 
                                             <tr>
-                                                <td style="font-size:16px;"><b>Estado :</b></td>
+                                                <td style="font-size:16px;"><b>Estado:</b></td>
                                                 <td colspan="1"><?php $stats = $result->Status;
                                                 if ($stats == 1) {
                                                     ?>
                                                         <span style="color: green">Aprobado</span>
                                                     <?php }
                                                 if ($stats == 2) { ?>
-                                                        <span style="color: red">no Aprobado</span>
+                                                        <span style="color: red">No Aprobado</span>
                                                     <?php }
                                                 if ($stats == 0) { ?>
-                                                        <span style="color: blue">A la espera de la aprobación</span>
+                                                        <span style="color: blue">Esperando aprobación...</span>
                                                     <?php } ?>
                                                 </td>
                                                 <td style="font-size:16px;"><b>Fecha de publicación</b></td>
@@ -192,7 +191,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             </tr>
 
                                             <tr>
-                                                <td style="font-size:16px;"><b>Fecha de toma de acción de administrador : </b></td>
+                                                <td style="font-size:16px;"><b>Fecha de toma de acción para administrador:</b></td>
                                                 <td colspan="5"><?php
                                                 if ($result->AdminRemarkDate == "") {
                                                     echo "NA";
