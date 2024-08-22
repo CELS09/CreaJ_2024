@@ -43,7 +43,9 @@ if (isset($_POST['signin'])) {
     <!-- Fuente de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
@@ -57,62 +59,64 @@ if (isset($_POST['signin'])) {
     <style>
         /* Estilo para mantener el formulario centrado */
         .signin-page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             background-color: #27233B;
-            /* Color de fondo opcional */
-            padding: 20px
+            padding: 20px;
         }
+
         .select-wrapper {
-        display: none !important;
+            display: none !important;
         }
     </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Elimina cualquier swal2-checkbox si existe
-        let checkbox = document.querySelector('.swal2-checkbox');
-        if (checkbox) {
-            checkbox.remove();
-        }
-    });
-</script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Elimina cualquier swal2-checkbox si existe
+            let checkbox = document.querySelector('.swal2-checkbox');
+            if (checkbox) {
+                checkbox.remove();
+            }
+        });
+    </script>
 </head>
 
-<body class="signin-page">
+<body class="signin-page flex items-center justify-center min-h-screen">
 
-    <div class="container mx-auto p-4">
-        <main class="flex flex-col items-center">
-            <a href="../index.php" class="text-cyan-400 text-center">
-                <h5 class="bg-green-600 w-32 rounded-xl text-lg font-bold p-2">Regresar</h5>
-            </a>
+    <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-lg">
+        <div class="text-left mb-8">
+            <a href="../index.php"
+                class="inline-block bg-blue-600 text-white text-lg font-bold py-2 px-4 rounded-xl hover:bg-blue-700 transition-colors">Regresar</a>
+        </div>
 
-            <h4 class="text-white text-3xl font-bold mt-8 mb-6" style="font-family: averia libre;">Administrador</h4>
+        <h4 class="text-gray-700 text-center text-4xl font-extrabold mb-6" style="font-family: 'Averia Libre', sans-serif;">
+            Administrador
+        </h4>
 
-            <div class="w-full max-w-xs sm:max-w-sm">
-                <div class="bg-white w-full shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
-                    <div class="mb-4">
-                        <span class="block text-gray-700 text-center text-3xl font-bold pb-4">Iniciar sesión</span>
-                    </div>
-                    <form id="myForm" name="signin" method="post">
-                        <div class="input-field col s12">
-                            <input id="username1" type="text" name="username" class="validate" autocomplete="off">
-                            <label for="username">Nombre de usuario</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input id="password" type="password" name="password" class="validate" autocomplete="off">
-                            <label for="password">Contraseña</label>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button type="submit" name="signin" class="w-full bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ingresar</button>
-                        </div>
-                    </form>
+        <div class="w-full max-w-2xl mx-auto">
+            <div class="bg-gray-900 p-12 rounded-xl shadow-xl">
+                <div class="mb-8 text-center">
+                    <span class="block text-white text-3xl font-extrabold">Iniciar sesión</span>
                 </div>
+                <form id="myForm" name="signin" method="post">
+                    <div class="mb-6">
+                        <label for="username" class="block text-gray-300 text-sm font-medium mb-2"></label>
+                        <input id="username1" type="text" name="username"
+                            class="block w-full bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-4 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                            autocomplete="off" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="mb-8">
+                        <label for="password" class="block text-gray-300 text-sm font-medium mb-2"></label>
+                        <input id="password" type="password" name="password"
+                            class="block w-full bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-4 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                            autocomplete="off" placeholder="Contraseña">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button type="submit" name="signin"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50">Ingresar</button>
+                    </div>
+                </form>
             </div>
-        </main>
+
+        </div>
     </div>
 
     <!-- Javascripts -->
@@ -121,15 +125,14 @@ if (isset($_POST['signin'])) {
             <?php if (isset($_SESSION['login_error'])) { ?>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Detalles no válidos',
-                    text: 'El nombre de usuario o la contraseña son incorrectos.',
+                    title: 'Admin inválido',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK'
                 });
                 <?php unset($_SESSION['login_error']); // Elimina el mensaje de error después de mostrarlo ?>
             <?php } ?>
 
-            document.getElementById('myForm').addEventListener('submit', function(event) {
+            document.getElementById('myForm').addEventListener('submit', function (event) {
                 const username = document.getElementById('username1').value.trim();
                 const password = document.getElementById('password').value.trim();
 
@@ -138,7 +141,7 @@ if (isset($_POST['signin'])) {
                     Swal.fire({
                         icon: 'info',
                         title: 'Complete todos los campos',
-                        text: 'Hay uno o más campos sin completar.',
+                        text: 'Hay uno o más campos vacíos.',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'OK',
                         focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación

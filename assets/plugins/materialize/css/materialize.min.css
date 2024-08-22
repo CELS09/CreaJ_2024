@@ -5851,7 +5851,7 @@ textarea.materialize-textarea+label:after {
 
 .input-field {
     position: relative;
-    margin-top: 1rem
+    margin-top: 0.50rem
 }
 
 .input-field.col label {

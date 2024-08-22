@@ -122,8 +122,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             if (password != confirmpassword) {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Contraseña no coincide',
-                    text: 'La nueva contraseña y la confirmación no coinciden.',
+                    title: 'Contraseñas no coinciden',
+                    text: 'Nueva contraseña y la confirmación no coinciden.',
                     confirmButtonColor: '#3085d6'
                 });
                 return false;

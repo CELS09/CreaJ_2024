@@ -2,32 +2,37 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
+
 if (isset($_POST['signin'])) {
-    $uname = $_POST['username'];
-    $password = md5($_POST['password']);
-    $sql = "SELECT EmailId,Password,Status,id FROM tblemployees WHERE EmailId=:uname and Password=:password";
+    $uname = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
+    $passwordHash = md5($password); // Considera usar password_hash() para mayor seguridad
+
+    $sql = "SELECT EmailId, Password, Status, id FROM tblemployees WHERE EmailId = :uname AND Password = :password";
     $query = $dbh->prepare($sql);
     $query->bindParam(':uname', $uname, PDO::PARAM_STR);
-    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->bindParam(':password', $passwordHash, PDO::PARAM_STR);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
+
     if ($query->rowCount() > 0) {
         foreach ($results as $result) {
             $status = $result->Status;
             $_SESSION['eid'] = $result->id;
         }
+
         if ($status == 0) {
-            $msg = "Su cuenta está inactiva. Póngase en contacto con el administrador";
+            $_SESSION['login_error'] = "Su cuenta está inactiva. Póngase en contacto con el administrador";
         } else {
-            $_SESSION['emplogin'] = $_POST['username'];
+            $_SESSION['emplogin'] = $uname;
             echo "<script type='text/javascript'> document.location = 'emp-changepassword.php'; </script>";
         }
     } else {
-
-        echo "<script>alert('DATOS INVÀLIDOS');</script>";
+        $_SESSION['login_error'] = "Email o contraseña incorrectos";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -64,6 +69,22 @@ if (isset($_POST['signin'])) {
     <!-- SweetAlert JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Custom Styles -->
+    <style>
+        /* Estilo para mantener el formulario centrado */
+        .signin-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #27233B;
+            /* Color de fondo opcional */
+            padding: 20px
+        }
+        .select-wrapper {
+        display: none !important;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -193,15 +214,15 @@ if (isset($_POST['signin'])) {
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
-                    <div class="font-bold text-3xl mb-7 mt-24">
-                        <p class="text-center text-5xl" style="font-family: averia libre;">¡BIENVENIDO A WORKFUSION!</p>
+                    <div class="font-bold text-3xl mb-10 mt-24">
+                        <p class="text-center text-5xl font-extrabold">¡BIENVENIDO A WORKFUSION!</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
                         <div class="card white darken-1">
 
                             <div class="card-content h-auto">
-                                <span class="mt-4 card-title text-xl text-center">Login del empleado</span>
+                                <span class="pt-4 card-title text-xl text-center font-bold">Login del empleado</span>
                                 <?php if ($msg) { ?>
                                     <div class="errorWrap"><strong>Error</strong> :
                                         <?php echo htmlentities($msg); ?>
@@ -209,7 +230,7 @@ if (isset($_POST['signin'])) {
                                 <?php } ?>
 
                                 <div class="row">
-                                    <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-8 mb-4" name="signin" method="post">
+                                    <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-2 mb-4" name="signin" method="post">
                                         <div class="input-field col s12">
                                             <input id="username" type="text" name="username" class="validate" autocomplete="off">
                                             <label for="email">Email</label>
@@ -219,7 +240,7 @@ if (isset($_POST['signin'])) {
                                             <label for="password">Contraseña</label>
                                         </div>
                                         <div class=" items-center justify-center">
-                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
+                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
                                         </div>
                                     </form>
                                 </div>
@@ -245,7 +266,8 @@ if (isset($_POST['signin'])) {
                 event.preventDefault(); // Evita el envío del formulario
                 Swal.fire({
                     icon: 'error',
-                    title: 'Debe ingresar todos los datos',
+                    title: 'Ingresar todos los datos',
+                    text: 'Hay uno o más campos vacíos',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK',
                     focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
@@ -261,6 +283,19 @@ if (isset($_POST['signin'])) {
                 });
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        <?php if (isset($_SESSION['login_error'])) { ?>
+            Swal.fire({
+                title: '¡Error!',
+                text: '<?php echo $_SESSION['login_error']; ?>',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar'
+            });
+            <?php unset($_SESSION['login_error']); // Elimina el mensaje de error después de mostrarlo ?>
+        <?php } ?>
+    });
+
     </script>
 
     <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>

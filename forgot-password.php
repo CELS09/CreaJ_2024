@@ -28,16 +28,22 @@ if (isset($_POST['change'])) {
     <meta name="description" content="Responsive Admin Dashboard Template" />
     <meta name="keywords" content="admin,dashboard" />
     <meta name="author" content="Steelcoders" />
+
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
+
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!--TAILWIND-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,7 +126,8 @@ if (isset($_POST['change'])) {
             <nav class="cyan darken-1">
                 <div class="nav-wrapper row">
                     <section class="material-design-hamburger navigation-toggle">
-                        <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
+                        <a href="#" data-activates="slide-out"
+                            class="button-collapse show-on-large material-design-hamburger__icon">
                             <span class="material-design-hamburger__layer"></span>
                         </a>
                     </section>
@@ -136,35 +143,43 @@ if (isset($_POST['change'])) {
             </nav>
         </header>
 
-        <aside id="slide-out" class="side-nav white fixed">
+                <!-- SIDEBAR-->
+
+                <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
+
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
+
                     <li>&nbsp;</li>
 
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="index.php">
-
-                            <!-- USAMOS EL (class="material-icons) DENTRO DE LOS "<i>" PARA QUE QUEDE AJUSTADO AL TEXTO-->
                             <i class="material-icons">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVR4nM3TsUrDUBSH8d8u6KCTLvoAujiLgs666dBVBKm4utsXaHfRybyEq07WSZ9BpYOTY0W5cAqXQFOTgPiHj4RzLt8NhxP+KEsoMMy4xWIdyRo2cYNHnGQMcR391VmiLr7wgU884yLjJeqpP8ZplewJ5/E+hz7uMvpRF+fSl05Nurnzy3F04nwt2VHM77CtbAffGdttZGclWbeNbAWvIUrP5TaylAVsYb5U79SRpSUdxU5NGOG4iawozWtC0UR2EFuei8bYbyJL2UAPV7jEetabKXvAIH7kWQxwXyXbw/uUWZV5w26V7P/kB29nXp92NMJ+AAAAAElFTkSuQmCC">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
                             </i>Login empleado
                         </a>
                     </li>
 
-                    <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
+                    <hr class="border-gray-300 my-0.5 mx-5">
 
                     <li class="no-padding">
-                        <a class="waves-effect waves-grey" href="forgot-password.php">
+                        <a class="waves-effect waves-grey" href="admin/">
+                            <i class="material-icons">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nM2TvUpDQRCFRfAVFNTWQgsVRJ8h3D3fQlKJNv6RRmuxS2OniE0QFAJ5Bi200UKbQB5Ae21tVIigQQb2xk3CvREEceDAcubMmbl3doeG/iqSJJl3zs39ykTSOvAq6QVYG1jgnJuQdChpu1KpDKc8UANOAmopbxpgx2q89+MdI+AKuJT05L1fjhosAW8GSYvRpCvAY1oXf8IdUAcegM3IaApoGewc6beC1mpuO0be+xmgCbSBUjRpPUbEl4K2mSTJdNd/CmZtSR9AFZhNJ3HfkxlXDZp2n0nU6QY4ABqS3numqAeuYRpJ15nb895vmKBcLo8451aLxeJomrOzcZYLDbOvQ6FQmLSxY4PeAMYkfdqV6Uv2CG0byspLQtJ9rkkQXgC7Ofk9SecDjYAz4CjH6FjS6U+M9sOqnzPQMs1AI3s7zrmFPHS9r38bX94JttXznMwZAAAAAElFTkSuQmCC">
+                            </i>Admin login
+                        </a>
+                    </li>
+
+                    <hr class="border-gray-300 my-0.5 mx-5">
+
+                    <li class="no-padding">
+                        <a class="waves-effect waves-grey" href="#">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
                             </i>Contraseña de recuperación
                         </a>
                     </li>
 
-                    <hr color="gray" size="0.3px" style="margin-left: 20px; margin-right: 20px;">
-
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i
-                                class="material-icons">account_box</i>Admin login</a></li>
                 </ul>
                 <div class="footer">
                     <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
@@ -172,82 +187,93 @@ if (isset($_POST['change'])) {
             </div>
         </aside>
 
-        <main class="mn-inner">
-            <div class="row">
-                <div class="col s12">
-                    <div class="page-title">
-                        <p class="text-center text-5xl pb-7 pt-7" style="font-family: averia libre;">Recuperación de contraseña para empleado</p>
-                    </div>
+        <!-- FIN DEL SIDEBAR-->
 
-                    <div class="col s12 m6 l8 offset-l2 offset-m3">
-                        <div class="card white darken-1">
+        <main class="flex flex-col items-center justify-center pt-8 bg-gray-100">
+            <div class="w-full max-w-4xl p-6">
+                <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-700">
+                    Recuperación de contraseña para empleado
+                </h1>
 
-                            <div class="card-content ">
-                                <span class="card-title" style="font-size:20px;">Digite sus credenciales</span>
-                                <?php if ($msg) { ?><div class="succWrap"><strong>Éxito </strong> : <?php echo htmlentities($msg); ?> </div><?php } ?>
-                                <div class="row">
-                                    <form class="col s12" name="signin" method="post">
-                                        <div class="input-field col s12">
-                                            <input id="empid" type="text" name="empid" class="validate" autocomplete="off" required>
-                                            <label for="email">ID Empleado</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
-                                            <label for="password">Email</label>
-                                        </div>
-                                        <div class="col s12 right-align m-t-sm">
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <h2 class="text-2xl font-extrabold mb-6 text-center text-gray-600">DIGITE SUS CREDENCIALES</h2>
 
-                                            <input type="submit" name="submit" value="Iniciar sesión" class="waves-effect waves-light btn teal">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <?php if (isset($_POST['submit'])) {
-                                $empid = $_POST['empid'];
-                                $email = $_POST['emailid'];
-                                $sql = "SELECT id FROM tblemployees WHERE EmailId=:email and EmpId=:empid";
-                                $query = $dbh->prepare($sql);
-                                $query->bindParam(':email', $email, PDO::PARAM_STR);
-                                $query->bindParam(':empid', $empid, PDO::PARAM_STR);
-                                $query->execute();
-                                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                                if ($query->rowCount() > 0) {
-                                    foreach ($results as $result) {
-                                        $_SESSION['empid'] = $result->id;
-                                    }
-                            ?>
-
-                                    <div class="row">
-                                        <span class="card-title" style="font-size:20px;">cambia tu contraseña </span>
-                                        <form class="col s12" name="udatepwd" method="post">
-                                            <div class="input-field col s12">
-                                                <input id="password" type="password" name="newpassword" class="validate" autocomplete="off" required>
-                                                <label for="password">Nueva contraseña</label>
-                                            </div>
-
-                                            <div class="input-field col s12">
-                                                <input id="password" type="password" name="confirmpassword" class="validate" autocomplete="off" required>
-                                                <label for="password">Confirmar contraseña</label>
-                                            </div>
-
-
-                                            <div class="input-field col s12">
-                                                <button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Cambio</button>
-
-                                            </div>
-                                    </div>
-                                    </form>
-                                <?php } else { ?>
-                                    <div class="errorWrap" style="margin-left: 2%; font-size:22px;">
-                                        <strong>ERROR</strong> : <?php echo htmlentities("Invalid details");
-                                                                } ?>
-                                    </div>
-                                <?php } ?>
+                    <?php if ($msg) { ?>
+                        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6">
+                            <strong>Éxito:</strong> <?php echo htmlentities($msg); ?>
                         </div>
-                    </div>
+                    <?php } ?>
+
+                    <form name="signin" method="post" class="space-y-6 m-6">
+                        <div>
+                            <label for="empid" class="block text-lg font-medium text-gray-600">ID Empleado</label>
+                            <input id="empid" type="text" name="empid"
+                                class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                autocomplete="off" required>
+                        </div>
+                        <div>
+                            <label for="emailid" class="block text-lg font-medium text-gray-600">Email</label>
+                            <input id="emailid" type="text" name="emailid"
+                                class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                autocomplete="off" required>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="Iniciar sesión"
+                                class="w-full py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                    </form>
                 </div>
+
+                <?php if (isset($_POST['submit'])) {
+                    $empid = $_POST['empid'];
+                    $email = $_POST['emailid'];
+                    $sql = "SELECT id FROM tblemployees WHERE EmailId=:email and EmpId=:empid";
+                    $query = $dbh->prepare($sql);
+                    $query->bindParam(':email', $email, PDO::PARAM_STR);
+                    $query->bindParam(':empid', $empid, PDO::PARAM_STR);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {
+                            $_SESSION['empid'] = $result->id;
+                        }
+                        ?>
+
+                        <div class="bg-white mt-8 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                            <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">DIGITE SU NUEVO CAMBIO DE CONTRASEÑA</h2>
+                            <form name="udatepwd" method="post" class="space-y-6">
+                                <div>
+                                    <label for="newpassword" class="block text-lg font-medium text-gray-800">Nueva
+                                        contraseña</label>
+                                    <input id="newpassword" type="password" name="newpassword"
+                                        class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                        autocomplete="off" required>
+                                </div>
+                                <div>
+                                    <label for="confirmpassword" class="block text-lg font-medium text-gray-800">Confirmar
+                                        contraseña</label>
+                                    <input id="confirmpassword" type="password" name="confirmpassword"
+                                        class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                        autocomplete="off" required>
+                                </div>
+                                <div>
+                                    <button type="submit" name="change"
+                                        class="w-full py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                        onclick="return valid();">Cambiar</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    <?php } else { ?>
+                        <div
+                            class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-6 max-w-lg mx-auto">
+                            <strong>ERROR:</strong> <?php echo htmlentities("Datos inválidos"); ?>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
             </div>
         </main>
+
 
     </div>
     <div class="left-sidebar-hover"></div>
