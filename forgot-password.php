@@ -191,12 +191,12 @@ if (isset($_POST['change'])) {
 
         <main class="flex flex-col items-center justify-center pt-8 bg-gray-100">
             <div class="w-full max-w-4xl p-6">
-                <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-700">
+                <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-500">
                     Recuperación de contraseña para empleado
                 </h1>
 
                 <div class="bg-white rounded-lg shadow-lg p-4">
-                    <h2 class="text-2xl font-extrabold mb-6 text-center text-gray-600">DIGITE SUS CREDENCIALES</h2>
+                    <h2 class="text-2xl font-extrabold mb-6 text-center text-gray-500">DIGITE SUS CREDENCIALES</h2>
 
                     <?php if ($msg) { ?>
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6">
