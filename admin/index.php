@@ -38,6 +38,8 @@ if (isset($_POST['signin'])) {
     <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
     <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!--TAILWIND-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Fuente de Google -->
@@ -82,19 +84,19 @@ if (isset($_POST['signin'])) {
 <body class="signin-page flex items-center justify-center min-h-screen">
 
     <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-lg">
-        <div class="text-left mb-8">
+        <div class="text-left mb-4">
             <a href="../index.php"
                 class="inline-block bg-blue-600 text-white text-lg font-bold py-2 px-4 rounded-xl hover:bg-blue-700 transition-colors">Regresar</a>
         </div>
 
-        <h4 class="text-gray-700 text-center text-4xl font-extrabold mb-6" style="font-family: 'Averia Libre', sans-serif;">
+        <h4 class="text-gray-700 text-center text-4xl font-extrabold mb-6">
             Administrador
         </h4>
 
         <div class="w-full max-w-2xl mx-auto">
             <div class="bg-gray-900 p-12 rounded-xl shadow-xl">
                 <div class="mb-8 text-center">
-                    <span class="block text-white text-3xl font-extrabold">Iniciar sesión</span>
+                    <span class="block text-white text-2xl font-extrabold">Iniciar sesión</span>
                 </div>
                 <form id="myForm" name="signin" method="post">
                     <div class="mb-6">

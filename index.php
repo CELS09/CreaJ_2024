@@ -55,11 +55,12 @@ if (isset($_POST['signin'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 
-
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- TAILWIND-->
+    <link rel="stylesheet" href="src/output.css">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
@@ -214,15 +215,15 @@ if (isset($_POST['signin'])) {
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
-                    <div class="font-bold text-3xl mb-10 mt-24">
+                    <div class="font-bold text-3xl mb-12 mt-20">
                         <p class="text-center text-5xl font-extrabold">¡BIENVENIDO A WORKFUSION!</p>
                     </div>
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
                         <div class="card white darken-1">
 
-                            <div class="card-content h-auto">
-                                <span class="pt-4 card-title text-xl text-center font-bold">Login del empleado</span>
+                            <div class="card-content h-auto ">
+                                <p class="pt-4 text-2xl text-center mx-auto font-extrabold">Login del empleado<sp>
                                 <?php if ($msg) { ?>
                                     <div class="errorWrap"><strong>Error</strong> :
                                         <?php echo htmlentities($msg); ?>
@@ -230,7 +231,7 @@ if (isset($_POST['signin'])) {
                                 <?php } ?>
 
                                 <div class="row">
-                                    <form id="myForm" class="mx-auto max-w-4xl px-8 pt-6 pb-2 mb-4" name="signin" method="post">
+                                    <form id="myForm" class="mx-auto px-8 pt-6 pb-2 mb-4" name="signin" method="post">
                                         <div class="input-field col s12">
                                             <input id="username" type="text" name="username" class="validate" autocomplete="off">
                                             <label for="email">Email</label>
@@ -266,7 +267,7 @@ if (isset($_POST['signin'])) {
                 event.preventDefault(); // Evita el envío del formulario
                 Swal.fire({
                     icon: 'error',
-                    title: 'Ingresar todos los datos',
+                    title: 'Ingrese todos los datos',
                     text: 'Hay uno o más campos vacíos',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK',

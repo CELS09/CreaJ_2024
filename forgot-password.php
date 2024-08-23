@@ -42,7 +42,7 @@ if (isset($_POST['change'])) {
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     <!--TAILWIND-->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/output.css">
 
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
