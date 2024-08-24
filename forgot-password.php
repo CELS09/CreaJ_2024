@@ -156,7 +156,7 @@ if (isset($_POST['change'])) {
                         <a class="waves-effect waves-grey" href="index.php">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
-                            </i>Login de Empleado 
+                            </i>Login empleado
                         </a>
                     </li>
 
@@ -218,8 +218,8 @@ if (isset($_POST['change'])) {
                                 autocomplete="off" required>
                         </div>
                         <div>
-                            <input type="submit" name="submit" value="Iniciar Sesión"
-                                class="w-full py-3 bg-indigo-500 text-white font-bold rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="submit" name="submit" value="Iniciar sesión"
+                                class="w-full py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                     </form>
                 </div>

@@ -28,10 +28,11 @@ if (isset($_POST['signin'])) {
             echo "<script type='text/javascript'> document.location = 'emp-changepassword.php'; </script>";
         }
     } else {
-        $_SESSION['login_error'] = "Compruebe su Email o Contraseña, y vuelva a digitarlos de manera correcta.";
+        $_SESSION['login_error'] = "Email o contraseña incorrectos";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -220,8 +221,9 @@ if (isset($_POST['signin'])) {
 
                     <div class="col s12 m6 l8 offset-l2 offset-m3">
                         <div class="card white darken-1">
+
                             <div class="card-content h-auto ">
-                                <p class="pt-4 text-2xl text-center mx-auto font-extrabold">Login de Empleado<sp>
+                                <p class="pt-4 text-2xl text-center mx-auto font-extrabold">Login del empleado<sp>
                                 <?php if ($msg) { ?>
                                     <div class="errorWrap"><strong>Error</strong> :
                                         <?php echo htmlentities($msg); ?>
@@ -239,7 +241,7 @@ if (isset($_POST['signin'])) {
                                             <label for="password">Contraseña</label>
                                         </div>
                                         <div class=" items-center justify-center">
-                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">INGRESAR</button>
+                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">INGRESAR</button>
                                         </div>
                                     </form>
                                 </div>
@@ -265,8 +267,8 @@ if (isset($_POST['signin'])) {
                 event.preventDefault(); // Evita el envío del formulario
                 Swal.fire({
                     icon: 'error',
-                    title: '¡Campos Vacíos!',
-                    text: 'Por favor, complete todos los campos para poder acceder.',
+                    title: 'Ingrese todos los datos',
+                    text: 'Hay uno o más campos vacíos',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK',
                     focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
@@ -286,7 +288,7 @@ if (isset($_POST['signin'])) {
         document.addEventListener('DOMContentLoaded', function() {
         <?php if (isset($_SESSION['login_error'])) { ?>
             Swal.fire({
-                title: '¡Credenciales Incorrectas!',
+                title: '¡Error!',
                 text: '<?php echo $_SESSION['login_error']; ?>',
                 icon: 'warning',
                 confirmButtonText: 'Aceptar'
