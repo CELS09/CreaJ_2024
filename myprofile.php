@@ -107,7 +107,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
                         <div class="card-content">
                             <form id="example-form" method="post" name="updatemp">
                                 <div>
-                                    <h3>Actualizar información de Empleado</h3>
+                                    <h3>Actualizar información del empleado</h3>
                                     <?php if ($error) { ?>
                                         <div class="errorWrap"><strong>ERROR</strong>:
                                             <?php echo htmlentities($error); ?>

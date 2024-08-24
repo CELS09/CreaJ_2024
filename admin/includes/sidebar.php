@@ -11,7 +11,7 @@
             <hr color="gray" size="0.5px">
 
             <div class="sidebar-profile-info center-align">
-                <p style="font-size: 18px; font-family: Lilita One; font-weight: 400; font-style: normal;">Administrador</p>
+                <p style="font-size: 18px; font-family: Lilita One; font-weight: 400; font-style: normal;">Admin</p>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="addleavetype.php">Agregar tipo de permiso</a></li>
-                        <li><a href="manageleavetype.php">Adm. tipo de permiso</a></li>
+                        <li><a href="manageleavetype.php">Adm. tipo de licencia</a></li>
                     </ul>
                 </div>
             </li>
