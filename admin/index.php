@@ -110,7 +110,7 @@ if (isset($_POST['signin'])) {
                             </svg>
                             <span class="ml-3">Usuario</span>
                         </label>
-                        <input id="username" type="text" name="username" class="validate w-full mt-2"
+                        <input id="username" type="text" name="username" class="text-white validate w-full mt-2"
                             autocomplete="off">
                     </div>
                     <div class="input-field col s12 mb-4">
@@ -125,7 +125,7 @@ if (isset($_POST['signin'])) {
                             </svg>
                             <span class="ml-3">Contraseña</span>
                         </label>
-                        <input id="password" type="password" name="password" class="validate w-full mt-2"
+                        <input id="password" type="password" name="password" class="text-white validate w-full mt-2"
                             autocomplete="off">
                     </div>
                     <div class="flex items-center justify-center">
