@@ -180,7 +180,7 @@ if (isset($_POST['signin'])) {
                         <a class="waves-effect waves-grey" href="#">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
-                            </i>Login empleado
+                            </i>Login de Empleado
                         </a>
                     </li>
 
@@ -213,7 +213,6 @@ if (isset($_POST['signin'])) {
         </aside>
 
         <!-- FIN DEL SIDEBAR-->
-
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -226,7 +225,7 @@ if (isset($_POST['signin'])) {
 
                             <div class="card-content h-auto ">
                                 <p class="text-gray-600 pt-4 text-2xl text-center mx-auto font-extrabold">Login del
-                                    empleado<sp>
+                                    Empleado<sp>
                                         <?php if ($msg) { ?>
                                             <div class="errorWrap"><strong>Error</strong> :
                                                 <?php echo htmlentities($msg); ?>
