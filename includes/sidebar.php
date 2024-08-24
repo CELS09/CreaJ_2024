@@ -35,19 +35,18 @@
         </div>
 
         <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
+            <li class="no-padding">
+                <a class="waves-effect waves-grey" href="myprofile.php">
+                    <i class="material-icons">account_box</i>Mi Perfil 
+                </a>
+            </li>
 
             <li class="no-padding">
                 <a class="waves-effect waves-grey" href="emp-changepassword.php">
                     <i class="material-icons">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nL3SPciNYRjA8SOSSGIRMiglXwODIjyLc3Cu//96OulO76IsMjEoRillYqAsNrIwGBSTbEgWZSCZULL4SAwMeuq8dZKc56Fc033fV/26r49e739FRCxVz6i3gIsRsakzUtf1auCtegc4BlxWv2Rm6QQBN9Qrg8FgWWYer+t6c13XOzJzTyllfmtIfZ+ZW9TrwDPgc2buHufeqDNtoVcRsUu9oD5RT85iETEEPqjL20DngHvAQuD2BPaxKRd4BBycCgEHgB+Zua7pyRh7oX7LzJXq/Yg4NA3Z30xInRkOh+uB0/1+fxFwGNgJbB3n17RCMnMD8E59DTxVT6nn1U/qiT/1Zd9vkLNVVc1Tj6hXgUvNEKaV9PxXpNclgO3q2on7taaxpePibRyX0599i4hVwFe17vKbo+rjiNjW7EZE7AXuAg8zc3FraDQarQBeqt/Vm83uqA9KKUtaIxMxp6qqBc2hWftSyty/Qf45fgKZL62uRz7/gwAAAABJRU5ErkJggg==">
-                    </i>Cambia la contraseña
-                </a>
-            </li>
-
-            <li class="no-padding">
-                <a class="waves-effect waves-grey" href="myprofile.php">
-                    <i class="material-icons">account_box</i>Mi cuenta
+                    </i>Cambiar mi Contraseña
                 </a>
             </li>
 
@@ -69,13 +68,13 @@
 
             <li class="no-padding">
                 <a class="waves-effect waves-grey" href="logout.php"><i
-                        class="material-icons">exit_to_app</i>Desconectar</a>
+                        class="material-icons">exit_to_app</i>Cerrar Sesión</a>
             </li>
 
 
         </ul>
         <div class="footer">
-            <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==">WorkFusion</a> ©</p>
+            <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
 
         </div>
     </div>
