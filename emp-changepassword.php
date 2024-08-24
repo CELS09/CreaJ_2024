@@ -57,7 +57,7 @@ if (strlen($_SESSION['emplogin']) == 0) {
     <link rel="stylesheet" href="../includes/style-traductor.css">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../assets/images/FaviconWF.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../CreaJ_2024/assets/images/FaviconWF.png" type="image/x-icon">
 
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -184,13 +184,12 @@ if (strlen($_SESSION['emplogin']) == 0) {
             if (newpassword !== confirmpassword) {
                 Swal.fire({
                     icon: 'info',
-                    title: 'Contraseñas no coinciden',
-                    text: 'La nueva contraseña y la confirmación de contraseña no coinciden.',
+                    title: '¡Contraseñas No Coinciden!',
+                    text: 'La nueva contraseña y su confirmación no coinciden. ¡Vuelva a intentarlo!',
                     confirmButtonText: 'OK'
                 });
                 return false;
             }
-
             return true;
         }
     </script>

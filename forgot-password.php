@@ -192,7 +192,7 @@ if (isset($_POST['change'])) {
         <main class="flex flex-col items-center justify-center pt-8 bg-gray-100">
             <div class="w-full max-w-4xl p-6">
                 <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-500">
-                    Recuperación de contraseña para empleado
+                    Recuperación de Contraseña para Empleado
                 </h1>
 
                 <div class="bg-white rounded-lg shadow-lg p-4">

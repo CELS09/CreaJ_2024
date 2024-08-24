@@ -114,19 +114,19 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <div class="input-field col s12">
                                         <input id="departmentname" type="text" class="validate" autocomplete="off"
                                             name="departmentname" >
-                                        <label for="departmentname">Nombre de Departamento</label>
+                                        <label for="departmentname">Nombre del Departamento</label>
                                     </div>
 
                                     <div class="input-field col s12">
                                         <input id="departmentshortname" type="text" class="validate" autocomplete="off"
                                             name="departmentshortname" >
-                                        <label for="departmentshortname">Nombre corto del departamento</label>
+                                        <label for="departmentshortname">Nombre corto del Departamento</label>
                                     </div>
 
                                     <div class="input-field col s12">
                                         <input id="deptcode" type="text" name="deptcode" class="validate"
                                             autocomplete="off" >
-                                        <label for="deptcode">Código del departamento</label>
+                                        <label for="deptcode">Código del Departamento</label>
                                     </div>
 
                                     <div class="input-field col s12">
