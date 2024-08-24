@@ -4598,7 +4598,6 @@ footer.page-footer .footer-copyright {
 
 .card .card-content p {
     margin: 0;
-    color: inherit
 }
 
 .card .card-content .card-title {
@@ -5541,11 +5540,6 @@ button.btn-floating {
 
 select:focus {
     outline: 1px solid #c9f3ef
-}
-
-button:focus {
-    outline: none;
-    background-color: #2ab7a9
 }
 
 label {

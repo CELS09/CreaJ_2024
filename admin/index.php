@@ -40,7 +40,8 @@ if (isset($_POST['signin'])) {
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css" />
 
     <!--TAILWIND-->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../src/output.css" rel="stylesheet">
+
 
     <!-- Fuente de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,28 +95,47 @@ if (isset($_POST['signin'])) {
         </h4>
 
         <div class="w-full max-w-2xl mx-auto">
-            <div class="bg-gray-900 p-12 rounded-xl shadow-xl">
+            <div class="bg-gray-800 p-12 rounded-xl shadow-xl">
                 <div class="mb-8 text-center">
                     <span class="block text-white text-2xl font-extrabold">Iniciar sesión</span>
                 </div>
                 <form id="myForm" name="signin" method="post">
-                    <div class="mb-6">
-                        <label for="username" class="block text-gray-300 text-sm font-medium mb-2"></label>
-                        <input id="username1" type="text" name="username"
-                            class="block w-full bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-4 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                            autocomplete="off" placeholder="Nombre de usuario">
+                    <div class="input-field col s12 mb-4">
+                        <label for="username" class="flex items-center">
+                            <!-- Ícono de Usuario -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                class="text-gray-500 mr-2">
+                                <path fill="currentColor"
+                                    d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5M20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1z" />
+                            </svg>
+                            <span class="ml-3">Usuario</span>
+                        </label>
+                        <input id="username" type="text" name="username" class="validate w-full mt-2"
+                            autocomplete="off">
                     </div>
-                    <div class="mb-8">
-                        <label for="password" class="block text-gray-300 text-sm font-medium mb-2"></label>
-                        <input id="password" type="password" name="password"
-                            class="block w-full bg-gray-800 text-white border border-gray-700 rounded-md py-2 px-4 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                            autocomplete="off" placeholder="Contraseña">
+                    <div class="input-field col s12 mb-4">
+                        <label for="password" class="flex items-center">
+                            <!-- Ícono de Contraseña -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15"
+                                class="text-gray-500 mr-2">
+                                <path fill="currentColor" d="M11 11h-1v-1h1zm-3 0h1v-1H8zm5 0h-1v-1h1z" />
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M3 6V3.5a3.5 3.5 0 1 1 7 0V6h1.5A1.5 1.5 0 0 1 13 7.5v.55a2.5 2.5 0 0 1 0 4.9v.55a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 0 13.5v-6A1.5 1.5 0 0 1 1.5 6zm1-2.5a2.5 2.5 0 0 1 5 0V6H4zM8.5 9a1.5 1.5 0 1 0 0 3h4a1.5 1.5 0 0 0 0-3z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="ml-3">Contraseña</span>
+                        </label>
+                        <input id="password" type="password" name="password" class="validate w-full mt-2"
+                            autocomplete="off">
                     </div>
                     <div class="flex items-center justify-center">
                         <button type="submit" name="signin"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50">Ingresar</button>
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                            Ingresar
+                        </button>
                     </div>
                 </form>
+
             </div>
 
         </div>
