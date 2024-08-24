@@ -174,8 +174,8 @@ if (strlen($_SESSION['emplogin']) == 0) {
             if (!password || !newpassword || !confirmpassword) {
                 Swal.fire({
                     icon: 'warning',
-                    title: 'Campos vacíos',
-                    text: 'Por favor, llena todos los campos.',
+                    title: '¡Campos Vacíos!',
+                    text: 'Por favor, complete todos los campos para poder cambiar su contraseña.',
                     confirmButtonText: 'OK'
                 });
                 return false;

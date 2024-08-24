@@ -49,7 +49,7 @@
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVR4nM3TPUpDQRSG4Qe7NEqqIChoUpiITRqL2KW1snAlsdY22YFuQrcRUMFCxbgClyED516GSwiZW+WDAzNnvnlnzvywq+rjtmWcVpAD/GKBeWEsYm43gfbxg0GLSgb4w0WVuMI3RgWQEb5iEzUoaRzJyy0g48z7UoH2cBKG81hlsgEyCU/yykFneG7U/YnpGsg0xvLzrEHD6OQ6xDtustw1PnDc8G4EJfXwihnuop1ySkHVG3vAfbS1BW2jGnSEpfZaZrfuESu8FcYKT01yJ/5MSaQ5O6p/ng06sIowD7wAAAAASUVORK5CYII=">
                     </i>
-                    Tipo de permiso
+                    Tipo de Permiso 
                     <i class="nav-drop-icon material-icons">keyboard_arrow_right</i>
                 </a>
 
@@ -113,8 +113,7 @@
             </li>
 
             <li class="no-padding">
-                <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Cerrar
-                    Sesión</a>
+                <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Cerrar Sesión</a>
             </li>
 
         </ul>

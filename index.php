@@ -190,7 +190,7 @@ if (isset($_POST['signin'])) {
                         <a class="waves-effect waves-grey" href="admin/">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nM2TvUpDQRCFRfAVFNTWQgsVRJ8h3D3fQlKJNv6RRmuxS2OniE0QFAJ5Bi200UKbQB5Ae21tVIigQQb2xk3CvREEceDAcubMmbl3doeG/iqSJJl3zs39ykTSOvAq6QVYG1jgnJuQdChpu1KpDKc8UANOAmopbxpgx2q89+MdI+AKuJT05L1fjhosAW8GSYvRpCvAY1oXf8IdUAcegM3IaApoGewc6beC1mpuO0be+xmgCbSBUjRpPUbEl4K2mSTJdNd/CmZtSR9AFZhNJ3HfkxlXDZp2n0nU6QY4ABqS3numqAeuYRpJ15nb895vmKBcLo8451aLxeJomrOzcZYLDbOvQ6FQmLSxY4PeAMYkfdqV6Uv2CG0byspLQtJ9rkkQXgC7Ofk9SecDjYAz4CjH6FjS6U+M9sOqnzPQMs1AI3s7zrmFPHS9r38bX94JttXznMwZAAAAAElFTkSuQmCC">
-                            </i>Admin login
+                            </i>Login de Admin  
                         </a>
                     </li>
 
@@ -200,7 +200,7 @@ if (isset($_POST['signin'])) {
                         <a class="waves-effect waves-grey" href="forgot-password.php">
                             <i class="material-icons">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
-                            </i>Contraseña de recuperación
+                            </i>Recuperación de Contraseña 
                         </a>
                     </li>
 
@@ -211,8 +211,8 @@ if (isset($_POST['signin'])) {
                 </div>
             </div>
         </aside>
-
         <!-- FIN DEL SIDEBAR-->
+
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -224,8 +224,7 @@ if (isset($_POST['signin'])) {
                         <div class="card white darken-1">
 
                             <div class="card-content h-auto ">
-                                <p class="text-gray-600 pt-4 text-2xl text-center mx-auto font-extrabold">Login del
-                                    Empleado<sp>
+                                <p class="text-gray-600 pt-4 text-2xl text-center mx-auto font-extrabold">Login de Empleado<sp> 
                                         <?php if ($msg) { ?>
                                             <div class="errorWrap"><strong>Error</strong> :
                                                 <?php echo htmlentities($msg); ?>
@@ -269,8 +268,8 @@ if (isset($_POST['signin'])) {
                 event.preventDefault(); // Evita el envío del formulario
                 Swal.fire({
                     icon: 'error',
-                    title: 'Ingrese todos los datos',
-                    text: 'Hay uno o más campos vacíos',
+                    title: '¡Campos Vacíos!',
+                    text: 'Por favor, complete todos los campos para poder acceder.',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'OK',
                     focusConfirm: false, // Evita que SweetAlert le dé foco al botón de confirmación
