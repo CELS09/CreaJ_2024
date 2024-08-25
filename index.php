@@ -188,7 +188,6 @@ if (isset($_POST['signin'])) {
 
 
         <!-- SIDEBAR-->
-
         <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
 
@@ -201,7 +200,7 @@ if (isset($_POST['signin'])) {
                             <i class="material-icons">
                                 <img
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
-                            </i>Login empleado
+                            </i>Login de Empleado
                         </a>
                     </li>
 
@@ -227,8 +226,7 @@ if (isset($_POST['signin'])) {
 
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag=="
-                            target="_blank">WorkFusion</a> ©</p>
+                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
                 </div>
             </div>
         </aside>
@@ -267,8 +265,7 @@ if (isset($_POST['signin'])) {
                                                         </svg>
                                                         <span class="ml-3">Email</span>
                                                     </label>
-                                                    <input id="username" type="text" name="username"
-                                                        class="validate w-full mt-2" autocomplete="off">
+                                                    <input id="username" type="text" name="username" class="validate w-full mt-2" autocomplete="off">
                                                 </div>
                                                 <div class="input-field col s12 mb-4">
                                                     <label for="password" class="flex items-center">
@@ -283,8 +280,7 @@ if (isset($_POST['signin'])) {
                                                         </svg>
                                                         <span class="ml-3">Contraseña</span>
                                                     </label>
-                                                    <input id="password" type="password" name="password"
-                                                        class="validate w-full mt-2" autocomplete="off">
+                                                    <input id="password" type="password" name="password" class="validate w-full mt-2" autocomplete="off">
                                                 </div>
                                                 <div class="items-center justify-center">
                                                     <button type="submit" name="signin"

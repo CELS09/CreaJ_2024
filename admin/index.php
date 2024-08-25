@@ -115,7 +115,7 @@ if (isset($_POST['signin'])) {
         <div class="w-full max-w-2xl mx-auto">
             <div class="bg-gray-800 p-12 rounded-xl shadow-xl">
                 <div class="mb-8 text-center">
-                    <span class="block text-white text-2xl font-extrabold">Iniciar sesión</span>
+                    <span class="block text-white text-2xl font-extrabold">Iniciar Sesión</span>
                 </div>
                 <form id="myForm" name="signin" method="post">
                     <div class="input-field col s12 mb-4">
@@ -147,7 +147,7 @@ if (isset($_POST['signin'])) {
                     <div class="flex items-center justify-center">
                         <button type="submit" name="signin"
                             class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50">
-                            Ingresar
+                            INGRESAR 
                         </button>
                     </div>
                 </form>
