@@ -53,7 +53,9 @@ if (isset($_POST['signin'])) {
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
@@ -78,14 +80,26 @@ if (isset($_POST['signin'])) {
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #27233B;
-            /* Color de fondo opcional */
-            padding: 20px
+            padding: 20px;
+            position: relative; /* Añadir esta línea */
         }
 
         .select-wrapper {
             display: none !important;
         }
+
+        /* ESTILO DEL VIDEO DE FONDO */
+        .videobg {
+            position: absolute;
+            opacity: 10%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Asegura que el video esté detrás del contenido */
+        }
+
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -98,6 +112,11 @@ if (isset($_POST['signin'])) {
 
 <body>
 
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="videobg" preload="none">
+        <source src="assets/images/FONDO_FORMS.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
 
     <div class="loader-bg"></div>
     <div class="loader">
@@ -169,6 +188,7 @@ if (isset($_POST['signin'])) {
 
 
         <!-- SIDEBAR-->
+
         <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
 
@@ -179,8 +199,9 @@ if (isset($_POST['signin'])) {
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="#">
                             <i class="material-icons">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
-                            </i>Login de Empleado
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
+                            </i>Login empleado
                         </a>
                     </li>
 
@@ -213,6 +234,7 @@ if (isset($_POST['signin'])) {
         </aside>
         <!-- FIN DEL SIDEBAR-->
 
+
         <main class="mn-inner">
             <div class="row">
                 <div class="col s12">
@@ -220,32 +242,59 @@ if (isset($_POST['signin'])) {
                         <p class="text-gray-700 text-center text-5xl font-extrabold">¡BIENVENIDO A WORKFUSION!</p>
                     </div>
 
-                    <div class="col s12 m6 l8 offset-l2 offset-m3">
+                    <div class="col s14 m6 l8 offset-l2 offset-m3">
                         <div class="card white darken-1">
 
                             <div class="card-content h-auto ">
-                                <p class="text-gray-600 pt-4 text-2xl text-center mx-auto font-extrabold">Login de Empleado<sp> 
+                                <p class="text-gray-600 pt-4 text-2xl text-center mx-auto font-extrabold">Login de Empleado<p> 
                                         <?php if ($msg) { ?>
                                             <div class="errorWrap"><strong>Error</strong> :
                                                 <?php echo htmlentities($msg); ?>
                                             </div>
                                         <?php } ?>
 
-                                <div class="row">
-                                    <form id="myForm" class="mx-auto px-8 pt-6 pb-2 mb-4" name="signin" method="post">
-                                        <div class="input-field col s12">
-                                            <input id="username" type="text" name="username" class="validate" autocomplete="off">
-                                            <label for="email">Email</label>
+                                        <div class="row">
+
+                                            <form id="myForm" class="mx-auto px-8 pt-6 mb-4" name="signin"
+                                                method="post">
+                                                <div class="input-field col s12 mb-4">
+                                                    <label for="username" class="flex items-center">
+                                                        <!-- Ícono de Email -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" class="text-gray-500 mr-2">
+                                                            <path fill="currentColor"
+                                                                d="M14.608 12.172c0 .84.239 1.175.864 1.175c1.393 0 2.28-1.775 2.28-4.727c0-4.512-3.288-6.672-7.393-6.672c-4.223 0-8.064 2.832-8.064 8.184c0 5.112 3.36 7.896 8.52 7.896c1.752 0 2.928-.192 4.727-.792l.386 1.607c-1.776.577-3.674.744-5.137.744c-6.768 0-10.393-3.72-10.393-9.456c0-5.784 4.201-9.72 9.985-9.72c6.024 0 9.215 3.6 9.215 8.016c0 3.744-1.175 6.6-4.871 6.6c-1.681 0-2.784-.672-2.928-2.161c-.432 1.656-1.584 2.161-3.145 2.161c-2.088 0-3.84-1.609-3.84-4.848c0-3.264 1.537-5.28 4.297-5.28c1.464 0 2.376.576 2.782 1.488l.697-1.272h2.016v7.057zm-2.951-3.168c0-1.319-.985-1.872-1.801-1.872c-.888 0-1.871.719-1.871 2.832c0 1.68.744 2.616 1.871 2.616c.792 0 1.801-.504 1.801-1.896z" />
+                                                        </svg>
+                                                        <span class="ml-3">Email</span>
+                                                    </label>
+                                                    <input id="username" type="text" name="username"
+                                                        class="validate w-full mt-2" autocomplete="off">
+                                                </div>
+                                                <div class="input-field col s12 mb-4">
+                                                    <label for="password" class="flex items-center">
+                                                        <!-- Ícono de Contraseña -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 15 15" class="text-gray-500 mr-2">
+                                                            <path fill="currentColor"
+                                                                d="M11 11h-1v-1h1zm-3 0h1v-1H8zm5 0h-1v-1h1z" />
+                                                            <path fill="currentColor" fill-rule="evenodd"
+                                                                d="M3 6V3.5a3.5 3.5 0 1 1 7 0V6h1.5A1.5 1.5 0 0 1 13 7.5v.55a2.5 2.5 0 0 1 0 4.9v.55a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 0 13.5v-6A1.5 1.5 0 0 1 1.5 6zm1-2.5a2.5 2.5 0 0 1 5 0V6H4zM8.5 9a1.5 1.5 0 1 0 0 3h4a1.5 1.5 0 0 0 0-3z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                        <span class="ml-3">Contraseña</span>
+                                                    </label>
+                                                    <input id="password" type="password" name="password"
+                                                        class="validate w-full mt-2" autocomplete="off">
+                                                </div>
+                                                <div class="items-center justify-center">
+                                                    <button type="submit" name="signin"
+                                                        class="w-full mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                                        INGRESAR
+                                                    </button>
+                                                </div>
+                                            </form>
+
                                         </div>
-                                        <div class="input-field col s12">
-                                            <input id="password" type="password" name="password" class="validate" autocomplete="off">
-                                            <label for="password">Contraseña</label>
-                                        </div>
-                                        <div class=" items-center justify-center">
-                                            <button type="submit" name="signin" class="w-full mt-8 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">INGRESAR</button>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -47,7 +47,9 @@ if (isset($_POST['change'])) {
     <!--Fuente de Google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         .errorWrap {
@@ -67,11 +69,30 @@ if (isset($_POST['change'])) {
             -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
             box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
         }
+
+        /* ESTILO DEL VIDEO DE FONDO */
+        .videobg {
+            position: absolute;
+            opacity: 10%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Asegura que el video esté detrás del contenido */
+        }
     </style>
 
 </head>
 
 <body>
+
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop class="videobg">
+        <source src="assets/images/FONDO_FORMS.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
     <div class="loader-bg"></div>
     <div class="loader">
         <div class="preloader-wrapper big active">
@@ -143,9 +164,9 @@ if (isset($_POST['change'])) {
             </nav>
         </header>
 
-                <!-- SIDEBAR-->
+        <!-- SIDEBAR-->
 
-                <aside id="slide-out" class="side-nav white fixed">
+        <aside id="slide-out" class="side-nav white fixed">
             <div class="side-nav-wrapper">
 
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
@@ -155,7 +176,8 @@ if (isset($_POST['change'])) {
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="index.php">
                             <i class="material-icons">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nMWUv0rEQBCH0yn6DFrcI2hhJakCgfl+2VofwForO62vutpGfAnviivSCorN+Qb2NleqKIN7EEISLhfUgR/DDrvfzp9lk+QvDdiXdOa+90FgAtxUNJP05b4Wn4QQ9lphkqaS3iW9rQQsI2xZjetn331XZi+SymqsKIojYO6+dnHp+3vBOqoo/xcGXEhaSDofBEvTdBv4jAP48HUyJDNJTxH2OLjMLMt2zewY2NkYluf5FnANPEt6dQ9cebw3DBh7eXUB494wSUHSZYPCxj1rM60DAx7MbNQk4MDMDl1xyosu2F1Tnzp02wqLj/TU/681dLKa7K/YN8Y95sWbSMkoAAAAAElFTkSuQmCC">
                             </i>Login empleado
                         </a>
                     </li>
@@ -165,7 +187,8 @@ if (isset($_POST['change'])) {
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="admin/">
                             <i class="material-icons">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nM2TvUpDQRCFRfAVFNTWQgsVRJ8h3D3fQlKJNv6RRmuxS2OniE0QFAJ5Bi200UKbQB5Ae21tVIigQQb2xk3CvREEceDAcubMmbl3doeG/iqSJJl3zs39ykTSOvAq6QVYG1jgnJuQdChpu1KpDKc8UANOAmopbxpgx2q89+MdI+AKuJT05L1fjhosAW8GSYvRpCvAY1oXf8IdUAcegM3IaApoGewc6beC1mpuO0be+xmgCbSBUjRpPUbEl4K2mSTJdNd/CmZtSR9AFZhNJ3HfkxlXDZp2n0nU6QY4ABqS3numqAeuYRpJ15nb895vmKBcLo8451aLxeJomrOzcZYLDbOvQ6FQmLSxY4PeAMYkfdqV6Uv2CG0byspLQtJ9rkkQXgC7Ofk9SecDjYAz4CjH6FjS6U+M9sOqnzPQMs1AI3s7zrmFPHS9r38bX94JttXznMwZAAAAAElFTkSuQmCC">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nM2TvUpDQRCFRfAVFNTWQgsVRJ8h3D3fQlKJNv6RRmuxS2OniE0QFAJ5Bi200UKbQB5Ae21tVIigQQb2xk3CvREEceDAcubMmbl3doeG/iqSJJl3zs39ykTSOvAq6QVYG1jgnJuQdChpu1KpDKc8UANOAmopbxpgx2q89+MdI+AKuJT05L1fjhosAW8GSYvRpCvAY1oXf8IdUAcegM3IaApoGewc6beC1mpuO0be+xmgCbSBUjRpPUbEl4K2mSTJdNd/CmZtSR9AFZhNJ3HfkxlXDZp2n0nU6QY4ABqS3numqAeuYRpJ15nb895vmKBcLo8451aLxeJomrOzcZYLDbOvQ6FQmLSxY4PeAMYkfdqV6Uv2CG0byspLQtJ9rkkQXgC7Ofk9SecDjYAz4CjH6FjS6U+M9sOqnzPQMs1AI3s7zrmFPHS9r38bX94JttXznMwZAAAAAElFTkSuQmCC">
                             </i>Admin login
                         </a>
                     </li>
@@ -175,24 +198,26 @@ if (isset($_POST['change'])) {
                     <li class="no-padding">
                         <a class="waves-effect waves-grey" href="#">
                             <i class="material-icons">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVUlEQVR4nJXUT0sWURTH8Y+pSeJOBNtJLloEthBy48pdKLWyJIj0BSRCu4xEUNSVEIobEdtIK6FFughFRStR6MX4BmTgPA+Xca7D84XLzDn3d87cPz+G+5nAEa7iOaFFOvAWp1hHf+QfR3yKN6Gr5BHGsYVzzKM3o+2N+fPQj0d9k//4gqEWd/E86or6Jn8z4odYxgmWIq7iTxoU59BVIfqKWTzAXKyiTHdcTpPveHpHxnFy0J3louAZtiV8xus0gW+4wXUybiKf8g6f0sQY1kqis1Kcy+/iRXnfF5miNvyKZ7lZW9zkHc/9iP2rKFrJ5EexqYKRuIgG/zBcMS4TzT6eyHCAwXifwmrFmEoMu5Nr1Fjdz+R8cnSETQZqdBbxsUazgA91jRpfPcTLzPz7sknr6MFvvCrlZ7CH9laaNRoWdils0RcW2LjvP1ZHcRHTYczJOvUttRU+T/juX+oAAAAASUVORK5CYII=">
                             </i>Contraseña de recuperación
                         </a>
                     </li>
 
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag==" target="_blank">WorkFusion</a> ©</p>
+                    <p class="copyright"><a href="https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag=="
+                            target="_blank">WorkFusion</a> ©</p>
                 </div>
             </div>
         </aside>
 
         <!-- FIN DEL SIDEBAR-->
 
-        <main class="flex flex-col items-center justify-center pt-8 bg-gray-100">
+        <main class="flex flex-col items-center justify-center pt-8">
             <div class="w-full max-w-4xl p-6">
-                <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-500">
-                    Recuperación de Contraseña para Empleado
+                <h1 class="text-center text-4xl font-extrabold pb-10 text-gray-600">
+                    RECUPERACIÓN DE CONTRASEÑA PARA EMPLEADO
                 </h1>
 
                 <div class="bg-white rounded-lg shadow-lg p-4">
@@ -218,7 +243,7 @@ if (isset($_POST['change'])) {
                                 autocomplete="off" required>
                         </div>
                         <div>
-                            <input type="submit" name="submit" value="Iniciar sesión"
+                            <input type="submit" name="submit" value="COMPROBAR"
                                 class="w-full py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                     </form>
@@ -239,9 +264,10 @@ if (isset($_POST['change'])) {
                         }
                         ?>
 
-                        <div class="bg-white mt-8 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-                            <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">DIGITE SU NUEVO CAMBIO DE CONTRASEÑA</h2>
-                            <form name="udatepwd" method="post" class="space-y-6">
+                        <div class="bg-gray-100 mt-8 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                            <h2 class="text-2xl font-extrabold mb-6 text-gray-500 text-center">DIGITE SU NUEVO CAMBIO DE
+                                CONTRASEÑA</h2>
+                            <form name="udatepwd" method="post" class="space-y-6 mt-4">
                                 <div>
                                     <label for="newpassword" class="block text-lg font-medium text-gray-800">Nueva
                                         contraseña</label>
@@ -259,7 +285,7 @@ if (isset($_POST['change'])) {
                                 <div>
                                     <button type="submit" name="change"
                                         class="w-full py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                        onclick="return valid();">Cambiar</button>
+                                        onclick="return valid();">CAMBIAR</button>
                                 </div>
                             </form>
                         </div>

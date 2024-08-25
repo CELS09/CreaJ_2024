@@ -62,12 +62,24 @@ if (isset($_POST['signin'])) {
     <style>
         /* Estilo para mantener el formulario centrado */
         .signin-page {
-            background-color: #27233B;
+            background-color: #000100;
             padding: 20px;
         }
 
         .select-wrapper {
             display: none !important;
+        }
+
+        /* ESTILO DEL VIDEO DE FONDO */
+        .videobg {
+            position: absolute;
+            opacity: 5%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Asegura que el video esté detrás del contenido */
         }
     </style>
 
@@ -84,14 +96,20 @@ if (isset($_POST['signin'])) {
 
 <body class="signin-page flex items-center justify-center min-h-screen">
 
-    <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-lg">
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop class="videobg">
+        <source src="../assets/images/FONDO_ADMIN.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <div class="w-full max-w-2xl p-6 rounded-lg shadow-lg">
         <div class="text-left mb-4">
             <a href="../index.php"
                 class="inline-block bg-blue-600 text-white text-lg font-bold py-2 px-4 rounded-xl hover:bg-blue-700 transition-colors">Regresar</a>
         </div>
 
-        <h4 class="text-gray-700 text-center text-4xl font-extrabold mb-6">
-            Administrador
+        <h4 class="text-gray-500 text-center text-4xl font-extrabold mb-6">
+            ADMINISTRADOR
         </h4>
 
         <div class="w-full max-w-2xl mx-auto">
@@ -103,8 +121,7 @@ if (isset($_POST['signin'])) {
                     <div class="input-field col s12 mb-4">
                         <label for="username" class="flex items-center">
                             <!-- Ícono de Usuario -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                class="text-gray-500 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-gray-500 mr-2">
                                 <path fill="currentColor"
                                     d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2S7.5 4.019 7.5 6.5M20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1z" />
                             </svg>
@@ -116,8 +133,7 @@ if (isset($_POST['signin'])) {
                     <div class="input-field col s12 mb-4">
                         <label for="password" class="flex items-center">
                             <!-- Ícono de Contraseña -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15"
-                                class="text-gray-500 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15" class="text-gray-500 mr-2">
                                 <path fill="currentColor" d="M11 11h-1v-1h1zm-3 0h1v-1H8zm5 0h-1v-1h1z" />
                                 <path fill="currentColor" fill-rule="evenodd"
                                     d="M3 6V3.5a3.5 3.5 0 1 1 7 0V6h1.5A1.5 1.5 0 0 1 13 7.5v.55a2.5 2.5 0 0 1 0 4.9v.55a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 0 13.5v-6A1.5 1.5 0 0 1 1.5 6zm1-2.5a2.5 2.5 0 0 1 5 0V6H4zM8.5 9a1.5 1.5 0 1 0 0 3h4a1.5 1.5 0 0 0 0-3z"

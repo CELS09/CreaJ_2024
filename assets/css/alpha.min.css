@@ -20,8 +20,8 @@ nav {
 }
 
 html {
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -1521,7 +1521,7 @@ li.active .nav-drop-icon {
 
 .sidebar-profile {
     padding: 25px 24px;
-    background: url(../images/profile_bg.png);
+    background: url(../images/profile_bg);
     background-size: cover
 }
 
@@ -3623,7 +3623,7 @@ body.search-app .search-input input:-ms-input-placeholder {
 .signin-page {  
     height: 100%;
     width: 100%;
-    background: url(../images/mountains2.jpg) no-repeat;
+    background: url(../images/mountains2) no-repeat;
     background-size: cover
 }
 

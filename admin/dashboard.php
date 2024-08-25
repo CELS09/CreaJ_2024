@@ -50,7 +50,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="card stats-card">
                             <div class="card-content">
 
-                                <span class="card-title">Empleados</span>
+                                <span class="card-title tetx-bold">Empleados</span>
                                 <span class="stats-counter">
                                     <?php
                                     $sql = "SELECT id from tblemployees";
