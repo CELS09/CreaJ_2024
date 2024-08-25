@@ -25,7 +25,7 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-50">
 
     <div class="text-center p-8 rounded-lg shadow-2xl max-w-md w-full fade-in">
-        <h1 class="text-8xl font-extrabold text-gray-800 mb-4">404</h1>
+        <h1 class="text-5xl font-extrabold text-gray-800 mb-4">404</h1>
         <br>
         <p class="text-3xl font-bold text-gray-500">¡Oops!</p>
         <p class="text-2xl text-gray-600 mb-4 font-semibold">Página no encontrada</p>
