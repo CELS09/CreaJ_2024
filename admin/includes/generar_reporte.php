@@ -1,34 +1,50 @@
 <?php
 require('../includes/fpdf.php'); // Ajusta la ruta según sea necesario
 
-// Crear una instancia del objeto FPDF
-$pdf = new FPDF('L', 'mm', 'A4'); // 'L' para orientación horizontal (Landscape)
+class PDF extends FPDF
+{
+    // Sobrescribimos el método Header para que el encabezado aparezca en cada página
+    function Header()
+    {
+        // Agregar la imagen en la esquina superior izquierda
+        $this->Image('../../assets/images/WorkFusion.png', 10, 6, 30);
+
+        // Configurar la fuente y color para el texto del encabezado
+        $this->SetFont('Arial', 'B', 16);
+        $this->SetTextColor(0, 102, 204); // Color azul para el texto
+        $this->Cell(0, 10, 'WorkFusion', 0, 1, 'R');
+
+        // Agregar un espacio después del encabezado
+        $this->Ln(10);
+
+        // Agregar el botón de regresar al inicio del PDF con más estilo
+        $this->SetFont('Arial', 'U', 16); // Cambiar a subrayado
+        $this->SetTextColor(0, 0, 255); // Color azul para el enlace
+
+        // Obtener el ancho del enlace
+        $link_text = 'Regresar a Dashboard';
+        $width = $this->GetStringWidth($link_text);
+
+        // Posición del enlace
+        $x = ($this->GetPageWidth() - $width) / 2;
+        $y = $this->GetY();
+
+        // Imprimir el texto del enlace
+        $this->SetXY($x, $y);
+        $this->Cell($width, 10, $link_text, 0, 1, 'C', false, 'http://localhost/CreaJ_2024/admin/dashboard.php');
+
+        // Volver al color negro para el texto restante
+        $this->SetTextColor(0, 0, 0); 
+        $this->Ln(5); // Espacio después del enlace
+    }
+}
+
+// Crear una instancia del objeto PDF
+$pdf = new PDF('L', 'mm', 'A4'); // 'L' para orientación horizontal (Landscape)
 $pdf->AddPage();
 
-// Agregar el botón de regresar al inicio del PDF con más estilo
-$pdf->SetFont('Arial', 'U', 16); // Cambiar a subrayado
-$pdf->SetTextColor(0, 0, 255); // Color azul para el enlace
 
-// Obtener el ancho del enlace
-$link_text = 'Regresar a Dashboard';
-$width = $pdf->GetStringWidth($link_text);
-
-// Posición del enlace
-$x = ($pdf->GetPageWidth() - $width) / 2;
-$y = $pdf->GetY();
-
-// Imprimir el texto del enlace
-$pdf->SetXY($x, $y);
-$pdf->Cell($width, 10, $link_text, 0, 1, 'C', false, 'http://localhost/CreaJ_2024/admin/dashboard.php');
-
-// Volver al color negro para el texto restante
-$pdf->SetTextColor(0, 0, 0); 
-$pdf->Ln(10);
-
-// Configurar título del documento
-$pdf->SetFont('Arial', 'B', 16);
-$pdf->Cell(0, 10, 'Reporte Detallado', 0, 1, 'C');
-$pdf->Ln(10);
+// Aquí continúa el código original
 
 // Conectar a la base de datos
 $servername = "localhost";
@@ -93,7 +109,7 @@ $row = $result->fetch_assoc();
 $total_leaves = $row['total_leaves'];
 
 $pdf->Cell(0, 10, "Cantidad de Tipos de Permisos: $total_leaves", 0, 1);
-$pdf->Ln(15);
+$pdf->Ln(10);
 
 // Obtener las últimas aplicaciones de licencia
 $sql = "SELECT LeaveType, FromDate, ToDate FROM tblleaves ORDER BY PostingDate DESC LIMIT 10";
@@ -128,7 +144,7 @@ while ($row = $result->fetch_assoc()) {
         $row['RegDate']
     ];
 }
-$pdf->Ln(40);
+$pdf->Ln(10);
 
 $pdf->SetFont('Arial', 'B', 14);
 $pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
@@ -179,12 +195,23 @@ $pdf->Ln(30);
 
 $pdf->SetFont('Arial', 'B', 14);
 $pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
-$pdf->Cell(0, 5, "Detalles de Tipos de Licencia", 0, 1);
+$pdf->Cell(0, 5, "Detalles de Tipos de Permisos", 0, 1);
 $pdf->Ln(5);
 
 $header = ['Tipo de Licencia', 'Descripcion', 'Fecha de Creacion'];
 $widths = [60, 90, 60]; // Anchos personalizados para cada columna
 addTable($pdf, $header, $leave_type_data, $widths);
+
+// Agregar el pie de página con líneas para firmas
+$pdf->SetY(-50); // Posicionar a 50 mm del fondo de la página
+$pdf->SetFont('Arial', '', 12);
+$pdf->Cell(0, 10, '_____________________________________                  _____________________________________', 0, 1, 'C');
+$pdf->Cell(0, 10, 'Firma del Gerente                                                         Firma del Empleado', 0, 1, 'C');
+// LO AGREGUE 2 VECES PARA QUE SE VEA EN NEGRITA 
+$pdf->SetY(-50); // Posicionar a 50 mm del fondo de la página
+$pdf->SetFont('Arial', '', 12);
+$pdf->Cell(0, 10, '_____________________________________                  _____________________________________', 0, 1, 'C');
+$pdf->Cell(0, 10, 'Firma del Gerente                                                         Firma del Empleado', 0, 1, 'C');
 
 // Cerrar la conexión
 $conn->close();
