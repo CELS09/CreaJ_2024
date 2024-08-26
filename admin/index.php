@@ -76,6 +76,8 @@ if (isset($_POST['signin'])) {
 
         /* ESTILO DEL VIDEO DE FONDO */
         .videobg {
+            pointer-events: none;
+            user-select: none;
             position: absolute;
             opacity: 5%;
             top: 0;
@@ -83,6 +85,7 @@ if (isset($_POST['signin'])) {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             z-index: -1; /* Asegura que el video esté detrás del contenido */
         }
     </style>
@@ -95,14 +98,24 @@ if (isset($_POST['signin'])) {
                 checkbox.remove();
             }
         });
+
+        //Carga el video después de que la página haya cargado o solo cuando sea visible en la pantalla
+        document.addEventListener("DOMContentLoaded", function() {
+        var video = document.getElementById('bgVideo');
+        var source = video.querySelector('source');
+        source.src = source.getAttribute('data-src');
+        video.load();
+        video.play();
+    });
+        
     </script>
 </head>
 
 <body class="signin-page flex items-center justify-center min-h-screen">
 
     <!-- VIDEO DE FONDO -->
-    <video autoplay muted loop class="videobg">
-        <source src="../assets/images/FONDO_ADMIN.mp4" type="video/mp4">
+    <video id="bgVideo" muted loop class="videobg" disablePictureInPicture controlsList="nodownload nofullscreen noplaybackrate">
+        <source data-src="../assets/images/FONDO_ADMIN.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
 

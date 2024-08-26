@@ -72,6 +72,8 @@ if (isset($_POST['change'])) {
 
         /* ESTILO DEL VIDEO DE FONDO */
         .videobg {
+            pointer-events: none;
+            user-select: none;
             position: absolute;
             opacity: 10%;
             top: 0;
@@ -79,17 +81,30 @@ if (isset($_POST['change'])) {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Asegura que el video esté detrás del contenido */
+            object-position: center;
+            z-index: -1;
+            /* Asegura que el video esté detrás del contenido */
         }
     </style>
+
+    <script>
+        //Carga el video después de que la página haya cargado o solo cuando sea visible en la pantalla
+            document.addEventListener("DOMContentLoaded", function () {
+            var video = document.getElementById('bgVideo');
+            var source = video.querySelector('source');
+            source.src = source.getAttribute('data-src');
+            video.load();
+            video.play();
+        });
+    </script>
 
 </head>
 
 <body>
 
     <!-- VIDEO DE FONDO -->
-    <video autoplay muted loop class="videobg">
-        <source src="assets/images/FONDO_FORMS.mp4" type="video/mp4">
+    <video id="bgVideo" muted loop class="videobg" controlsList="nodownload nofullscreen noplaybackrate" disablePictureInPicture>
+        <source data-src="assets/images/FONDO_FORMS.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
 
