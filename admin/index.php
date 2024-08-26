@@ -25,7 +25,7 @@ if (isset($_POST['signin'])) {
 
 <head>
     <!-- Title -->
-    <title>Login | Admin</title>
+    <title>Login | Administrador</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Admin Dashboard Template" />

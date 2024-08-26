@@ -36,7 +36,6 @@ table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc {
   cursor: pointer;
-  *cursor: hand;
 }
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,

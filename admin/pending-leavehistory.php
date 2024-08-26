@@ -82,9 +82,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <tr>
                                         <th>#</th>
                                         <th width="200">Nombre del empleado</th>
-                                        <th width="120">Tipo de licencia</th>
+                                        <th width="120">Tipo de Permiso</th>
 
-                                        <th width="180">Fecha de publicación</th>
+                                        <th width="180">Fecha de Publicación</th>
                                         <th>Estado</th>
                                         <th align="center">Acción</th>
                                     </tr>
