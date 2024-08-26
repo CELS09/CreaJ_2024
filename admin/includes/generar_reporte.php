@@ -19,7 +19,7 @@ class PDF extends FPDF
         $this->Image('../../assets/images/WorkFusion.png', 10, 6, 30);
 
         // Configurar la fuente y color para el texto del encabezado
-        $this->SetFont('Arial', 'B', 16);
+        $this->SetFont('Arial', 'B', 19);
         $this->SetTextColor(0, 102, 204); // Color azul para el texto
         $this->Cell(0, 10, 'WorkFusion', 0, 1, 'R');
 
@@ -27,7 +27,7 @@ class PDF extends FPDF
         $this->Ln(10);
 
         // Agregar el botón de regresar al inicio del PDF con más estilo
-        $this->SetFont('Arial', 'U', 16); // Cambiar a subrayado
+        $this->SetFont('Arial', 'U', 12); // Cambiar a subrayado
         $this->SetTextColor(0, 0, 255); // Color azul para el enlace
 
         // Obtener el ancho del enlace
@@ -156,7 +156,7 @@ while ($row = $result->fetch_assoc()) {
         $row['RegDate']
     ];
 }
-$pdf->Ln(10);
+$pdf->Ln(25);
 
 $pdf->SetFont('Arial', 'B', 14);
 $pdf->SetTextColor(0, 0, 0); // Asegurarse de que el texto sea negro
