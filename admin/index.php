@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('includes/config.php');
+
 if (isset($_POST['signin'])) {
     $uname = $_POST['username'];
     $password = md5($_POST['password']);
@@ -11,8 +12,11 @@ if (isset($_POST['signin'])) {
     $query->execute();
 
     if ($query->rowCount() > 0) {
-        $_SESSION['alogin'] = $_POST['username'];
-        echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+        // Establecer variable de sesión para indicar que el administrador está conectado
+        $_SESSION['admin_logged_in'] = true;
+        $_SESSION['alogin'] = $uname; // Guardar el nombre de usuario en la sesión si lo necesitas
+        header('Location: dashboard.php');
+        exit;
     } else {
         // Agregar un valor en la variable de sesión para indicar error
         $_SESSION['login_error'] = 'Detalles no válidos';

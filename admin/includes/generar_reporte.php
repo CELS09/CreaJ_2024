@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+// Verificar si la sesión de administrador está activa
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    // Redirigir al formulario de inicio de sesión o a una página de error
+    header('Location: ../index.php'); // Ajusta la ruta según sea necesario
+    exit;
+}
+
 require('../includes/fpdf.php'); // Ajusta la ruta según sea necesario
 
 class PDF extends FPDF
@@ -41,10 +50,13 @@ class PDF extends FPDF
 
 // Crear una instancia del objeto PDF
 $pdf = new PDF('L', 'mm', 'A4'); // 'L' para orientación horizontal (Landscape)
+
+// Activar la opción de salto automático de página si el contenido excede el área disponible
+$pdf->SetAutoPageBreak(true, 10);
+
 $pdf->AddPage();
 
-
-// Aquí continúa el código original
+// Aquí continúa el código......................
 
 // Conectar a la base de datos
 $servername = "localhost";
