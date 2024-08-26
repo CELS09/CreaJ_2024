@@ -156,7 +156,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     </div>
 
                                     <div class="input-field col s12">
-                                        <button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs">Confirmar</button>
+                                        <button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs">CAMBIAR</button>
                                     </div>
                                 </div>
                             </form>

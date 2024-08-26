@@ -128,7 +128,6 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             <th>Estado</th>
                                             <th></th>
                                             <th>Acción</th>
-                                            <!--<th align="center">Acción</th>-->
                                         </tr>
                                     </thead>
 
@@ -164,10 +163,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                             <span style="color: green">Aprobado</span>
                                                         <?php }
                                                         if ($stats == 2) { ?>
-                                                            <span style="color: red">No aprobado</span>
+                                                            <span style="color: red">No Aprobado</span>
                                                         <?php }
                                                         if ($stats == 0) { ?>
-                                                            <span style="color: blue">A la espera de la aprobación</span>
+                                                            <span style="color: blue">Esperando Aprobación...</span>
                                                         <?php } ?>
 
 

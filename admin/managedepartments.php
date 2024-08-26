@@ -106,10 +106,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                             <thead>
                                 <tr>
                                     <th>No.ㅤ</th>
-                                    <th>Nombre del departamento</th>
-                                    <th>Nombre corto del departamento</th>
-                                    <th>Código de departamento</th>
-                                    <th>Fecha de creación</th>
+                                    <th>Nombre del Departamento</th>
+                                    <th>Nombre corto del Departamento</th>
+                                    <th>Código del Departamento</th>
+                                    <th>Fecha de Creación</th>
                                     <th>Acción</th>
                                 </tr>
                             </thead>

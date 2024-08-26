@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#example').DataTable({
         language: {
-            searchPlaceholder: 'Buscar departamentos',
+            searchPlaceholder: 'Buscar Registro',
             sSearch: '',
             sLengthMenu: 'Mostrar _MENU_',
             sLength: 'dataTables_length',
