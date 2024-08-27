@@ -1,9 +1,12 @@
 # CreaJ_2024
 ### *Este es un proyecto sobre un Sistema para Gestión de Recursos Humanos. Dicho sistema se podrá ejecutar a nivel web para adaptarlo a tu empresa.*
 
-## Pre-requisitos de instalación 📋
+## Pre-requisitos de Instalación 📋
 
-
+Antes de instalar el Software, es necesario que en el equipo donde se va a instalar cuente con las siguientes herramientas:
+* XAMPP (Última Versión).
+* GitHub Desktop.
+* Visual Studio Code (O algún otro Editor de Código).
 
 ## Herramientas 🛠️
 
@@ -25,7 +28,7 @@ Ahora proceda a seguir los siguientes pasos:
 1. Ingrese a su cuenta de GitHub y adquiera este repositorio.
 2. Clone el repositorio a través de GitHub Desktop, y procure guardarlo en la dirección del Servidor Web que está utilizando.
 3. Ejecute los servicios de XAMPP, tales como: MySQL Database y Apache Web Server.
-4. Abra la Aplicación Web en el navegador de su preferencia. No se olvide de colocar la dirección de manera correcta.
+4. Abra la Aplicación Web en el navegador de su preferencia. No se olvide de colocar la dirección de manera correcta. Recuerde que el Sistema está almacenado en un Servidor Local, por lo que la dirección debe empezar siempre como: " localhost/ ".
 5. ¡Listo! Ya puede hacer uso del Sistema.
 
 ## Autores ✒️
@@ -62,4 +65,4 @@ No tiene que cumplir con la licencia para elementos del material que sean de dom
 
 No se dan garantías. Es posible que la licencia no le otorgue todos los permisos necesarios para el uso previsto. Por ejemplo, otros derechos como publicidad, privacidad o derechos morales pueden limitar la forma en que utiliza el material.
 
-## Enlaces de interés 👀
+## Enlaces de Interés 👀
