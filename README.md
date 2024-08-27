@@ -21,6 +21,12 @@ Antes de comenzar, asegúrese de tener instalado:
 * GitHub Desktop.
 * Visual Studio Code (O algún otro Editor de Código).
 
+Ahora proceda a seguir los siguientes pasos:
+1. Ingrese a su cuenta de GitHub y adquiera este repositorio.
+2. Clone el repositorio a través de GitHub Desktop, y procure guardarlo en la dirección del Servidor Web que está utilizando.
+3. Ejecute los servicios de XAMPP, tales como: MySQL Database y Apache Web Server.
+4. Abra la Aplicación Web en el navegador de su preferencia. No se olvide de colocar la dirección de manera correcta.
+5. ¡Listo! Ya puede hacer uso del Sistema.
 
 ## Autores ✒️
 
