@@ -10,7 +10,7 @@ Antes de instalar el Software, es necesario que en el equipo donde se va a insta
 
 ## Herramientas 🛠️
 
-* XAMPP (Sistema de Gestión de Bases de Datos MySQL): https://www.apachefriends.org/download.html 
+* XAMPP (Sistema para Gestión de Bases de Datos MySQL): https://www.apachefriends.org/download.html 
 * Visual Studio Code (Editor de Código Fuente): https://code.visualstudio.com/download
 * phpMyAdmin (Aplicación Web para Administrar Bases de Datos MySQL): https://www.phpmyadmin.net/downloads/
 * PHP (Lenguaje de Programación interpretado​ del lado del Servidor): https://www.php.net/downloads.php
