@@ -16,6 +16,7 @@ Antes de instalar el Software, es necesario que en el equipo donde se va a insta
 * PHP (Lenguaje de Programación interpretado​ del lado del Servidor): https://www.php.net/downloads.php
 * GitHub Desktop (Aplicación de Escritorio para el Desarrollo Colaborativo): https://desktop.github.com/
 * Less (Dinámico Lenguaje de Hojas de Estilo): https://lesscss.org/
+* Tailwind CSS (Framework de CSS): https://tailwindcss.com/docs/installation
 
 ## Guía de Instalación 💻
 
