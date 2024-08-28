@@ -70,5 +70,5 @@ No se dan garantías. Es posible que la licencia no le otorgue todos los permiso
 * Tablero en Notion: https://www.notion.so/Crea-J-2024-b311545375cc46b7a1044d0f4147113f?pvs=4
 * Enlace a Mockup's: https://www.figma.com/design/lBMSFXN02Sf5Dcxg0vgMsP/WorkFusion-MOCKUP%C2%B4S?node-id=0-1&t=CTYI48iD9bi1bj1x-1
 * Manual de Usuario: https://docs.google.com/document/d/1QPqak5D6MxADxe9QKbgCR5hS0HmLw5nzk3lv3-9_E-w/edit?usp=sharing
-* Manual Técnico:  https://docs.google.com/document/d/17RKQUgGS6FRil_dBxIHF8AwP55NuhARTyGW9eAPS7kU/edit?usp=sharing
+* Manual Técnico: https://docs.google.com/document/d/17RKQUgGS6FRil_dBxIHF8AwP55NuhARTyGW9eAPS7kU/edit?usp=sharing
 * Perfil de Instagram: https://www.instagram.com/workfusionhr?igsh=MXNrMjZhZWQ3amdmag%3D%3D
