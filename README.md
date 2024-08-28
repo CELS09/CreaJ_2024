@@ -4,9 +4,9 @@
 ## Pre-requisitos de Instalación 📋
 
 Antes de instalar el Software, es necesario que en el equipo donde se va a instalar cuente con las siguientes herramientas:
-* XAMPP (Última Versión).
-* GitHub Desktop.
-* Visual Studio Code (O algún otro Editor de Código).
+* XAMPP: Su equipo debe tener instalado un gestor de BD MySQL como XAMPP o WAMPP, de preferencia XAMPP.
+* GitHub Desktop: Se debe tener instalada dicha aplicación para poder clonar el proyecto a nuestro equipo de manera práctica y sencilla.
+* Navegador Web rápido y seguro: Tener un navegador web instalado para poder ejecutar y hacer uso del SGHR (Sistema para Gestión de Recursos Humanos). Se sugiere usar navegadores como: Google Chrome, Microsoft Edge u Opera GX.
 
 ## Herramientas 🛠️
 
